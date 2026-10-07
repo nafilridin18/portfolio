@@ -1727,6 +1727,15 @@ a.channel-val:hover {
   padding: 0.5rem 1.1rem;
   border-radius: var(--radius-pill);
   transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+}
+
+.social-badge-btn svg {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
 }
 
 .social-badge-btn:hover {
@@ -1734,6 +1743,10 @@ a.channel-val:hover {
   border-color: var(--peach);
   background: var(--peach-glow);
   transform: translateY(-2px);
+}
+
+.social-badge-btn:hover svg {
+  transform: scale(1.12);
 }
 
 /* Contact Form */
