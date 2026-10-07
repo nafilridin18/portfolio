@@ -221,21 +221,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       formStatus.innerHTML = '<span style="color:var(--text-muted);">⏳ Sending your message directly to Nafil\'s inbox...</span>';
 
+      const formData = new FormData(contactForm);
+      formData.set('_subject', subject ? `Portfolio Message: ${subject}` : `New message from ${name} (Portfolio)`);
+      formData.set('_replyto', email);
+
       try {
         const response = await fetch('https://formsubmit.co/ajax/nafilridinssbu@gmail.com', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            _subject: subject ? `Portfolio Message: ${subject}` : `New message from ${name} (Portfolio)`,
-            message: message,
-            _template: 'table',
-            _captcha: 'false'
-          })
+          body: formData
         });
 
         const data = await response.json();
