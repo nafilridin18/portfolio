@@ -245,6 +245,14 @@ document.addEventListener('DOMContentLoaded', () => {
           formStatus.style.color = 'var(--peach)';
           showToast('Message sent to inbox successfully!');
           contactForm.reset();
+        } else if (data.message && data.message.toLowerCase().includes('activation')) {
+          formStatus.innerHTML = `📩 <strong>One-time activation required:</strong> FormSubmit just sent an activation link to <em>nafilridinssbu@gmail.com</em>. Please check your Gmail (inbox or Spam folder) and click <strong>"Activate Form"</strong>.`;
+          formStatus.style.color = 'var(--peach)';
+          showToast('Check your Gmail to activate the form!');
+        } else if (data.message && data.message.includes('web server')) {
+          formStatus.innerHTML = `⚠️ FormSubmit requires the site to be browsed online (e.g. on GitHub Pages) rather than opened directly as a local HTML file.`;
+          formStatus.style.color = '#ef4444';
+          showToast('Please test via your GitHub Pages link');
         } else {
           throw new Error(data.message || 'Form submission failed');
         }
