@@ -192,24 +192,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => observer.observe(section));
 
-  // ---------- 8. Contact Form Handler ----------
+  // ---------- 8. Contact Form Handler (Real Email Delivery via FormSubmit) ----------
   const contactForm = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
 
   if (contactForm && formStatus) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const submitBtn = contactForm.querySelector('.submit-btn');
+      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
-      
-      formStatus.innerHTML = `Thank you, <strong>${name}</strong>! Your message has been received. I will respond to <em>${email}</em> promptly.`;
-      formStatus.style.color = 'var(--peach)';
-      showToast('Message sent successfully!');
-      contactForm.reset();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
 
-      setTimeout(() => {
-        formStatus.textContent = '';
-      }, 6000);
+      // Set Loading UI State
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <span>Sending...</span>
+          <svg class="spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-opacity="0.25"/>
+            <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-linecap="round"/>
+          </svg>
+        `;
+      }
+      formStatus.innerHTML = '<span style="color:var(--text-muted);">⏳ Sending your message directly to Nafil\'s inbox...</span>';
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/nafilridinssbu@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            _subject: subject ? `Portfolio Message: ${subject}` : `New message from ${name} (Portfolio)`,
+            message: message,
+            _template: 'table',
+            _captcha: 'false'
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && (data.success === 'true' || data.success === true)) {
+          formStatus.innerHTML = `✓ Thank you, <strong>${name}</strong>! Your message was delivered straight to my email inbox. I will reply to <em>${email}</em> soon!`;
+          formStatus.style.color = 'var(--peach)';
+          showToast('Message sent to inbox successfully!');
+          contactForm.reset();
+        } else {
+          throw new Error(data.message || 'Form submission failed');
+        }
+      } catch (err) {
+        console.error('Contact form delivery error:', err);
+        formStatus.innerHTML = `⚠️ Direct delivery failed. Please send an email directly to <a href="mailto:nafilridinssbu@gmail.com" style="color:var(--peach);text-decoration:underline;">nafilridinssbu@gmail.com</a>`;
+        formStatus.style.color = '#ef4444';
+        showToast('Could not send message. Please email directly.');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHTML;
+        }
+
+        setTimeout(() => {
+          if (formStatus.textContent.includes('✓')) {
+            formStatus.textContent = '';
+          }
+        }, 8000);
+      }
     });
   }
 
