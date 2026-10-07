@@ -1,237 +1,1167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nafil Ardul Ridin — Software Developer</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nafil Ardul Ridin | Software Developer & CSE Student</title>
+  <meta name="description" content="Portfolio of Nafil Ardul Ridin — 3rd-year CSE student at Daffodil International University (CGPA 3.735), Full Stack Developer, Systems Builder, and HR Manager.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="blob blob-violet" aria-hidden="true"></div>
-<div class="blob blob-lime" aria-hidden="true"></div>
+  <!-- Ambient Glow Blobs -->
+  <div class="glow-bg glow-peach" aria-hidden="true"></div>
+  <div class="glow-bg glow-brown" aria-hidden="true"></div>
+  <div class="glow-bg glow-warm" aria-hidden="true"></div>
 
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#top" class="brand">Nafil<span class="dot">.</span></a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="#contact" class="btn btn-solid nav-cta">Hire me</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  <!-- Toast Notification for Copy Actions -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text" id="toastText">Copied to clipboard!</span>
   </div>
-</header>
 
-<section id="top" class="hero">
-  <div class="hero-text">
-    <p class="eyebrow">Hello, I'm</p>
-    <h1>Nafil Ardul Ridin</h1>
-    <p class="role">A <span class="highlight">Software Developer.</span></p>
-    <p class="bio">Third-year CSE student at Daffodil International University, currently sharpening backend systems, algorithms, and small compilers — while running content and HR operations at StratifyX Global on the side.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-solid">Contact me</a>
-      <a href="#projects" class="btn btn-ghost">View projects</a>
-    </div>
-    <div class="hero-socials">
-      <a href="https://github.com/nafilridin18" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 .5C5.7.5.9 5.3.9 11.6c0 5 3.2 9.2 7.7 10.7.6.1.8-.2.8-.6v-2.2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.1.9-.2 1.8-.4 2.8-.4s1.9.1 2.8.4c2.1-1.4 3-1.1 3-1.1.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.7-5.7 7.7-10.7C23.1 5.3 18.3.5 12 .5z"/></svg>
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#top" class="brand" aria-label="Home">
+        <span class="brand-first">Nafil</span><span class="brand-dot">.</span>
       </a>
-      <a href="https://www.linkedin.com/in/nafil-ardul-ridin" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM7 20.4H3.5V9H7v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
-      </a>
-      <a href="mailto:nafilridin.personal.info@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
-      </a>
-    </div>
-  </div>
 
-  <div class="hero-photo">
-    <div class="photo-glow" aria-hidden="true"></div>
-    <div class="photo-frame">
-      <img src="assets/images/profile.jpg" alt="Portrait of Nafil Ardul Ridin">
-    </div>
-    <div class="floating-card card-top">
-      <span class="fc-num">3.735</span>
-      <span class="fc-label">CGPA</span>
-    </div>
-    <div class="floating-card card-bottom">
-      <span class="fc-num">1,000+</span>
-      <span class="fc-label">members reached</span>
-    </div>
-  </div>
-</section>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
 
-<main>
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+          <span class="theme-icon sun-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+          <span class="theme-icon moon-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
 
-<section id="about" class="section">
-  <p class="section-eyebrow">About</p>
-  <div class="about-grid">
-    <p class="about-lede">Dedicated CSE student holding a 3.735 CGPA across six semesters at Daffodil International University, with a growing portfolio of backend, algorithmic, and numerical-computing projects.</p>
-    <div class="about-details">
-      <p>Alongside my degree, I work as Senior Content Writer &amp; HR Manager at StratifyX Global, directing digital promotional copy and managing recruitment and internal communications. I'm also an Executive Member of the Competitive Programming Club, where I help coordinate contests and workshops for over a thousand members.</p>
-      <ul class="fact-list">
-        <li><span>Phone</span>01742541999</li>
-        <li><span>Email</span>nafilridin.personal.info@gmail.com</li>
-        <li><span>Location</span>Dhanmondi, Dhaka-1209</li>
-        <li><span>Languages</span>Bangla, English (IELTS 6.5), Hindi</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="education" class="section">
-  <p class="section-eyebrow">Education</p>
-  <div class="edu-grid">
-    <article class="edu-card">
-      <p class="edu-date">2024 — Present</p>
-      <h3>BSc in Computer Science &amp; Engineering</h3>
-      <p class="edu-org">Daffodil International University</p>
-      <p>Running CGPA of 3.735 across six semesters.</p>
-    </article>
-    <article class="edu-card">
-      <p class="edu-date">2023</p>
-      <h3>Higher Secondary Certificate</h3>
-      <p class="edu-org">Birshrestha Noor Mohammed Public College</p>
-      <p>Science group, Golden GPA-5.00.</p>
-    </article>
-    <article class="edu-card">
-      <p class="edu-date">2021</p>
-      <h3>Secondary School Certificate</h3>
-      <p class="edu-org">Birshrestha Noor Mohammed Public College</p>
-      <p>Science group, Golden GPA-5.00.</p>
-    </article>
-  </div>
-</section>
-
-<section id="skills" class="section">
-  <p class="section-eyebrow">Skills</p>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <h3>Languages</h3>
-      <div class="pills"><span>C</span><span>C++</span><span>Java</span><span>PHP</span></div>
-    </div>
-    <div class="skill-card">
-      <h3>Core concepts</h3>
-      <div class="pills"><span>Data Structures</span><span>Algorithms</span><span>OOP</span><span>Database Systems</span></div>
-    </div>
-    <div class="skill-card">
-      <h3>Electronics &amp; hardware</h3>
-      <div class="pills"><span>Circuit &amp; PCB Design</span><span>Sensors</span><span>Microcontrollers</span></div>
-    </div>
-    <div class="skill-card">
-      <h3>Tools &amp; software</h3>
-      <div class="pills"><span>Git &amp; GitHub</span><span>VS Code</span><span>MS Office</span><span>Python (Streamlit / pywebview)</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="section">
-  <p class="section-eyebrow">Projects</p>
-  <div class="project-grid">
-
-    <article class="project-card">
-      <div class="project-band band-violet"></div>
-      <div class="project-body">
-        <h3>RelieFX</h3>
-        <p>Privacy-focused disaster relief tracker built with PHP &amp; MySQL — SHA-256 NID hashing, dynamic stock tracking, and a custom multi-byte Levenshtein distance algorithm for duplicate detection.</p>
-        <div class="pills"><span>PHP</span><span>MySQL</span><span>Algorithm design</span></div>
-        <a href="https://github.com/nafilridin18/relife%20system" target="_blank" rel="noopener" class="project-link">View on GitHub <span>→</span></a>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <div class="project-band band-lime"></div>
-      <div class="project-body">
-        <h3>OmniCalc</h3>
-        <p>Multi-domain computational desktop suite built on a custom compiler architecture (Flex &amp; Bison), interfaced through a Python pywebview GUI.</p>
-        <div class="pills"><span>C</span><span>Flex / Bison</span><span>Python</span></div>
-        <a href="https://github.com/nafilridin18/OmniCalc" target="_blank" rel="noopener" class="project-link">View on GitHub <span>→</span></a>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <div class="project-band band-violet"></div>
-      <div class="project-body">
-        <h3>Curve Fitting &amp; Predictive Modeling</h3>
-        <p>Numerical analysis app implementing least-squares normal equations from scratch, with Plotly-based residual diagnostics and automated R² / RMSE metrics.</p>
-        <div class="pills"><span>Python</span><span>Streamlit</span><span>Plotly</span></div>
-        <a href="https://github.com/nafilridin18/curve%20fitting" target="_blank" rel="noopener" class="project-link">View on GitHub <span>→</span></a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section id="experience" class="section">
-  <p class="section-eyebrow">Experience &amp; Leadership</p>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <div class="timeline-head"><h3>Senior Content Writer &amp; HR Manager</h3><span>Ongoing</span></div>
-        <p class="timeline-org">StratifyX Global</p>
-        <p>Supervise content writing and digital promotional copy, and manage recruitment, HR operations, and internal communications.</p>
+        <a href="#contact" class="btn btn-primary nav-cta">Let's Connect</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open mobile navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <div class="timeline-head"><h3>Executive Member</h3><span>2026</span></div>
-        <p class="timeline-org">Competitive Programming Club, Daffodil International University</p>
-        <p>Coordinate programming contests and workshops for a community of 1,000+ members, and manage on-ground technical event operations.</p>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="top" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available for Roles &amp; Collaborations</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="text-gradient">Nafil Ardul Ridin</span>
+        </h1>
+
+        <div class="dynamic-roles">
+          <span class="role-lead">Specializing in</span>
+          <span class="typewriter-text" id="typewriterText">Full Stack &amp; Software Engineering</span>
+        </div>
+
+        <p class="hero-desc">
+          Third-year Computer Science &amp; Engineering student at <strong>Daffodil International University</strong> (ID: 242-15-705) maintaining an average <strong>3.735 CGPA</strong>. Senior Content Writer &amp; HR Manager at <strong>StratifyX.Global</strong>, Executive Member at <strong>DIU CPC</strong>, and passionate builder of robust web apps, compiler suites, and electronics systems.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            Explore Projects
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Certificates Drive
+          </a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+
+        <div class="hero-social-strip">
+          <span class="social-label">Find me on:</span>
+          <div class="social-links">
+            <a href="https://github.com/nafilridin18" target="_blank" rel="noopener" aria-label="GitHub Profile" title="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.7.5.9 5.3.9 11.6c0 5 3.2 9.2 7.7 10.7.6.1.8-.2.8-.6v-2.2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.1.9-.2 1.8-.4 2.8-.4s1.9.1 2.8.4c2.1-1.4 3-1.1 3-1.1.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.7-5.7 7.7-10.7C23.1 5.3 18.3.5 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/nafil-ardul-ridin" target="_blank" rel="noopener" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM7 20.4H3.5V9H7v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook Profile" title="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <button class="social-copy-btn" data-copy="nafilridinssbu@gmail.com" aria-label="Copy Email" title="Copy Primary Email">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visuals -->
+      <div class="hero-visual">
+        <div class="avatar-card-wrapper">
+          <div class="avatar-glow"></div>
+          <div class="avatar-frame">
+            <img src="assets/images/profile.jpg" alt="Portrait of Nafil Ardul Ridin" class="avatar-img">
+            <div class="avatar-glass-overlay"></div>
+          </div>
+
+          <!-- Floating Stat Cards -->
+          <div class="floating-badge badge-top-left">
+            <span class="badge-icon">🎓</span>
+            <div>
+              <span class="badge-num">3.735</span>
+              <span class="badge-sub">DIU CGPA (Avg)</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-right">
+            <span class="badge-icon">🏆</span>
+            <div>
+              <span class="badge-num">Golden 5.0</span>
+              <span class="badge-sub">HSC &amp; SSC</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <span class="badge-icon">💻</span>
+            <div>
+              <span class="badge-num">11+</span>
+              <span class="badge-sub">Projects Built</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights Counter Bar -->
+    <section class="highlights-bar">
+      <div class="bar-item">
+        <span class="bar-value">3.735</span>
+        <span class="bar-title">University CGPA</span>
+        <span class="bar-desc">Daffodil Int. University (6 Semesters)</span>
+      </div>
+      <div class="bar-divider"></div>
+      <div class="bar-item">
+        <span class="bar-value">6.5</span>
+        <span class="bar-title">IELTS Band Score</span>
+        <span class="bar-desc">British Council (2024)</span>
+      </div>
+      <div class="bar-divider"></div>
+      <div class="bar-item">
+        <span class="bar-value">1,000+</span>
+        <span class="bar-title">Club Community Impact</span>
+        <span class="bar-desc">Competitive Programming Club (CPC)</span>
+      </div>
+      <div class="bar-divider"></div>
+      <div class="bar-item">
+        <span class="bar-value">Top 80</span>
+        <span class="bar-title">Unlock The Algorithm</span>
+        <span class="bar-desc">Out of 2,000+ Preliminary Candidates</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-heading">Dedicated to Code, Architecture &amp; Execution</h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-bio-col">
+          <p class="lead-paragraph">
+            I am a third-year Computer Science and Engineering student at <strong>Daffodil International University</strong> with an average CGPA of <strong>3.735</strong>. My foundational education began at <strong>Birshrestha Noor Mohammed Public College</strong>, where I secured <strong>Golden GPA-5 in both SSC and HSC</strong>.
+          </p>
+          <p>
+            Beyond coursework, I bridge software and leadership: serving as <strong>Senior Content Writer &amp; HR Manager</strong> at StratifyX.Global, where I lead communications and talent management; and as an active <strong>Executive Member</strong> of the Competitive Programming Club (CPC), orchestrating massive collegiate coding contests.
+          </p>
+          <p>
+            From low-level parser theory with Flex &amp; Bison and Levenshtein algorithm integrations to full-stack e-commerce platforms and breadboard sequential logic circuits, I love tackling challenging technical domains end-to-end.
+          </p>
+
+          <div class="about-action-strip">
+            <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              View Verified Certificates Drive
+            </a>
+            <button class="btn btn-ghost" id="viewBioDetailsBtn">
+              Personal Bio Specs
+            </button>
+          </div>
+        </div>
+
+        <div class="about-cards-col">
+          <!-- Quick Contact Information -->
+          <div class="profile-card">
+            <h3 class="card-mini-title">Key Information</h3>
+            <ul class="meta-list">
+              <li>
+                <span class="meta-key">Location:</span>
+                <span class="meta-val">Dhanmondi, Dhaka-1209, Bangladesh</span>
+              </li>
+              <li>
+                <span class="meta-key">Phone:</span>
+                <span class="meta-val">
+                  <a href="tel:01742541999" class="link-hover">01742541999</a>
+                  <button class="inline-copy-btn" data-copy="01742541999" title="Copy Phone">Copy</button>
+                </span>
+              </li>
+              <li>
+                <span class="meta-key">Primary Email:</span>
+                <span class="meta-val">
+                  <a href="mailto:nafilridinssbu@gmail.com" class="link-hover">nafilridinssbu@gmail.com</a>
+                  <button class="inline-copy-btn" data-copy="nafilridinssbu@gmail.com" title="Copy Email">Copy</button>
+                </span>
+              </li>
+              <li>
+                <span class="meta-key">Academic Email:</span>
+                <span class="meta-val">
+                  <a href="mailto:ardul242-15-705@diu.edu.bd" class="link-hover">ardul242-15-705@diu.edu.bd</a>
+                  <button class="inline-copy-btn" data-copy="ardul242-15-705@diu.edu.bd" title="Copy Academic Email">Copy</button>
+                </span>
+              </li>
+              <li>
+                <span class="meta-key">Professional:</span>
+                <span class="meta-val">
+                  <a href="mailto:nafilridin.personal.info@gmail.com" class="link-hover">nafilridin.personal.info@gmail.com</a>
+                  <button class="inline-copy-btn" data-copy="nafilridin.personal.info@gmail.com" title="Copy Professional Email">Copy</button>
+                </span>
+              </li>
+              <li>
+                <span class="meta-key">Languages:</span>
+                <span class="meta-val">Bangla (Native), English (IELTS 6.5), Hindi</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Personal Background Collapsible/Display -->
+          <div class="profile-card personal-details-card" id="personalDetailsCard">
+            <h3 class="card-mini-title">Personal Details</h3>
+            <div class="details-grid">
+              <div class="detail-cell">
+                <span class="cell-label">Date of Birth</span>
+                <span class="cell-value">18 March, 2004</span>
+              </div>
+              <div class="detail-cell">
+                <span class="cell-label">Nationality</span>
+                <span class="cell-value">Bangladeshi</span>
+              </div>
+              <div class="detail-cell">
+                <span class="cell-label">Blood Group</span>
+                <span class="cell-value">O+ (Positive)</span>
+              </div>
+              <div class="detail-cell">
+                <span class="cell-label">Religion</span>
+                <span class="cell-value">Muslim</span>
+              </div>
+              <div class="detail-cell">
+                <span class="cell-label">Father's Name</span>
+                <span class="cell-value">Late MD Azad Hossain</span>
+              </div>
+              <div class="detail-cell">
+                <span class="cell-label">Mother's Name</span>
+                <span class="cell-value">Maksuda Yasmin</span>
+              </div>
+              <div class="detail-cell full-width">
+                <span class="cell-label">Permanent Address</span>
+                <span class="cell-value">Rayerbazar Nimtola, 256/6 Sultanganj Road, Dhaka 1209</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-heading">Skills &amp; Competencies</h2>
+        <p class="section-subtext">A blend of computer science foundations, modern web engineering, hardware design, and leadership.</p>
+      </div>
+
+      <div class="skills-wrapper">
+        <!-- Programming & Web -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">💻</div>
+            <div>
+              <h3>Programming &amp; Web Development</h3>
+              <p>Languages, frontend &amp; backend stacks</p>
+            </div>
+          </div>
+          <div class="pill-group">
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">PHP</span>
+            <span class="skill-pill">JavaScript (ES6+)</span>
+            <span class="skill-pill">HTML5 &amp; CSS3</span>
+            <span class="skill-pill">Full-Stack Architecture</span>
+            <span class="skill-pill">Streamlit</span>
+            <span class="skill-pill">JavaFX</span>
+            <span class="skill-pill">UI/UX Design</span>
+          </div>
+        </div>
+
+        <!-- Technical Knowledge -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">🧠</div>
+            <div>
+              <h3>Computer Science Foundations</h3>
+              <p>Algorithms, data structures &amp; systems</p>
+            </div>
+          </div>
+          <div class="pill-group">
+            <span class="skill-pill">Data Structures</span>
+            <span class="skill-pill">Algorithms</span>
+            <span class="skill-pill">Object-Oriented Programming (OOP)</span>
+            <span class="skill-pill">Relational Databases</span>
+            <span class="skill-pill">MySQL &amp; ACID Transactions</span>
+            <span class="skill-pill">Compiler Theory (Flex &amp; Bison)</span>
+            <span class="skill-pill">Fuzzy String Matching (Levenshtein)</span>
+            <span class="skill-pill">Least Squares Regression</span>
+          </div>
+        </div>
+
+        <!-- Electronics & Hardware -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">⚡</div>
+            <div>
+              <h3>Electronics &amp; Hardware Engineering</h3>
+              <p>Circuits, PCB &amp; embedded prototyping</p>
+            </div>
+          </div>
+          <div class="pill-group">
+            <span class="skill-pill">Circuit Design</span>
+            <span class="skill-pill">Digital Logic Gates</span>
+            <span class="skill-pill">Sequential Circuits</span>
+            <span class="skill-pill">PCB Design</span>
+            <span class="skill-pill">Sensor Integration</span>
+            <span class="skill-pill">Breadboard Prototyping</span>
+            <span class="skill-pill">Electronic Components (Diode, Zener, Transistor, Capacitor, LED)</span>
+            <span class="skill-pill">Microcontroller Fundamentals</span>
+          </div>
+        </div>
+
+        <!-- Tools & Soft Skills -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">🛠️</div>
+            <div>
+              <h3>Tools &amp; Professional Leadership</h3>
+              <p>Development tools, management &amp; collaboration</p>
+            </div>
+          </div>
+          <div class="pill-group">
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">Git &amp; GitHub</span>
+            <span class="skill-pill">Plotly &amp; pywebview</span>
+            <span class="skill-pill">Human Resources (HR) Basics</span>
+            <span class="skill-pill">Team Leadership</span>
+            <span class="skill-pill">Public Communication</span>
+            <span class="skill-pill">Problem Solving</span>
+            <span class="skill-pill">MS Office Suite</span>
+            <span class="skill-pill">Adobe Tools</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-heading">Projects &amp; Prototypes</h2>
+        <p class="section-subtext">Explore software systems, web applications, algorithms, and hardware implementations.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="project-filters" id="projectFilters" role="tablist">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects (11)</button>
+        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Full-Stack &amp; Web</button>
+        <button class="filter-btn" data-filter="systems" role="tab" aria-selected="false">Systems &amp; Algorithms</button>
+        <button class="filter-btn" data-filter="hardware" role="tab" aria-selected="false">Hardware &amp; IoT</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1: Minibook -->
+        <article class="project-card" data-category="web">
+          <div class="project-badge">Full-Stack • 2026</div>
+          <div class="project-main">
+            <div class="project-org">CodeAlpha Virtual Internship</div>
+            <h3 class="project-title">Minibook (Social Media Platform)</h3>
+            <p class="project-description">
+              Scalable social networking platform facilitating user registration, profile customization, and dynamic multimedia sharing. Engineered optimized MySQL relational schemas for friend networks and chronologically ordered post feeds, paired with async like/comment event handlers without page reloads.
+            </p>
+            <div class="project-tags">
+              <span>Full-Stack</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+              <span>Relational Modeling</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook-" target="_blank" rel="noopener" class="project-action-link">
+              <span>View Repository</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Asthetica -->
+        <article class="project-card" data-category="web">
+          <div class="project-badge">E-Commerce • 2026</div>
+          <div class="project-main">
+            <div class="project-org">CodeAlpha Virtual Internship</div>
+            <h3 class="project-title">Asthetica (E-Commerce Store)</h3>
+            <p class="project-description">
+              Responsive e-commerce storefront crafted for intuitive browsing, dynamic product filtering, and persistent cart management. Designed backend server architecture to manage catalogs, checkout workflows, and user session management via structured MySQL databases.
+            </p>
+            <div class="project-tags">
+              <span>HTML5 / CSS3</span>
+              <span>JavaScript</span>
+              <span>MySQL</span>
+              <span>Cart &amp; Checkout</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/nafilridin18/CodeAlpha_Simple-E-Commerce-Store-Asthetica" target="_blank" rel="noopener" class="project-action-link">
+              <span>View Repository</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Shuvrota -->
+        <article class="project-card" data-category="web">
+          <div class="project-badge">Retail Platform • 2026</div>
+          <div class="project-main">
+            <div class="project-org">StratifyX.Global</div>
+            <h3 class="project-title">Shuvrota E-Commerce Platform</h3>
+            <p class="project-description">
+              Comprehensive online retail system featuring secure authentication, shopping cart persistence, and ACID-compliant transactional inventory handling to prevent overselling under high concurrency. Engineered AJAX live search and multi-layered category filtering for rapid product discovery.
+            </p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>ACID Transactions</span>
+              <span>AJAX Live Search</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/nafilridin18/Shuvrota-e-commerce" target="_blank" rel="noopener" class="project-action-link">
+              <span>View Repository</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: RelieFX -->
+        <article class="project-card" data-category="systems">
+          <div class="project-badge">Disaster Relief &amp; Security • 2026</div>
+          <div class="project-main">
+            <div class="project-org">Daffodil International University</div>
+            <h3 class="project-title">RelieFX (Disaster Relief Tracker)</h3>
+            <p class="project-description">
+              Privacy-preserving disaster aid distribution tracker implementing SHA-256 National ID hashing and row-level locking (FOR UPDATE) to enforce multi-NGO 7-day duplicate prevention. Engineered custom multi-byte Levenshtein distance (mb_levenshtein) in PHP to detect near-duplicate Bangla beneficiary registrations.
+            </p>
+            <div class="project-tags">
+              <span>PHP &amp; MySQL</span>
+              <span>Bangla Fuzzy Match</span>
+              <span>SHA-256 Hashing</span>
+              <span>Concurrency Lock</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/nafilridin18/relife_system" target="_blank" rel="noopener" class="project-action-link">
+              <span>View Repository</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5: OmniCalc -->
+        <article class="project-card" data-category="systems">
+          <div class="project-badge">Compiler Design • 2026</div>
+          <div class="project-main">
+            <div class="project-org">Daffodil International University</div>
+            <h3 class="project-title">OmniCalc (Compiler Desktop Suite)</h3>
+            <p class="project-description">
+              Multi-domain computational desktop suite leveraging custom compiler principles. Utilized Flex and Bison to construct Context-Free Grammars (CFGs), handle operator precedence, and generate dynamic Abstract Syntax Trees (ASTs). Interfaced a C execution engine with modern HTML/JS web GUI via Python pywebview.
+            </p>
+            <div class="project-tags">
+              <span>C Engine</span>
+              <span>Flex &amp; Bison</span>
+              <span>Compiler AST</span>
+              <span>Python pywebview</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/nafilridin18/OmniCalc" target="_blank" rel="noopener" class="project-action-link">
+              <span>View Repository</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 6: Curve Fitting & Predictive Modeling -->
+        <article class="project-card" data-category="systems">
+          <div class="project-badge">Numerical Methods • 2026</div>
+          <div class="project-main">
+            <div class="project-org">Daffodil International University</div>
+            <h3 class="project-title">Curve Fitting &amp; Predictive App</h3>
+            <p class="project-description">
+              Numerical analysis web application calculating Least Squares Normal Equations from ground-up without external fitting packages. Implemented non-linear data linearization (Exponential, Power, Logarithmic) and polynomial models alongside interactive Plotly residual diagnostics and R² / RMSE validation.
+            </p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Streamlit</span>
+              <span>Plotly</span>
+              <span>Numerical Regression</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/nafilridin18/curve_fitting" target="_blank" rel="noopener" class="project-action-link">
+              <span>View Repository</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 7: Ride Share App -->
+        <article class="project-card" data-category="systems">
+          <div class="project-badge">Application • 2025</div>
+          <div class="project-main">
+            <div class="project-org">Daffodil International University</div>
+            <h3 class="project-title">Ride Share Desktop &amp; Mobile Concept</h3>
+            <p class="project-description">
+              Application connecting drivers and passengers efficiently with real-time tracking, route optimization heuristics, and secure authentication models built with JavaFX and backend database integration.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>JavaFX</span>
+              <span>Route Optimization</span>
+              <span>State Management</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <span class="project-note">Academic Capstone</span>
+          </div>
+        </article>
+
+        <!-- Project 8: 4-Bit Binary Lock -->
+        <article class="project-card" data-category="hardware">
+          <div class="project-badge">Digital Logic • 2026</div>
+          <div class="project-main">
+            <div class="project-org">Daffodil International University</div>
+            <h3 class="project-title">4-Bit Binary Digital Lock</h3>
+            <p class="project-description">
+              Digital security access control system engineered using logic gates (AND, OR, NOT) and sequential flip-flop circuits. Authenticates correct binary passcode inputs and triggers lock/unlock indicators with breadboard circuitry.
+            </p>
+            <div class="project-tags">
+              <span>Digital Electronics</span>
+              <span>Logic Gates</span>
+              <span>Sequential Circuits</span>
+              <span>Breadboard Wiring</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <span class="project-note">Hardware Lab Project</span>
+          </div>
+        </article>
+
+        <!-- Project 9: Battery Charger -->
+        <article class="project-card" data-category="hardware">
+          <div class="project-badge">Power Electronics • 2025</div>
+          <div class="project-main">
+            <div class="project-org">Daffodil International University</div>
+            <h3 class="project-title">Battery Charger System</h3>
+            <p class="project-description">
+              Safe, high-efficiency battery charging circuit featuring voltage and current regulation circuitry to prevent thermal runaway, preserve battery lifecycle, and maintain steady charging curves.
+            </p>
+            <div class="project-tags">
+              <span>Voltage Regulation</span>
+              <span>Current Limiting</span>
+              <span>Analog Testing</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <span class="project-note">Electrical Circuit Lab</span>
+          </div>
+        </article>
+
+        <!-- Project 10: Rain Detection Device -->
+        <article class="project-card" data-category="hardware">
+          <div class="project-badge">Automation &amp; Sensors • 2024</div>
+          <div class="project-main">
+            <div class="project-org">Daffodil International University</div>
+            <h3 class="project-title">Rain Detection Automation Device</h3>
+            <p class="project-description">
+              Automatic rainfall sensing device utilizing sensor arrays and signal conditioning circuits to trigger instantaneous visual/auditory alarms and motor-driven protective shield responses.
+            </p>
+            <div class="project-tags">
+              <span>Rain Sensors</span>
+              <span>Automation Circuit</span>
+              <span>Relay Integration</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <span class="project-note">IoT &amp; Automation Project</span>
+          </div>
+        </article>
+
+        <!-- Project 11: Hydraulic Pump -->
+        <article class="project-card" data-category="hardware">
+          <div class="project-badge">Physics &amp; Mechanics • 2023</div>
+          <div class="project-main">
+            <div class="project-org">National Science Carnival – DRMC</div>
+            <h3 class="project-title">Hydraulic Pump System</h3>
+            <p class="project-description">
+              Prototype system demonstrating fluid mechanics and Pascal's principle, optimizing fluid flow, pressure amplification, and mechanical energy conservation under variable load conditions.
+            </p>
+            <div class="project-tags">
+              <span>Fluid Mechanics</span>
+              <span>Pressure Control</span>
+              <span>DRMC National Fest</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <span class="project-note">National Science Carnival Exhibition</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <span class="section-tag">Career History</span>
+        <h2 class="section-heading">Work Experience &amp; Internships</h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-card">
+          <div class="timeline-indicator"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <div>
+                <h3 class="timeline-role">Senior Content Writer &amp; HR Manager</h3>
+                <div class="timeline-company">StratifyX.Global</div>
+              </div>
+              <span class="timeline-date-badge">Ongoing</span>
+            </div>
+            <ul class="timeline-bullet-list">
+              <li>Lead and supervise all content writing initiatives and promotional campaigns across digital platforms.</li>
+              <li>Manage talent acquisition, candidate screening, interviews, employee coordination, and HR administration.</li>
+              <li>Support organizational development, branding, and disciplined internal communication workflows.</li>
+              <li>Ensure strict organizational confidentiality, team alignment, and operational efficiency.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-card">
+          <div class="timeline-indicator"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <div>
+                <h3 class="timeline-role">Full Stack Development Intern</h3>
+                <div class="timeline-company">CodeAlpha • Virtual Internship</div>
+              </div>
+              <span class="timeline-date-badge">Oct 2026</span>
+            </div>
+            <ul class="timeline-bullet-list">
+              <li>Engineered <strong>"Asthetica"</strong>, an interactive e-commerce website with product catalogs, responsive UI, and secure database interactions.</li>
+              <li>Built <strong>"Mini Book"</strong>, an engaging social media web application supporting user authentication, post feeds, and database storage.</li>
+              <li>Applied hands-on full-stack development skills across frontend logic, backend routing, and relational databases.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline-card">
+          <div class="timeline-indicator"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <div>
+                <h3 class="timeline-role">Private Academic Tutor</h3>
+                <div class="timeline-company">Mentoring Class 8 &amp; Class 10 Students</div>
+              </div>
+              <span class="timeline-date-badge">Ongoing</span>
+            </div>
+            <ul class="timeline-bullet-list">
+              <li>Conduct personalized tutoring sessions focusing on science and mathematics concepts, problem solving, and exam readiness.</li>
+              <li>Formulate customized study materials, practice sets, and systematic revision schedules.</li>
+              <li>Cultivated communication skills, academic empathy, and pedagogical clarity.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="timeline-card">
+          <div class="timeline-indicator"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <div>
+                <h3 class="timeline-role">Sales Assistant (Part-Time)</h3>
+                <div class="timeline-company">Soniya's Boutique</div>
+              </div>
+              <span class="timeline-date-badge">2020 – 2022</span>
+            </div>
+            <ul class="timeline-bullet-list">
+              <li>Assisted customers with garment selection and delivered attentive, high-quality personalized service.</li>
+              <li>Managed daily billing, pricing records, stock replenishment, and aesthetic display organization.</li>
+              <li>Honed early real-world negotiation, interpersonal communication, and team coordination skills.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-heading">Education</h2>
+      </div>
+
+      <div class="edu-grid">
+        <!-- BSc -->
+        <div class="edu-card highlighted-edu">
+          <div class="edu-top-row">
+            <span class="edu-badge">Undergraduate</span>
+            <span class="edu-duration">2024 — Present</span>
+          </div>
+          <h3 class="edu-degree">Bachelor of Science in Computer Science &amp; Engineering</h3>
+          <p class="edu-institution">Daffodil International University (DIU)</p>
+          <div class="edu-grade-pill">
+            <span class="grade-label">Running CGPA:</span>
+            <span class="grade-number">3.735</span>
+            <span class="grade-context">(6th Semester Average)</span>
+          </div>
+          <p class="edu-sub">Student ID: 242-15-705 • Focus on Algorithms, Systems Engineering, Databases &amp; Software Design.</p>
+        </div>
+
+        <!-- HSC -->
+        <div class="edu-card">
+          <div class="edu-top-row">
+            <span class="edu-badge">Higher Secondary</span>
+            <span class="edu-duration">2021 — 2023</span>
+          </div>
+          <h3 class="edu-degree">Higher Secondary Certificate (HSC)</h3>
+          <p class="edu-institution">Birshrestha Noor Mohammed Public College (BNMPC)</p>
+          <div class="edu-grade-pill">
+            <span class="grade-label">Result:</span>
+            <span class="grade-number">Golden GPA 5.00 / 5.00</span>
+          </div>
+          <p class="edu-sub">Science Background • Physics, Chemistry, Higher Mathematics &amp; ICT.</p>
+        </div>
+
+        <!-- SSC -->
+        <div class="edu-card">
+          <div class="edu-top-row">
+            <span class="edu-badge">Secondary School</span>
+            <span class="edu-duration">2019 — 2021</span>
+          </div>
+          <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
+          <p class="edu-institution">Birshrestha Noor Mohammed Public College (BNMPC)</p>
+          <div class="edu-grade-pill">
+            <span class="grade-label">Result:</span>
+            <span class="grade-number">Golden GPA 5.00 / 5.00</span>
+          </div>
+          <p class="edu-sub">Science Background with exceptional academic performance throughout.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Co-Curricular & Awards Section -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">Leadership &amp; Accolades</span>
+        <h2 class="section-heading">Co-Curricular &amp; Awards</h2>
+      </div>
+
+      <div class="activities-awards-grid">
+        <!-- Co-Curricular List -->
+        <div class="dual-column-card">
+          <h3 class="sub-header-title">
+            <span>🤝</span> Co-Curricular Activities &amp; Leadership
+          </h3>
+          <div class="activity-items">
+            <div class="activity-item">
+              <div class="act-head">
+                <span class="act-title">Executive Member</span>
+                <span class="act-year">2026</span>
+              </div>
+              <div class="act-org">Competitive Programming Club (CPC), Daffodil International University</div>
+              <p>Collaborated with executive panel to deliver programming contests &amp; workshops for 1,000+ members. Supervised on-ground operations and member engagement.</p>
+            </div>
+
+            <div class="activity-item">
+              <div class="act-head">
+                <span class="act-title">Volunteer Executive</span>
+                <span class="act-year">2026</span>
+              </div>
+              <div class="act-org">"Unlock The Algorithm" &amp; "Take Off" Programming Contests (CPC DIU)</div>
+              <p>Coordinated live competition management, participant support, and contest logistics under time-pressured environments.</p>
+            </div>
+
+            <div class="activity-item">
+              <div class="act-head">
+                <span class="act-title">Event Logistics Volunteer</span>
+                <span class="act-year">2025</span>
+              </div>
+              <div class="act-org">Job Utshob 2025, Daffodil International University</div>
+              <p>Managed guest logistics, participant transportation, and scheduling support with the university central management team.</p>
+            </div>
+
+            <div class="activity-item">
+              <div class="act-head">
+                <span class="act-title">General Member (Member ID: DS978)</span>
+                <span class="act-year">2023</span>
+              </div>
+              <div class="act-org">Data Science Club, DIU</div>
+              <p>Engaged in machine learning and data analysis workshops, hackathon discussions, and collaborative projects.</p>
+            </div>
+
+            <div class="activity-item">
+              <div class="act-head">
+                <span class="act-title">Executive Member</span>
+                <span class="act-year">2018 – 2023</span>
+              </div>
+              <div class="act-org">Science Club, Birshrestha Noor Mohammed Public College (BNMPC)</div>
+              <p>Organized science events, assisted peers with science fair exhibits, and fostered collaborative problem solving.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Awards & Honors -->
+        <div class="dual-column-card">
+          <h3 class="sub-header-title">
+            <span>🏆</span> Honors &amp; Awards
+          </h3>
+          <div class="awards-stack">
+            <div class="award-box featured-award">
+              <div class="award-badge-icon">🎖️</div>
+              <div>
+                <span class="award-year">2025</span>
+                <h4 class="award-title">Unlock The Algorithm (Finalist - 80th Position)</h4>
+                <div class="award-org">Daffodil International University</div>
+                <p>Selected among the top 200 finalists shortlisted from <strong>2,000+ competitors</strong> in the rigorous university-wide preliminary programming round, securing 80th rank in the grand finals.</p>
+              </div>
+            </div>
+
+            <div class="award-box">
+              <div class="award-badge-icon">🥈</div>
+              <div>
+                <span class="award-year">2024</span>
+                <h4 class="award-title">Science Olympiad (2nd Position)</h4>
+                <div class="award-org">Saint Joseph Higher Secondary School</div>
+                <p>Secured Runner-Up 2nd Position in competitive inter-college science problem solving and scientific reasoning.</p>
+              </div>
+            </div>
+
+            <div class="drive-cta-box">
+              <h4>Official Verification Documents</h4>
+              <p>All competition credentials, certificates, and academic records are organized in my verified Google Drive portfolio folder.</p>
+              <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary full-width-btn">
+                Open Verified Certificates Drive ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+      <div class="section-header">
+        <span class="section-tag">Verified Credentials</span>
+        <h2 class="section-heading">Certifications &amp; Courses</h2>
+        <p class="section-subtext">Click below to view the official Google Drive archive with all original certificates.</p>
+      </div>
+
+      <div class="certifications-grid">
+        <!-- 1 -->
+        <div class="cert-card">
+          <div class="cert-icon">📜</div>
+          <div class="cert-meta">
+            <span class="cert-year">2025</span>
+            <h3 class="cert-title">Workplace Communication Essentials</h3>
+            <p class="cert-issuer">UNICEF – Passport to Earning Bangladesh</p>
+            <p class="cert-desc">Professional workplace communication, team synergy, digital etiquette, and collaboration.</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="cert-card">
+          <div class="cert-icon">🛡️</div>
+          <div class="cert-meta">
+            <span class="cert-year">2025</span>
+            <h3 class="cert-title">DIU-Cybercon</h3>
+            <p class="cert-issuer">Daffodil International University</p>
+            <p class="cert-desc">Cybersecurity workshop covering threat vectors, digital safety precautions, and defense mechanisms.</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="cert-card">
+          <div class="cert-icon">🌐</div>
+          <div class="cert-meta">
+            <span class="cert-year">2024</span>
+            <h3 class="cert-title">IELTS (International English Language Testing)</h3>
+            <p class="cert-issuer">British Council</p>
+            <p class="cert-desc">Achieved an <strong>Overall Band Score of 6.5 / 9.0</strong> in English language proficiency.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="cert-card">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-meta">
+            <span class="cert-year">2024</span>
+            <h3 class="cert-title">AI Literacy Workshop</h3>
+            <p class="cert-issuer">EMK Center</p>
+            <p class="cert-desc">Foundations of artificial intelligence, ethical prompt engineering, and modern AI tool integration.</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="cert-card">
+          <div class="cert-icon">⚡</div>
+          <div class="cert-meta">
+            <span class="cert-year">2025</span>
+            <h3 class="cert-title">Prompt Battle</h3>
+            <p class="cert-issuer">Daffodil International University</p>
+            <p class="cert-desc">Competitive challenge testing creativity, prompt structuring, and problem resolution via generative AI.</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="cert-card">
+          <div class="cert-icon">⌨️</div>
+          <div class="cert-meta">
+            <span class="cert-year">2025</span>
+            <h3 class="cert-title">Type Track Contest</h3>
+            <p class="cert-issuer">Daffodil International University</p>
+            <p class="cert-desc">High-speed precision typing competition evaluating WPM speed and character accuracy.</p>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="cert-card">
+          <div class="cert-icon">🤝</div>
+          <div class="cert-meta">
+            <span class="cert-year">2025</span>
+            <h3 class="cert-title">Job Utshob Volunteering</h3>
+            <p class="cert-issuer">Daffodil International University</p>
+            <p class="cert-desc">Certified for logistical dedication and volunteer service at the university's flagship career event.</p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="cert-card">
+          <div class="cert-icon">📸</div>
+          <div class="cert-meta">
+            <span class="cert-year">2023</span>
+            <h3 class="cert-title">National Photography Fest</h3>
+            <p class="cert-issuer">Dhaka Residential Model College (DRMC)</p>
+            <p class="cert-desc">Visual storytelling, creative composition, and digital media production workshops.</p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="cert-card">
+          <div class="cert-icon">🔬</div>
+          <div class="cert-meta">
+            <span class="cert-year">2023</span>
+            <h3 class="cert-title">National Science Carnival</h3>
+            <p class="cert-issuer">Dhaka Residential Model College (DRMC)</p>
+            <p class="cert-desc">Scientific research exhibition, collaborative innovation, and prototype demonstrations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-bottom-action">
+        <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary drive-button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          Open Complete Certificate Google Drive Folder
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <span class="section-tag">Let's Talk</span>
+        <h2 class="section-heading">Get in Touch</h2>
+        <p class="section-subtext">Open to software engineering roles, internships, tech collaborations, or casual conversations.</p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Direct Contact Cards -->
+        <div class="contact-info-col">
+          <div class="contact-card">
+            <h3 class="contact-card-title">Direct Channels</h3>
+            
+            <div class="channel-item">
+              <div class="channel-icon">📧</div>
+              <div class="channel-body">
+                <span class="channel-title">Primary Email</span>
+                <a href="mailto:nafilridinssbu@gmail.com" class="channel-val">nafilridinssbu@gmail.com</a>
+                <button class="inline-copy-btn" data-copy="nafilridinssbu@gmail.com">Copy</button>
+              </div>
+            </div>
+
+            <div class="channel-item">
+              <div class="channel-icon">🎓</div>
+              <div class="channel-body">
+                <span class="channel-title">Educational Email</span>
+                <a href="mailto:ardul242-15-705@diu.edu.bd" class="channel-val">ardul242-15-705@diu.edu.bd</a>
+                <button class="inline-copy-btn" data-copy="ardul242-15-705@diu.edu.bd">Copy</button>
+              </div>
+            </div>
+
+            <div class="channel-item">
+              <div class="channel-icon">💼</div>
+              <div class="channel-body">
+                <span class="channel-title">Professional Email</span>
+                <a href="mailto:nafilridin.personal.info@gmail.com" class="channel-val">nafilridin.personal.info@gmail.com</a>
+                <button class="inline-copy-btn" data-copy="nafilridin.personal.info@gmail.com">Copy</button>
+              </div>
+            </div>
+
+            <div class="channel-item">
+              <div class="channel-icon">📱</div>
+              <div class="channel-body">
+                <span class="channel-title">Phone / WhatsApp</span>
+                <a href="tel:01742541999" class="channel-val">01742541999</a>
+                <button class="inline-copy-btn" data-copy="01742541999">Copy</button>
+              </div>
+            </div>
+
+            <div class="channel-item">
+              <div class="channel-icon">📍</div>
+              <div class="channel-body">
+                <span class="channel-title">Location</span>
+                <span class="channel-val">Dhanmondi, Dhaka-1209, Bangladesh</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-panel">
+            <h4>Connect via Social Media</h4>
+            <div class="social-buttons-row">
+              <a href="https://github.com/nafilridin18" target="_blank" rel="noopener" class="social-badge-btn">
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/nafil-ardul-ridin" target="_blank" rel="noopener" class="social-badge-btn">
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-badge-btn">
+                <span>Facebook</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message Form -->
+        <div class="contact-form-col">
+          <form class="contact-form" id="contactForm">
+            <h3 class="form-title">Send a Quick Message</h3>
+            
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email Address</label>
+              <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Opportunity" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+
+            <div class="form-status" id="formStatus" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="#top" class="brand">Nafil<span class="brand-dot">.</span></a>
+        <p class="footer-copy">Crafted with precision using modern HTML, CSS &amp; JavaScript. Inspired by clean code and warm, aesthetic design.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener">Certificates</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <div class="timeline-head"><h3>Private Tutor</h3><span>Ongoing</span></div>
-        <p class="timeline-org">Class 8 &amp; Class 10 students</p>
-        <p>Conduct tailored tutoring sessions, build revision plans, and track academic progress.</p>
-      </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nafil Ardul Ridin. All rights reserved.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="contact" class="section">
-  <p class="section-eyebrow">Contact</p>
-  <div class="contact-grid">
-    <div class="contact-copy">
-      <h2>Let's build something.</h2>
-      <p>Open to internships, collaborations, and interesting problems. Reach out and I'll get back to you soon.</p>
-      <div class="contact-links">
-        <a href="mailto:nafilridin.personal.info@gmail.com">nafilridin.personal.info@gmail.com</a>
-        <a href="tel:01742541999">01742541999</a>
-      </div>
-    </div>
-    <form class="contact-form" id="contactForm">
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required>
-      </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required>
-      </div>
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-solid">Send message</button>
-      <p class="form-status" id="formStatus" aria-live="polite"></p>
-    </form>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
-  <p>© 2026 Nafil Ardul Ridin</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
