@@ -272,4 +272,293 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ---------- 9. Profile Picture Interactive Side Dim Light & 3D Tilt ----------
+  const avatarCardWrapper = document.getElementById('avatarCardWrapper');
+  const avatarFrame = document.getElementById('avatarFrame');
+
+  if (avatarCardWrapper && avatarFrame) {
+    let isHovering = false;
+    let targetTiltX = 0;
+    let targetTiltY = 0;
+    let currentTiltX = 0;
+    let currentTiltY = 0;
+    let animFrame = null;
+
+    function smoothTilt() {
+      if (!isHovering) {
+        currentTiltX += (0 - currentTiltX) * 0.12;
+        currentTiltY += (0 - currentTiltY) * 0.12;
+        if (Math.abs(currentTiltX) < 0.05 && Math.abs(currentTiltY) < 0.05) {
+          currentTiltX = 0;
+          currentTiltY = 0;
+          avatarFrame.style.transform = '';
+          cancelAnimationFrame(animFrame);
+          animFrame = null;
+          return;
+        }
+      } else {
+        currentTiltX += (targetTiltX - currentTiltX) * 0.15;
+        currentTiltY += (targetTiltY - currentTiltY) * 0.15;
+      }
+
+      avatarFrame.style.transform = `perspective(1000px) rotateX(${currentTiltX.toFixed(2)}deg) rotateY(${currentTiltY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
+      animFrame = requestAnimationFrame(smoothTilt);
+    }
+
+    function updateAvatarLight(e) {
+      const rect = avatarCardWrapper.getBoundingClientRect();
+      const x = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width)); // 0 to 1
+      const y = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height)); // 0 to 1
+
+      // Dynamically track cursor position: light follows cursor directly on whichever side it is
+      const outerX = (x * 100).toFixed(1);
+      const outerY = (y * 100).toFixed(1);
+      const outerShiftX = ((x - 0.5) * 36).toFixed(1);
+      const outerShiftY = ((y - 0.5) * 24).toFixed(1);
+
+      avatarCardWrapper.style.setProperty('--outer-light-x', `${outerX}%`);
+      avatarCardWrapper.style.setProperty('--outer-light-y', `${outerY}%`);
+      avatarCardWrapper.style.setProperty('--outer-shift-x', `${outerShiftX}px`);
+      avatarCardWrapper.style.setProperty('--outer-shift-y', `${outerShiftY}px`);
+
+      // Gentle 3D tilt coordinates
+      targetTiltX = (y - 0.5) * -12;
+      targetTiltY = (x - 0.5) * 12;
+    }
+
+    avatarCardWrapper.addEventListener('mouseenter', (e) => {
+      isHovering = true;
+      updateAvatarLight(e);
+      if (!animFrame) {
+        animFrame = requestAnimationFrame(smoothTilt);
+      }
+    });
+
+    avatarCardWrapper.addEventListener('mousemove', (e) => {
+      updateAvatarLight(e);
+      if (!animFrame) {
+        animFrame = requestAnimationFrame(smoothTilt);
+      }
+    });
+
+    avatarCardWrapper.addEventListener('mouseleave', () => {
+      isHovering = false;
+      targetTiltX = 0;
+      targetTiltY = 0;
+    });
+  }
+
+  // ---------- 10. Scroll Blur-to-Appear Reveal Observer ----------
+  const revealTargets = document.querySelectorAll(
+    '.blur-reveal, .section-header, .about-layout, .skill-category-card, .project-card, .timeline-card, .edu-card, .cert-card, .dual-column-card, .profile-card, .contact-card, .social-panel, .contact-form'
+  );
+
+  revealTargets.forEach(el => {
+    el.classList.add('blur-reveal');
+  });
+
+  // Apply sequential stagger to grid children
+  const gridGroups = document.querySelectorAll('.skills-wrapper, .projects-grid, .timeline, .edu-grid, .certifications-grid');
+  gridGroups.forEach(grid => {
+    Array.from(grid.children).forEach((child, idx) => {
+      child.classList.add(`stagger-${(idx % 5) + 1}`);
+    });
+  });
+
+  function checkAndRevealVisible() {
+    const windowH = window.innerHeight || document.documentElement.clientHeight;
+    revealTargets.forEach(el => {
+      if (!el.classList.contains('revealed')) {
+        const rect = el.getBoundingClientRect();
+        // If element is in view or within 80px of entering viewport
+        if (rect.top <= windowH * 0.92) {
+          el.classList.add('revealed');
+        }
+      }
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    const blurObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '160px 0px 160px 0px',
+      threshold: 0
+    });
+
+    revealTargets.forEach(el => {
+      blurObserver.observe(el);
+    });
+  } else {
+    // Fallback only for legacy browsers without IntersectionObserver
+    let isScrollTicking = false;
+    window.addEventListener('scroll', () => {
+      if (!isScrollTicking) {
+        requestAnimationFrame(() => {
+          checkAndRevealVisible();
+          isScrollTicking = false;
+        });
+        isScrollTicking = true;
+      }
+    }, { passive: true });
+  }
+
+  // Initial check so above-the-fold content appears immediately
+  checkAndRevealVisible();
+
+  // ---------- 11. Skills Category Filters & Live Search ----------
+  const skillFilterBtns = document.querySelectorAll('.skill-filter-btn');
+  const skillCategoryCards = document.querySelectorAll('.skill-category-card');
+  const skillSearchInput = document.getElementById('skillSearchInput');
+
+  if (skillFilterBtns.length > 0 && skillCategoryCards.length > 0) {
+    skillFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        skillFilterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        const filterVal = btn.getAttribute('data-skill-filter');
+
+        skillCategoryCards.forEach(card => {
+          const category = card.getAttribute('data-skill-category');
+          if (filterVal === 'all' || category === filterVal) {
+            card.classList.remove('hidden');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(12px)';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 30);
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
+  if (skillSearchInput) {
+    skillSearchInput.addEventListener('input', (e) => {
+      const query = e.target.value.trim().toLowerCase();
+      const allPills = document.querySelectorAll('.skill-pill');
+
+      if (!query) {
+        allPills.forEach(p => p.classList.remove('highlight'));
+        skillCategoryCards.forEach(c => c.classList.remove('hidden'));
+        return;
+      }
+
+      skillCategoryCards.forEach(card => {
+        const pillsInCard = card.querySelectorAll('.skill-pill');
+        let cardHasMatch = false;
+
+        pillsInCard.forEach(pill => {
+          const text = pill.textContent.toLowerCase();
+          if (text.includes(query)) {
+            pill.classList.add('highlight');
+            cardHasMatch = true;
+          } else {
+            pill.classList.remove('highlight');
+          }
+        });
+
+        if (cardHasMatch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  }
+
+  // ---------- 12. Dynamic Co-Curricular & Awards Tab Filtering ----------
+  const actFilterBtns = document.querySelectorAll('.act-filter-btn');
+  const actItems = document.querySelectorAll('.activity-item');
+  const awardBoxes = document.querySelectorAll('.award-box');
+  const actColumnCard = document.getElementById('activitiesColumnCard');
+  const awardColumnCard = document.getElementById('awardsColumnCard');
+  const actGrid = document.getElementById('activitiesAwardsGrid');
+
+  if (actFilterBtns.length > 0) {
+    actFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        actFilterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        const filter = btn.getAttribute('data-act-filter');
+
+        let visibleActs = 0;
+        let visibleAwards = 0;
+
+        // Filter activity items
+        actItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            item.classList.remove('hidden');
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(12px)';
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, 30);
+            visibleActs++;
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+
+        // Filter award boxes
+        awardBoxes.forEach(box => {
+          const category = box.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            box.classList.remove('hidden');
+            box.style.opacity = '0';
+            box.style.transform = 'translateY(12px)';
+            setTimeout(() => {
+              box.style.opacity = '1';
+              box.style.transform = 'translateY(0)';
+            }, 30);
+            visibleAwards++;
+          } else {
+            box.classList.add('hidden');
+          }
+        });
+
+        // Smart column card layout handling
+        if (actColumnCard && awardColumnCard && actGrid) {
+          if (visibleActs === 0 && visibleAwards > 0) {
+            actColumnCard.classList.add('hidden');
+            awardColumnCard.classList.remove('hidden');
+            actGrid.classList.add('collapsed-activities');
+            actGrid.classList.remove('collapsed-awards');
+          } else if (visibleAwards === 0 && visibleActs > 0) {
+            awardColumnCard.classList.add('hidden');
+            actColumnCard.classList.remove('hidden');
+            actGrid.classList.add('collapsed-awards');
+            actGrid.classList.remove('collapsed-activities');
+          } else {
+            actColumnCard.classList.remove('hidden');
+            awardColumnCard.classList.remove('hidden');
+            actGrid.classList.remove('collapsed-awards');
+            actGrid.classList.remove('collapsed-activities');
+          }
+        }
+      });
+    });
+  }
+
 });

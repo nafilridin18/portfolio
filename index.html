@@ -12,6 +12,100 @@
 </head>
 <body>
 
+  <!-- Tech Logos SVG Sprite Definition -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
+    <symbol id="logo-c" viewBox="0 0 128 128">
+      <path fill="#659AD2" d="M115.4 31.6L66.7 3.5c-1.7-1-3.7-1-5.4 0L12.6 31.6c-1.7 1-2.7 2.7-2.7 4.7v56.3c0 2 1 3.7 2.7 4.7l48.7 28.1c1.7 1 3.7 1 5.4 0l48.7-28.1c1.7-1 2.7-2.7 2.7-4.7V36.3c0-2-1-3.7-2.7-4.7z"/>
+      <path fill="#004482" d="M64 122c-1 0-1.9-.3-2.7-.7L12.6 93.2c-1.7-1-2.7-2.7-2.7-4.7V36.3c0-2 1-3.7 2.7-4.7L61.3 3.5c1.7-1 3.7-1 5.4 0l48.7 28.1c1.7 1 2.7 2.7 2.7 4.7v52.2c0 1.9-1 3.7-2.7 4.7l-48.7 28.1c-.8.5-1.7.7-2.7.7z"/>
+      <path fill="#FFFFFF" d="M64 26.2c-20.9 0-37.8 17-37.8 37.8s17 37.8 37.8 37.8c14.6 0 27.2-8.3 33.5-20.4l-14.8-8.5c-3.6 7.6-11.4 12.8-20.4 12.8-12.7 0-23-10.3-23-23s10.3-23 23-23c8.9 0 16.7 5.2 20.4 12.8l14.8-8.5C91.2 34.5 78.6 26.2 64 26.2z"/>
+    </symbol>
+    <symbol id="logo-cpp" viewBox="0 0 128 128">
+      <path fill="#00599C" d="M115.4 31.6L66.7 3.5c-1.7-1-3.7-1-5.4 0L12.6 31.6c-1.7 1-2.7 2.7-2.7 4.7v56.3c0 2 1 3.7 2.7 4.7l48.7 28.1c1.7 1 3.7 1 5.4 0l48.7-28.1c1.7-1 2.7-2.7 2.7-4.7V36.3c0-2-1-3.7-2.7-4.7z"/>
+      <path fill="#004482" d="M64 122c-1 0-1.9-.3-2.7-.7L12.6 93.2c-1.7-1-2.7-2.7-2.7-4.7V36.3c0-2 1-3.7 2.7-4.7L61.3 3.5c1.7-1 3.7-1 5.4 0l48.7 28.1c1.7 1 2.7 2.7 2.7 4.7v52.2c0 1.9-1 3.7-2.7 4.7l-48.7 28.1c-.8.5-1.7.7-2.7.7z"/>
+      <path fill="#FFFFFF" d="M62 26.2c-20.9 0-37.8 17-37.8 37.8s17 37.8 37.8 37.8c14.6 0 27.2-8.3 33.5-20.4l-14.8-8.5c-3.6 7.6-11.4 12.8-20.4 12.8-12.7 0-23-10.3-23-23s10.3-23 23-23c8.9 0 16.7 5.2 20.4 12.8l14.8-8.5C89.2 34.5 76.6 26.2 62 26.2z"/>
+      <path fill="#00599C" d="M84 57h5v-5h4v5h5v4h-5v5h-4v-5h-5v-4zm18 0h5v-5h4v5h5v4h-5v5h-4v-5h-5v-4z"/>
+    </symbol>
+    <symbol id="logo-python" viewBox="0 0 128 128">
+      <path fill="#3776AB" d="M63.6 1.8c-15.6 0-25 6.8-25 15.8v11.6h25.4v3.6H26.3C11.5 32.8 0 42.6 0 59.8c0 16.5 10 26.2 24.8 26.2h8.3v-12.4c0-8.9 7.8-16.7 16.7-16.7h25.3c7.2 0 13.1-6 13.1-13.1V17.6c0-9-9.5-15.8-24.6-15.8zm-13.8 9.5c2.7 0 4.9 2.2 4.9 4.9 0 2.7-2.2 4.9-4.9 4.9s-4.9-2.2-4.9-4.9c0-2.7 2.2-4.9 4.9-4.9z"/>
+      <path fill="#FFD43B" d="M64.4 126.2c15.6 0 25-6.8 25-15.8V98.8H64v-3.6h37.7c14.8 0 26.3-9.8 26.3-27 0-16.5-10-26.2-24.8-26.2h-8.3v12.4c0 8.9-7.8 16.7-16.7 16.7H52.9c-7.2 0-13.1 6-13.1 13.1v16.2c0 9 9.5 15.8 24.6 15.8zm13.8-9.5c-2.7 0-4.9-2.2-4.9-4.9 0-2.7 2.2-4.9 4.9-4.9s4.9 2.2 4.9 4.9c0 2.7-2.2 4.9-4.9 4.9z"/>
+    </symbol>
+    <symbol id="logo-java" viewBox="0 0 128 128">
+      <path fill="#EA2D2E" d="M47.7 89.2c-15.5 1.1-27.1-1.2-27.1-1.2s8.5 4.8 23.3 5.4c17.5.8 30.6-2.4 30.6-2.4s-11.2-3-26.8-1.8zM45.5 75.8c-20.2 1.4-35.4-1.5-35.4-1.5s11.1 6.2 30.5 7c22.9 1 40-3.1 40-3.1s-14.7-3.9-35.1-2.4zm4.1 27c-12 1-20.9-.9-20.9-.9s6.6 3.7 18 4.2c13.6.6 23.7-1.8 23.7-1.8s-8.7-2.3-20.8-1.5zm19.6-43.2c4.4 5.3-3.3 10.1-3.3 10.1s11.1-5.7 6-13.5c-5.7-8.7-10.2-13.1 13.8-27.6 0 0-24.9 6.3-16.5 31zm24.1 23.7s5 4-4.5 7.1c-11.5 3.8-24.1 3.9-38 1.9-5-1.5 5.5-3.3 9.4-4.2 16.4-3.8 28.5-4.8 33.1-4.8zm-11.7-14.7s14.8 3.5 7.8 11.2c-8.2 6.8-17.6 7.4-28.7 7.7-16.1.4-30.8-2.6-30.8-2.6s8.6 2.3 22.3 2.9c16.3.7 34.3-1.6 44.2-9.6 10-8.1-14.8-9.6-14.8-9.6z"/>
+      <path fill="#5382A1" d="M78.6 98.4c15.2-12.4 7.9-24.3 7.9-24.3s-2.1 4.5-9.6 8.5c-9 4.7-13 8.3-2.1 14.5 1.5.8 2.7 1.1 3.8 1.3zm-32.9 24.1c16.6 1.1 42.1-1.1 53.7-15.3 0 0-3.9 3.8-15.6 6.8-13.9 3.5-27.9 3.6-42.5 1.6-4.6-.6 4.4 6.9 4.4 6.9z"/>
+    </symbol>
+    <symbol id="logo-javascript" viewBox="0 0 128 128">
+      <path fill="#F7DF1E" d="M0 0h128v128H0z"/>
+      <path fill="#000000" d="M67.3 101.4c3.4 5.6 7.9 9.7 16 9.7 7.5 0 12.3-3.7 12.3-8.8 0-6.1-4.9-8.3-13.1-11.9l-4.5-1.9c-13-5.6-21.6-12.6-21.6-27.3 0-13.6 10.3-23.9 26.5-23.9 11.5 0 19.8 4 25.5 14.1l-11.5 7.4c-2.6-4.7-5.5-6.8-14-6.8-5.6 0-9.8 3.5-9.8 8 0 5.5 3.9 7.7 11.6 11l4.5 1.9c15.2 6.5 23.5 13.3 23.5 28.5 0 16.3-12.8 25.2-28.5 25.2-16 0-26.2-7.8-31-18.4l14.1-8.7zm-40.4 1.1c2.4 4.2 4.7 7.8 10.4 7.8 5.4 0 8.9-2.1 8.9-10.4V38.6h15.8v61.4c0 16.8-9.8 24.4-24.1 24.4-12.9 0-20.5-6.7-24.3-14.8l13.3-7.1z"/>
+    </symbol>
+    <symbol id="logo-php" viewBox="0 0 128 128">
+      <ellipse cx="64" cy="64" rx="60" ry="34" fill="#777BB4"/>
+      <path fill="#232531" d="M38.8 53.6h-7.6l-5.6 20.8h6.8l1.7-6.4h4.7c6.1 0 10.5-3.3 11.6-7.5 1.1-4.1-1.7-6.9-11.6-6.9zm-4.3 9.4l1.4-5.3h3.5c3.5 0 4.9 1 4.4 2.8-.5 1.8-2.6 2.5-5.3 2.5h-4zm36.8-9.4H65l-1.9 7.2h-7.4l1.9-7.2h-6.3l-5.6 20.8h6.3l2.2-8.3h7.4l-2.2 8.3h6.3l5.6-20.8zm23.9 0h-7.6L82 74.4h6.8l1.7-6.4h4.7c6.1 0 10.5-3.3 11.6-7.5 1.1-4.1-1.7-6.9-11.6-6.9zm-4.3 9.4l1.4-5.3h3.5c3.5 0 4.9 1 4.4 2.8-.5 1.8-2.6 2.5-5.3 2.5h-4z"/>
+    </symbol>
+    <symbol id="logo-html5" viewBox="0 0 128 128">
+      <path fill="#E34F26" d="M19.2 117.8L7.6 8h112.8L108.8 117.8 64 130.2 19.2 117.8z"/>
+      <path fill="#EF652A" d="M64 119.8l35.8-9.9 9.3-91.1H64v101z"/>
+      <path fill="#ECECEC" d="M64 53.8H46.4l-1.3-14.7H64V24.5H29.4l3.8 43.8H64V53.8zm0 37.8l-.2.1-16.1-4.3-1-11.6H32.1l2 22.8 29.8 8.3.1-.2V91.6z"/>
+      <path fill="#FFFFFF" d="M64 53.8h17.6l-1.6 18.5-16 4.3v15l29.8-8.3.4-4.8 3.5-39.7.9-10.4.9-9.9H64v14.6h17.6"/>
+    </symbol>
+    <symbol id="logo-css3" viewBox="0 0 128 128">
+      <path fill="#1572B6" d="M19.2 117.8L7.6 8h112.8L108.8 117.8 64 130.2 19.2 117.8z"/>
+      <path fill="#33A9DC" d="M64 119.8l35.8-9.9 9.3-91.1H64v101z"/>
+      <path fill="#ECECEC" d="M64 53.8H48.4l-1.3-14.7H64V24.5H31.4l1.3 14.6 2.5 29.2H64V53.8zm0 37.8l-.2.1-16.1-4.3-1-11.6H32.1l2 22.8 29.8 8.3.1-.2V91.6z"/>
+      <path fill="#FFFFFF" d="M64 53.8h17.6l-1.6 18.5-16 4.3v15l29.8-8.3.4-4.8 3.5-39.7.9-10.4.9-9.9H64v14.6h33.8l-1.3 14.6H64v14.7z"/>
+    </symbol>
+    <symbol id="logo-mysql" viewBox="0 0 128 128">
+      <path fill="#00758F" d="M96.3 54.3c-1.3-.9-2.8-1.5-4.4-1.8 1.9-5.1 2.3-10.7 1.1-16.1-2.2-9.7-9.5-17.7-19.1-20.9-1.9-.6-3.8-1-5.8-1.1.4.9.7 1.9.9 2.9 1 5.3-.3 10.7-3.4 15-2.9 4-7.4 6.8-12.4 7.6-6.1 1-12.2-.9-16.7-4.9-3.2-2.9-5.3-6.8-6-11-.5.7-1 1.4-1.3 2.2-3.1 7.2-2.7 15.4 1 22.3 2.1 3.9 5.2 7.2 9.1 9.4-4.6 1.4-9.6 1.3-14.2-.3-2.9-1-5.5-2.6-7.8-4.6-.2.8-.4 1.7-.4 2.5 0 6.6 3.6 12.8 9.3 16 3.9 2.2 8.5 3.3 13.1 3.2 8.7-.1 17.1-4.2 22.7-10.9 2.4-2.8 4.2-6.1 5.4-9.6 2.2 1.9 4.8 3.3 7.6 4.1 5.5 1.6 11.5.9 16.5-1.9 3.2-1.8 5.7-4.5 7.3-7.7.7-1.4 1.2-2.9 1.6-4.4z"/>
+      <path fill="#F29111" d="M106.8 68.4c-4.2-2.4-9.1-3.4-13.9-3-2.8.2-5.5.9-8.1 2 2.2 2.5 4.9 4.6 8 5.9 4.3 1.8 9.1 2.2 13.7 1.2.7-.2 1.5-.4 2.2-.7-1.1-1.8-2.6-3.4-4.4-4.7z"/>
+    </symbol>
+    <symbol id="logo-git" viewBox="0 0 128 128">
+      <path fill="#F05032" d="M125.7 57.3L70.7 2.3c-3-3-8-3-11 0L47.4 14.6l15 15c3.2-1.1 6.9-.3 9.4 2.2 2.5 2.5 3.3 6.2 2.2 9.4l14.4 14.4c3.2-1.1 6.9-.3 9.4 2.2 3.6 3.6 3.6 9.4 0 13s-9.4 3.6-13 0c-2.5-2.5-3.3-6.2-2.2-9.4L69.1 46.9v36.6c1.1.5 2.1 1.3 2.9 2.2 3.6 3.6 3.6 9.4 0 13s-9.4 3.6-13 0c-3.6-3.6-3.6-9.4 0-13 .8-.8 1.7-1.5 2.8-2V46.5c-1.1-.5-2.1-1.3-2.9-2.2-2.5-2.5-3.3-6.2-2.2-9.4L41.9 20.1 2.3 59.7c-3 3-3 8 0 11l55 55c3 3 8 3 11 0l57.4-57.4c3-3 3-8 0-11z"/>
+    </symbol>
+    <symbol id="logo-github" viewBox="0 0 128 128">
+      <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M64 5.3C29.8 5.3 2 33 2 67.3c0 27.4 17.8 50.7 42.4 58.9 3.1.6 4.2-1.3 4.2-3 0-1.5-.1-6.4-.1-11.7-17.3 3.8-20.9-7.3-20.9-7.3-2.8-7.2-6.9-9.1-6.9-9.1-5.6-3.9.4-3.8.4-3.8 6.3.4 9.5 6.4 9.5 6.4 5.5 9.5 14.5 6.8 18.1 5.2.6-4 2.2-6.8 3.9-8.3-13.8-1.6-28.3-6.9-28.3-30.6 0-6.8 2.4-12.3 6.4-16.6-.6-1.6-2.8-7.9.6-16.4 0 0 5.2-1.7 17 6.3 4.9-1.4 10.2-2.1 15.5-2.1s10.6.7 15.5 2.1c11.8-8 17-6.3 17-6.3 3.4 8.5 1.2 14.8.6 16.4 4 4.3 6.4 9.8 6.4 16.6 0 23.8-14.5 29-28.4 30.6 2.2 1.9 4.2 5.7 4.2 11.5 0 8.3-.1 15-.1 17.1 0 1.7 1.1 3.7 4.3 3 24.6-8.2 42.3-31.5 42.3-58.9C126 33 98.2 5.3 64 5.3z"/>
+    </symbol>
+    <symbol id="logo-vscode" viewBox="0 0 128 128">
+      <path fill="#0065A9" d="M92.7 125.7l27.9-13.6c4.6-2.2 7.4-6.9 7.4-12V27.9c0-5.1-2.9-9.7-7.4-12L92.7 2.3c-3.7-1.8-8.1-1.4-11.4 1.1L35.7 41.5 16.2 26.6c-3.1-2.4-7.4-2.5-10.6-.2-3.2 2.2-4.8 6.1-4 9.9l12.7 61.4c.8 3.8 3.5 6.9 7.1 8.1 3.6 1.2 7.6.4 10.4-2.1l13.9-12.2 45.6 38.1c3.3 2.5 7.7 2.9 11.4 1.1z"/>
+      <path fill="#007ACC" d="M92.7 2.3c3.7-1.8 8.1-1.4 11.4 1.1l21.2 17.7-34.9 32.8L61.7 27.2l31-24.9z"/>
+      <path fill="#1F9CF0" d="M125.3 106.9l-34.9-32.8 28.7-26.7 8.7 7.2v46.9c0 2.4-1 4.5-2.5 5.4z"/>
+    </symbol>
+    <symbol id="logo-streamlit" viewBox="0 0 128 128">
+      <path fill="#FF4B4B" d="M84.5 35.7L64 74.8l-15.6-25L32.8 77.2h77.8l-26.1-41.5zM64 9.4L18.7 89.2h90.6L64 9.4z"/>
+    </symbol>
+    <symbol id="logo-circuit" viewBox="0 0 128 128">
+      <rect x="28" y="28" width="72" height="72" rx="14" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="6"/>
+      <rect x="44" y="44" width="40" height="40" rx="8" fill="currentColor"/>
+      <line x1="10" y1="48" x2="28" y2="48" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="10" y1="64" x2="28" y2="64" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="10" y1="80" x2="28" y2="80" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="100" y1="48" x2="118" y2="48" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="100" y1="64" x2="118" y2="64" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="100" y1="80" x2="118" y2="80" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="48" y1="10" x2="48" y2="28" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="80" y1="10" x2="80" y2="28" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="48" y1="100" x2="48" y2="118" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <line x1="80" y1="100" x2="80" y2="118" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="logo-compiler" viewBox="0 0 128 128">
+      <path fill="#e07a5f" d="M64 12L16 40v48l48 28 48-28V40L64 12zm0 16.5l33.8 19.7L64 68 30.2 48.2 64 28.5zM26 53.6l33 19.3v39.4L26 93V53.6zm43 58.7V72.9l33-19.3V93l-33 19.3z"/>
+      <circle cx="64" cy="68" r="8" fill="#ffd5c2"/>
+    </symbol>
+    <symbol id="logo-linux" viewBox="0 0 128 128">
+      <path fill="#FCC624" d="M64 12c-15.5 0-24 13.5-24 28.5 0 7.8 1.8 16.5 4.5 23.5-6.5 4.2-12.5 12.5-12.5 22 0 14.8 11.2 24 24 24h16c12.8 0 24-9.2 24-24 0-9.5-6-17.8-12.5-22 2.7-7 4.5-15.7 4.5-23.5C88 25.5 79.5 12 64 12z"/>
+      <circle cx="54" cy="36" r="4" fill="#000"/>
+      <circle cx="74" cy="36" r="4" fill="#000"/>
+      <path fill="#E69138" d="M64 42c-5 0-8 3-8 5 0 3 3 5 8 5s8-2 8-5c0-2-3-5-8-5z"/>
+    </symbol>
+    <symbol id="logo-database" viewBox="0 0 128 128">
+      <ellipse cx="64" cy="28" rx="46" ry="16" fill="#33A9DC"/>
+      <path fill="#1572B6" d="M18 28v28c0 8.8 20.6 16 46 16s46-7.2 46-16V28H18z"/>
+      <ellipse cx="64" cy="56" rx="46" ry="14" fill="#33A9DC"/>
+      <path fill="#00599C" d="M18 56v28c0 8.8 20.6 16 46 16s46-7.2 46-16V56H18z"/>
+      <ellipse cx="64" cy="84" rx="46" ry="14" fill="#33A9DC"/>
+      <path fill="#004482" d="M18 84v24c0 8.8 20.6 16 46 16s46-7.2 46-16V84H18z"/>
+      <ellipse cx="64" cy="108" rx="46" ry="14" fill="#659AD2"/>
+    </symbol>
+  </svg>
+
   <!-- Ambient Glow Blobs -->
   <div class="glow-bg glow-peach" aria-hidden="true"></div>
   <div class="glow-bg glow-brown" aria-hidden="true"></div>
@@ -92,7 +186,7 @@
         </div>
 
         <p class="hero-desc">
-          Third-year Computer Science &amp; Engineering student at <strong>Daffodil International University</strong> (ID: 242-15-705) maintaining an average <strong>3.735 CGPA</strong>. Senior Content Writer &amp; HR Manager at <strong>StratifyX.Global</strong>, Executive Member at <strong>DIU CPC</strong>, and passionate builder of robust web apps, compiler suites, and electronics systems.
+          Third-year Computer Science &amp; Engineering student at <strong>Daffodil International University</strong> (ID: 242-15-705) maintaining an average <strong>3.735 CGPA</strong>. Senior Content Writer &amp; HR Manager at <strong><a href="https://stratifyxglobal.com/" target="_blank" rel="noopener" class="link-hover">StratifyX.Global</a></strong>, Executive Member at <strong>DIU CPC</strong>, and passionate builder of robust web apps, compiler suites, and electronics systems.
         </p>
 
         <div class="hero-buttons">
@@ -128,11 +222,14 @@
 
       <!-- Hero Visuals -->
       <div class="hero-visual">
-        <div class="avatar-card-wrapper">
+        <div class="avatar-card-wrapper" id="avatarCardWrapper">
           <div class="avatar-glow"></div>
-          <div class="avatar-frame">
-            <img src="assets/images/profile.jpg" alt="Portrait of Nafil Ardul Ridin" class="avatar-img">
-            <div class="avatar-glass-overlay"></div>
+          <!-- Spreading Outer Dim Light Aura & Beam (Radiates Outwards from Edge) -->
+          <div class="avatar-outer-beam" id="avatarOuterBeam" aria-hidden="true"></div>
+          <div class="avatar-outer-glow-spread" id="avatarOuterSpread" aria-hidden="true"></div>
+
+          <div class="avatar-frame" id="avatarFrame">
+            <img src="assets/images/profile.jpg" alt="Portrait of Nafil Ardul Ridin" class="avatar-img" id="avatarImg">
           </div>
 
           <!-- Floating Stat Cards -->
@@ -190,6 +287,152 @@
       </div>
     </section>
 
+    <!-- Dynamic Infinite Tech Stack Marquee Ribbon -->
+    <section class="tech-marquee-wrapper" aria-label="Interactive Tech Stack Showcase">
+      <div class="marquee-label-badge">
+        <span class="marquee-live-pulse"></span>
+        <span>Technologies &amp; Engineering Arsenal</span>
+      </div>
+      <div class="marquee-track-container">
+        <div class="marquee-track">
+          <!-- Marquee Track Group 1 -->
+          <div class="marquee-group">
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-c"></use></svg>
+              <span>C Language</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-cpp"></use></svg>
+              <span>C++</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-python"></use></svg>
+              <span>Python</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-java"></use></svg>
+              <span>Java</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-javascript"></use></svg>
+              <span>JavaScript (ES6+)</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-php"></use></svg>
+              <span>PHP</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-html5"></use></svg>
+              <span>HTML5</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-css3"></use></svg>
+              <span>CSS3</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-mysql"></use></svg>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-git"></use></svg>
+              <span>Git</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-github"></use></svg>
+              <span>GitHub</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-vscode"></use></svg>
+              <span>VS Code</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-streamlit"></use></svg>
+              <span>Streamlit</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-compiler"></use></svg>
+              <span>Flex &amp; Bison</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-circuit"></use></svg>
+              <span>Digital Logic</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-linux"></use></svg>
+              <span>Linux</span>
+            </div>
+          </div>
+          <!-- Marquee Track Group 2 (Duplicate for infinite seamless loop) -->
+          <div class="marquee-group" aria-hidden="true">
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-c"></use></svg>
+              <span>C Language</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-cpp"></use></svg>
+              <span>C++</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-python"></use></svg>
+              <span>Python</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-java"></use></svg>
+              <span>Java</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-javascript"></use></svg>
+              <span>JavaScript (ES6+)</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-php"></use></svg>
+              <span>PHP</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-html5"></use></svg>
+              <span>HTML5</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-css3"></use></svg>
+              <span>CSS3</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-mysql"></use></svg>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-git"></use></svg>
+              <span>Git</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-github"></use></svg>
+              <span>GitHub</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-vscode"></use></svg>
+              <span>VS Code</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-streamlit"></use></svg>
+              <span>Streamlit</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-compiler"></use></svg>
+              <span>Flex &amp; Bison</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-circuit"></use></svg>
+              <span>Digital Logic</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-linux"></use></svg>
+              <span>Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="section">
       <div class="section-header">
@@ -203,7 +446,7 @@
             I am a third-year Computer Science and Engineering student at <strong>Daffodil International University</strong> with an average CGPA of <strong>3.735</strong>. My foundational education began at <strong>Birshrestha Noor Mohammed Public College</strong>, where I secured <strong>Golden GPA-5 in both SSC and HSC</strong>.
           </p>
           <p>
-            Beyond coursework, I bridge software and leadership: serving as <strong>Senior Content Writer &amp; HR Manager</strong> at StratifyX.Global, where I lead communications and talent management; and as an active <strong>Executive Member</strong> of the Competitive Programming Club (CPC), orchestrating massive collegiate coding contests.
+            Beyond coursework, I bridge software and leadership: serving as <strong>Senior Content Writer &amp; HR Manager</strong> at <strong><a href="https://stratifyxglobal.com/" target="_blank" rel="noopener" class="link-hover">StratifyX.Global</a></strong>, where I lead communications and talent management; and as an active <strong>Executive Member</strong> of the Competitive Programming Club (CPC), orchestrating massive collegiate coding contests.
           </p>
           <p>
             From low-level parser theory with Flex &amp; Bison and Levenshtein algorithm integrations to full-stack e-commerce platforms and breadboard sequential logic circuits, I love tackling challenging technical domains end-to-end.
@@ -310,9 +553,24 @@
         <p class="section-subtext">A blend of computer science foundations, modern web engineering, hardware design, and leadership.</p>
       </div>
 
-      <div class="skills-wrapper">
+      <!-- Interactive Skill Filter Tabs & Search Bar -->
+      <div class="skills-controls">
+        <div class="skill-filters" id="skillFilters" role="tablist">
+          <button class="skill-filter-btn active" data-skill-filter="all" role="tab" aria-selected="true">All Domains (37)</button>
+          <button class="skill-filter-btn" data-skill-filter="programming" role="tab" aria-selected="false">Programming &amp; Web</button>
+          <button class="skill-filter-btn" data-skill-filter="cs" role="tab" aria-selected="false">CS Foundations</button>
+          <button class="skill-filter-btn" data-skill-filter="hardware" role="tab" aria-selected="false">Electronics &amp; Hardware</button>
+          <button class="skill-filter-btn" data-skill-filter="tools" role="tab" aria-selected="false">Tools &amp; Leadership</button>
+        </div>
+        <div class="skills-search-wrapper">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="skillSearchInput" class="skill-search-input" placeholder="Search skills, e.g. Python, MySQL, Flex..." aria-label="Search skills">
+        </div>
+      </div>
+
+      <div class="skills-wrapper" id="skillsWrapper">
         <!-- Programming & Web -->
-        <div class="skill-category-card">
+        <div class="skill-category-card blur-reveal" data-skill-category="programming">
           <div class="category-header">
             <div class="category-icon">💻</div>
             <div>
@@ -321,22 +579,22 @@
             </div>
           </div>
           <div class="pill-group">
-            <span class="skill-pill">C</span>
-            <span class="skill-pill">C++</span>
-            <span class="skill-pill">Java</span>
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">PHP</span>
-            <span class="skill-pill">JavaScript (ES6+)</span>
-            <span class="skill-pill">HTML5 &amp; CSS3</span>
-            <span class="skill-pill">Full-Stack Architecture</span>
-            <span class="skill-pill">Streamlit</span>
-            <span class="skill-pill">JavaFX</span>
-            <span class="skill-pill">UI/UX Design</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-c"></use></svg> C</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-cpp"></use></svg> C++</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-java"></use></svg> Java</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-python"></use></svg> Python</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-php"></use></svg> PHP</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-javascript"></use></svg> JavaScript (ES6+)</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-html5"></use></svg> HTML5 &amp; CSS3</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-database"></use></svg> Full-Stack Architecture</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-streamlit"></use></svg> Streamlit</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-java"></use></svg> JavaFX</span>
+            <span class="skill-pill">🎨 UI/UX Design</span>
           </div>
         </div>
 
         <!-- Technical Knowledge -->
-        <div class="skill-category-card">
+        <div class="skill-category-card blur-reveal" data-skill-category="cs">
           <div class="category-header">
             <div class="category-icon">🧠</div>
             <div>
@@ -345,19 +603,19 @@
             </div>
           </div>
           <div class="pill-group">
-            <span class="skill-pill">Data Structures</span>
-            <span class="skill-pill">Algorithms</span>
-            <span class="skill-pill">Object-Oriented Programming (OOP)</span>
-            <span class="skill-pill">Relational Databases</span>
-            <span class="skill-pill">MySQL &amp; ACID Transactions</span>
-            <span class="skill-pill">Compiler Theory (Flex &amp; Bison)</span>
-            <span class="skill-pill">Fuzzy String Matching (Levenshtein)</span>
-            <span class="skill-pill">Least Squares Regression</span>
+            <span class="skill-pill">📊 Data Structures</span>
+            <span class="skill-pill">⚡ Algorithms</span>
+            <span class="skill-pill">🧱 Object-Oriented Programming (OOP)</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-database"></use></svg> Relational Databases</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-mysql"></use></svg> MySQL &amp; ACID Transactions</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-compiler"></use></svg> Compiler Theory (Flex &amp; Bison)</span>
+            <span class="skill-pill">🔍 Fuzzy String Matching (Levenshtein)</span>
+            <span class="skill-pill">📈 Least Squares Regression</span>
           </div>
         </div>
 
         <!-- Electronics & Hardware -->
-        <div class="skill-category-card">
+        <div class="skill-category-card blur-reveal" data-skill-category="hardware">
           <div class="category-header">
             <div class="category-icon">⚡</div>
             <div>
@@ -366,19 +624,19 @@
             </div>
           </div>
           <div class="pill-group">
-            <span class="skill-pill">Circuit Design</span>
-            <span class="skill-pill">Digital Logic Gates</span>
-            <span class="skill-pill">Sequential Circuits</span>
-            <span class="skill-pill">PCB Design</span>
-            <span class="skill-pill">Sensor Integration</span>
-            <span class="skill-pill">Breadboard Prototyping</span>
-            <span class="skill-pill">Electronic Components (Diode, Zener, Transistor, Capacitor, LED)</span>
-            <span class="skill-pill">Microcontroller Fundamentals</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-circuit"></use></svg> Circuit Design</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-circuit"></use></svg> Digital Logic Gates</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-circuit"></use></svg> Sequential Circuits</span>
+            <span class="skill-pill">📐 PCB Design</span>
+            <span class="skill-pill">📡 Sensor Integration</span>
+            <span class="skill-pill">🔌 Breadboard Prototyping</span>
+            <span class="skill-pill">💡 Electronic Components (Diode, Zener, Transistor, Capacitor, LED)</span>
+            <span class="skill-pill">🕹️ Microcontroller Fundamentals</span>
           </div>
         </div>
 
         <!-- Tools & Soft Skills -->
-        <div class="skill-category-card">
+        <div class="skill-category-card blur-reveal" data-skill-category="tools">
           <div class="category-header">
             <div class="category-icon">🛠️</div>
             <div>
@@ -387,15 +645,17 @@
             </div>
           </div>
           <div class="pill-group">
-            <span class="skill-pill">VS Code</span>
-            <span class="skill-pill">Git &amp; GitHub</span>
-            <span class="skill-pill">Plotly &amp; pywebview</span>
-            <span class="skill-pill">Human Resources (HR) Basics</span>
-            <span class="skill-pill">Team Leadership</span>
-            <span class="skill-pill">Public Communication</span>
-            <span class="skill-pill">Problem Solving</span>
-            <span class="skill-pill">MS Office Suite</span>
-            <span class="skill-pill">Adobe Tools</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-vscode"></use></svg> VS Code</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-git"></use></svg> Git</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-github"></use></svg> GitHub</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-linux"></use></svg> Linux Shell</span>
+            <span class="skill-pill">📈 Plotly &amp; pywebview</span>
+            <span class="skill-pill">👔 Human Resources (HR) Basics</span>
+            <span class="skill-pill">👥 Team Leadership</span>
+            <span class="skill-pill">🎙️ Public Communication</span>
+            <span class="skill-pill">🧩 Problem Solving</span>
+            <span class="skill-pill">📄 MS Office Suite</span>
+            <span class="skill-pill">✨ Adobe Tools</span>
           </div>
         </div>
       </div>
@@ -472,7 +732,7 @@
         <article class="project-card" data-category="web">
           <div class="project-badge">Retail Platform • 2026</div>
           <div class="project-main">
-            <div class="project-org">StratifyX.Global</div>
+            <div class="project-org"><a href="https://stratifyxglobal.com/" target="_blank" rel="noopener" class="link-hover">StratifyX.Global ↗</a></div>
             <h3 class="project-title">Shuvrota E-Commerce Platform</h3>
             <p class="project-description">
               Comprehensive online retail system featuring secure authentication, shopping cart persistence, and ACID-compliant transactional inventory handling to prevent overselling under high concurrency. Engineered AJAX live search and multi-layered category filtering for rapid product discovery.
@@ -684,7 +944,7 @@
             <div class="timeline-top">
               <div>
                 <h3 class="timeline-role">Senior Content Writer &amp; HR Manager</h3>
-                <div class="timeline-company">StratifyX.Global</div>
+                <div class="timeline-company"><a href="https://stratifyxglobal.com/" target="_blank" rel="noopener" class="link-hover">StratifyX.Global ↗</a></div>
               </div>
               <span class="timeline-date-badge">Ongoing</span>
             </div>
@@ -813,93 +1073,164 @@
     </section>
 
     <!-- Co-Curricular & Awards Section -->
-    <section class="section">
+    <!-- Co-Curricular & Awards Section -->
+    <section id="co-curricular" class="section">
       <div class="section-header">
         <span class="section-tag">Leadership &amp; Accolades</span>
         <h2 class="section-heading">Co-Curricular &amp; Awards</h2>
       </div>
 
-      <div class="activities-awards-grid">
+      <!-- Dynamic Co-Curricular Filter Tabs -->
+      <div class="activity-filters" role="tablist" aria-label="Filter Co-Curricular Activities &amp; Awards">
+        <button class="act-filter-btn active" data-act-filter="all" role="tab" aria-selected="true">
+          <span class="tab-icon">🌟</span>
+          <span>All Accolades</span>
+          <span class="filter-count">7</span>
+        </button>
+        <button class="act-filter-btn" data-act-filter="leadership" role="tab" aria-selected="false">
+          <span class="tab-icon">🤝</span>
+          <span>Leadership &amp; Clubs</span>
+          <span class="filter-count">3</span>
+        </button>
+        <button class="act-filter-btn" data-act-filter="awards" role="tab" aria-selected="false">
+          <span class="tab-icon">🏆</span>
+          <span>Honors &amp; Awards</span>
+          <span class="filter-count">2</span>
+        </button>
+        <button class="act-filter-btn" data-act-filter="volunteering" role="tab" aria-selected="false">
+          <span class="tab-icon">⚡</span>
+          <span>Volunteering &amp; Logistics</span>
+          <span class="filter-count">2</span>
+        </button>
+      </div>
+
+      <div class="activities-awards-grid" id="activitiesAwardsGrid">
         <!-- Co-Curricular List -->
-        <div class="dual-column-card">
+        <div class="dual-column-card act-column-card" id="activitiesColumnCard">
           <h3 class="sub-header-title">
-            <span>🤝</span> Co-Curricular Activities &amp; Leadership
+            <span class="sub-title-icon">🤝</span> Co-Curricular Activities &amp; Leadership
           </h3>
           <div class="activity-items">
-            <div class="activity-item">
-              <div class="act-head">
-                <span class="act-title">Executive Member</span>
-                <span class="act-year">2026</span>
+            <div class="activity-item" data-category="leadership">
+              <div class="act-icon-wrap">
+                <span class="act-icon">🎯</span>
               </div>
-              <div class="act-org">Competitive Programming Club (CPC), Daffodil International University</div>
-              <p>Collaborated with executive panel to deliver programming contests &amp; workshops for 1,000+ members. Supervised on-ground operations and member engagement.</p>
+              <div class="act-body">
+                <div class="act-head">
+                  <div class="act-title-group">
+                    <span class="act-title">Executive Member</span>
+                    <span class="act-category-pill">Club Executive</span>
+                  </div>
+                  <span class="act-year">2026</span>
+                </div>
+                <div class="act-org">Competitive Programming Club (CPC), Daffodil International University</div>
+                <p>Collaborated with executive panel to deliver programming contests &amp; workshops for 1,000+ members. Supervised on-ground operations and member engagement.</p>
+              </div>
             </div>
 
-            <div class="activity-item">
-              <div class="act-head">
-                <span class="act-title">Volunteer Executive</span>
-                <span class="act-year">2026</span>
+            <div class="activity-item" data-category="volunteering">
+              <div class="act-icon-wrap">
+                <span class="act-icon">🚀</span>
               </div>
-              <div class="act-org">"Unlock The Algorithm" &amp; "Take Off" Programming Contests (CPC DIU)</div>
-              <p>Coordinated live competition management, participant support, and contest logistics under time-pressured environments.</p>
+              <div class="act-body">
+                <div class="act-head">
+                  <div class="act-title-group">
+                    <span class="act-title">Volunteer Executive</span>
+                    <span class="act-category-pill">Contest Operations</span>
+                  </div>
+                  <span class="act-year">2026</span>
+                </div>
+                <div class="act-org">"Unlock The Algorithm" &amp; "Take Off" Programming Contests (CPC DIU)</div>
+                <p>Coordinated live competition management, participant support, and contest logistics under time-pressured environments.</p>
+              </div>
             </div>
 
-            <div class="activity-item">
-              <div class="act-head">
-                <span class="act-title">Event Logistics Volunteer</span>
-                <span class="act-year">2025</span>
+            <div class="activity-item" data-category="volunteering">
+              <div class="act-icon-wrap">
+                <span class="act-icon">🎪</span>
               </div>
-              <div class="act-org">Job Utshob 2025, Daffodil International University</div>
-              <p>Managed guest logistics, participant transportation, and scheduling support with the university central management team.</p>
+              <div class="act-body">
+                <div class="act-head">
+                  <div class="act-title-group">
+                    <span class="act-title">Event Logistics Volunteer</span>
+                    <span class="act-category-pill">University Logistics</span>
+                  </div>
+                  <span class="act-year">2025</span>
+                </div>
+                <div class="act-org">Job Utshob 2025, Daffodil International University</div>
+                <p>Managed guest logistics, participant transportation, and scheduling support with the university central management team.</p>
+              </div>
             </div>
 
-            <div class="activity-item">
-              <div class="act-head">
-                <span class="act-title">General Member (Member ID: DS978)</span>
-                <span class="act-year">2023</span>
+            <div class="activity-item" data-category="leadership">
+              <div class="act-icon-wrap">
+                <span class="act-icon">📊</span>
               </div>
-              <div class="act-org">Data Science Club, DIU</div>
-              <p>Engaged in machine learning and data analysis workshops, hackathon discussions, and collaborative projects.</p>
+              <div class="act-body">
+                <div class="act-head">
+                  <div class="act-title-group">
+                    <span class="act-title">General Member (Member ID: DS978)</span>
+                    <span class="act-category-pill">Data &amp; AI</span>
+                  </div>
+                  <span class="act-year">2023</span>
+                </div>
+                <div class="act-org">Data Science Club, DIU</div>
+                <p>Engaged in machine learning and data analysis workshops, hackathon discussions, and collaborative projects.</p>
+              </div>
             </div>
 
-            <div class="activity-item">
-              <div class="act-head">
-                <span class="act-title">Executive Member</span>
-                <span class="act-year">2018 – 2023</span>
+            <div class="activity-item" data-category="leadership">
+              <div class="act-icon-wrap">
+                <span class="act-icon">🔬</span>
               </div>
-              <div class="act-org">Science Club, Birshrestha Noor Mohammed Public College (BNMPC)</div>
-              <p>Organized science events, assisted peers with science fair exhibits, and fostered collaborative problem solving.</p>
+              <div class="act-body">
+                <div class="act-head">
+                  <div class="act-title-group">
+                    <span class="act-title">Executive Member</span>
+                    <span class="act-category-pill">Academic Club</span>
+                  </div>
+                  <span class="act-year">2018 – 2023</span>
+                </div>
+                <div class="act-org">Science Club, Birshrestha Noor Mohammed Public College (BNMPC)</div>
+                <p>Organized science events, assisted peers with science fair exhibits, and fostered collaborative problem solving.</p>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Awards & Honors -->
-        <div class="dual-column-card">
+        <div class="dual-column-card award-column-card" id="awardsColumnCard">
           <h3 class="sub-header-title">
-            <span>🏆</span> Honors &amp; Awards
+            <span class="sub-title-icon">🏆</span> Honors &amp; Awards
           </h3>
           <div class="awards-stack">
-            <div class="award-box featured-award">
+            <div class="award-box featured-award" data-category="awards">
               <div class="award-badge-icon">🎖️</div>
-              <div>
-                <span class="award-year">2025</span>
+              <div class="award-body">
+                <div class="award-head-row">
+                  <span class="award-year">2025</span>
+                  <span class="award-rank-pill">Top 80 in Grand Finals</span>
+                </div>
                 <h4 class="award-title">Unlock The Algorithm (Finalist - 80th Position)</h4>
                 <div class="award-org">Daffodil International University</div>
                 <p>Selected among the top 200 finalists shortlisted from <strong>2,000+ competitors</strong> in the rigorous university-wide preliminary programming round, securing 80th rank in the grand finals.</p>
               </div>
             </div>
 
-            <div class="award-box">
+            <div class="award-box" data-category="awards">
               <div class="award-badge-icon">🥈</div>
-              <div>
-                <span class="award-year">2024</span>
+              <div class="award-body">
+                <div class="award-head-row">
+                  <span class="award-year">2024</span>
+                  <span class="award-rank-pill">Runner-Up 2nd</span>
+                </div>
                 <h4 class="award-title">Science Olympiad (2nd Position)</h4>
                 <div class="award-org">Saint Joseph Higher Secondary School</div>
                 <p>Secured Runner-Up 2nd Position in competitive inter-college science problem solving and scientific reasoning.</p>
               </div>
             </div>
 
-            <div class="drive-cta-box">
+            <div class="drive-cta-box" id="verifiedDocsBox">
               <h4>Official Verification Documents</h4>
               <p>All competition credentials, certificates, and academic records are organized in my verified Google Drive portfolio folder.</p>
               <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary full-width-btn">
