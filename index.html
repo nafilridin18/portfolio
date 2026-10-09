@@ -568,6 +568,39 @@
         </div>
       </div>
 
+      <!-- Mobile Skills Slideshow Navigation Bar (Active on phones & tablets) -->
+      <div class="skills-mobile-slider-nav" id="skillsMobileNav" aria-label="Skill Slideshow Controls">
+        <button class="skills-nav-arrow prev" id="skillsPrevBtn" aria-label="Previous Skill Category" title="Previous Category">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="skills-slider-dots" id="skillsSliderDots">
+          <button class="slider-dot active" data-index="0" aria-label="Category 1: Programming & Web">
+            <span class="dot-icon">💻</span>
+            <span class="dot-label">Dev</span>
+          </button>
+          <button class="slider-dot" data-index="1" aria-label="Category 2: CS Foundations">
+            <span class="dot-icon">🧠</span>
+            <span class="dot-label">CS</span>
+          </button>
+          <button class="slider-dot" data-index="2" aria-label="Category 3: Electronics & Hardware">
+            <span class="dot-icon">⚡</span>
+            <span class="dot-label">Hardware</span>
+          </button>
+          <button class="slider-dot" data-index="3" aria-label="Category 4: Tools & Soft Skills">
+            <span class="dot-icon">🛠️</span>
+            <span class="dot-label">Tools</span>
+          </button>
+        </div>
+        <button class="skills-nav-arrow next" id="skillsNextBtn" aria-label="Next Skill Category" title="Next Category">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <div class="skills-mobile-hint" id="skillsMobileHint">
+        <span>👆 Swipe left/right between skill domains</span>
+        <span class="skills-slide-counter" id="skillsSlideCounter">1 / 4</span>
+      </div>
+
       <div class="skills-wrapper" id="skillsWrapper">
         <!-- Programming & Web -->
         <div class="skill-category-card blur-reveal" data-skill-category="programming">

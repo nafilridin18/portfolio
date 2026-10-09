@@ -412,11 +412,113 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial check so above-the-fold content appears immediately
   checkAndRevealVisible();
 
-  // ---------- 11. Skills Category Filters & Live Search ----------
+  // ---------- 11. Skills Category Filters, Live Search & Mobile Slideshow ----------
   const skillFilterBtns = document.querySelectorAll('.skill-filter-btn');
   const skillCategoryCards = document.querySelectorAll('.skill-category-card');
   const skillSearchInput = document.getElementById('skillSearchInput');
+  const skillsWrapper = document.getElementById('skillsWrapper');
+  const skillsPrevBtn = document.getElementById('skillsPrevBtn');
+  const skillsNextBtn = document.getElementById('skillsNextBtn');
+  const skillsDots = document.querySelectorAll('.slider-dot');
+  const skillsSlideCounter = document.getElementById('skillsSlideCounter');
 
+  let currentSkillIndex = 0;
+  const totalSkillCards = skillCategoryCards.length;
+
+  function scrollToSkillCard(index, smooth = true) {
+    if (index < 0) index = 0;
+    if (index >= totalSkillCards) index = totalSkillCards - 1;
+    currentSkillIndex = index;
+
+    if (skillsWrapper && window.innerWidth <= 768) {
+      const targetCard = skillCategoryCards[currentSkillIndex];
+      if (targetCard) {
+        skillsWrapper.scrollTo({
+          left: targetCard.offsetLeft - skillsWrapper.offsetLeft,
+          behavior: smooth ? 'smooth' : 'auto'
+        });
+      }
+    }
+
+    // Update dots
+    skillsDots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === currentSkillIndex);
+    });
+
+    // Update slide counter
+    if (skillsSlideCounter) {
+      skillsSlideCounter.textContent = `${currentSkillIndex + 1} / ${totalSkillCards}`;
+    }
+
+    // Sync corresponding category filter tab
+    const targetCard = skillCategoryCards[currentSkillIndex];
+    if (targetCard) {
+      const cat = targetCard.getAttribute('data-skill-category');
+      skillFilterBtns.forEach(btn => {
+        const filterVal = btn.getAttribute('data-skill-filter');
+        const isMatch = (filterVal === cat);
+        if (filterVal !== 'all') {
+          btn.classList.toggle('active', isMatch);
+          btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+        } else {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        }
+      });
+    }
+  }
+
+  // Next / Prev button triggers
+  if (skillsPrevBtn) {
+    skillsPrevBtn.addEventListener('click', () => {
+      scrollToSkillCard((currentSkillIndex - 1 + totalSkillCards) % totalSkillCards);
+    });
+  }
+  if (skillsNextBtn) {
+    skillsNextBtn.addEventListener('click', () => {
+      scrollToSkillCard((currentSkillIndex + 1) % totalSkillCards);
+    });
+  }
+
+  // Dots click navigation
+  skillsDots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      scrollToSkillCard(idx);
+    });
+  });
+
+  // Track touch/scroll movements on mobile skills wrapper
+  if (skillsWrapper) {
+    let scrollDebounce;
+    skillsWrapper.addEventListener('scroll', () => {
+      if (window.innerWidth > 768) return;
+      clearTimeout(scrollDebounce);
+      scrollDebounce = setTimeout(() => {
+        const scrollLeft = skillsWrapper.scrollLeft;
+        const width = skillsWrapper.clientWidth || 1;
+        const newIndex = Math.round(scrollLeft / width);
+        if (newIndex >= 0 && newIndex < totalSkillCards && newIndex !== currentSkillIndex) {
+          currentSkillIndex = newIndex;
+          skillsDots.forEach((d, i) => d.classList.toggle('active', i === currentSkillIndex));
+          if (skillsSlideCounter) {
+            skillsSlideCounter.textContent = `${currentSkillIndex + 1} / ${totalSkillCards}`;
+          }
+          const targetCard = skillCategoryCards[currentSkillIndex];
+          if (targetCard) {
+            const cat = targetCard.getAttribute('data-skill-category');
+            skillFilterBtns.forEach(btn => {
+              const filterVal = btn.getAttribute('data-skill-filter');
+              const isMatch = (filterVal === cat);
+              btn.classList.toggle('active', isMatch);
+              btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+            });
+          }
+        }
+      }, 40);
+    }, { passive: true });
+  }
+
+  // Filter tabs handling
   if (skillFilterBtns.length > 0 && skillCategoryCards.length > 0) {
     skillFilterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -429,24 +531,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const filterVal = btn.getAttribute('data-skill-filter');
 
-        skillCategoryCards.forEach(card => {
-          const category = card.getAttribute('data-skill-category');
-          if (filterVal === 'all' || category === filterVal) {
-            card.classList.remove('hidden');
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(12px)';
-            setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
-            }, 30);
+        if (window.innerWidth <= 768) {
+          // On mobile: unhide all cards for seamless swipe, and slide directly to selected card
+          skillCategoryCards.forEach(c => c.classList.remove('hidden'));
+          if (filterVal === 'all') {
+            scrollToSkillCard(0);
           } else {
-            card.classList.add('hidden');
+            const matchIndex = Array.from(skillCategoryCards).findIndex(
+              c => c.getAttribute('data-skill-category') === filterVal
+            );
+            if (matchIndex !== -1) {
+              scrollToSkillCard(matchIndex);
+            }
           }
-        });
+        } else {
+          // On desktop: show/hide cards with smooth reveal
+          skillCategoryCards.forEach(card => {
+            const category = card.getAttribute('data-skill-category');
+            if (filterVal === 'all' || category === filterVal) {
+              card.classList.remove('hidden');
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(12px)';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 30);
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        }
       });
     });
   }
 
+  // Live search input handling
   if (skillSearchInput) {
     skillSearchInput.addEventListener('input', (e) => {
       const query = e.target.value.trim().toLowerCase();
@@ -458,7 +577,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      skillCategoryCards.forEach(card => {
+      let firstMatchedIndex = -1;
+      skillCategoryCards.forEach((card, idx) => {
         const pillsInCard = card.querySelectorAll('.skill-pill');
         let cardHasMatch = false;
 
@@ -472,13 +592,62 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        if (cardHasMatch) {
+        if (window.innerWidth <= 768) {
           card.classList.remove('hidden');
+          if (cardHasMatch && firstMatchedIndex === -1) {
+            firstMatchedIndex = idx;
+          }
         } else {
-          card.classList.add('hidden');
+          if (cardHasMatch) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
         }
       });
+
+      // On mobile, auto-slide to first matching domain card
+      if (window.innerWidth <= 768 && firstMatchedIndex !== -1) {
+        scrollToSkillCard(firstMatchedIndex);
+      }
     });
+  }
+
+  // Touch Swipe & Scrubbing for Dynamic Tech Marquee Ribbon
+  const marqueeContainer = document.querySelector('.marquee-track-container');
+  const marqueeTrack = document.querySelector('.marquee-track');
+  const marqueeGroups = document.querySelectorAll('.marquee-group');
+
+  if (marqueeContainer && marqueeTrack && marqueeGroups.length > 0) {
+    let touchStartX = 0;
+    let isTouching = false;
+    let manualOffset = 0;
+
+    marqueeContainer.addEventListener('touchstart', (e) => {
+      isTouching = true;
+      touchStartX = e.touches[0].clientX;
+      marqueeGroups.forEach(g => g.style.animationPlayState = 'paused');
+    }, { passive: true });
+
+    marqueeContainer.addEventListener('touchmove', (e) => {
+      if (!isTouching) return;
+      const currentX = e.touches[0].clientX;
+      const diffX = currentX - touchStartX;
+      manualOffset += diffX * 0.45;
+      marqueeTrack.style.transform = `translate3d(${manualOffset}px, 0, 0)`;
+      touchStartX = currentX;
+    }, { passive: true });
+
+    marqueeContainer.addEventListener('touchend', () => {
+      isTouching = false;
+      marqueeTrack.style.transition = 'transform 0.35s ease-out';
+      marqueeTrack.style.transform = 'translate3d(0, 0, 0)';
+      setTimeout(() => {
+        marqueeTrack.style.transition = '';
+        manualOffset = 0;
+        marqueeGroups.forEach(g => g.style.animationPlayState = 'running');
+      }, 350);
+    }, { passive: true });
   }
 
   // ---------- 12. Dynamic Co-Curricular & Awards Tab Filtering ----------
