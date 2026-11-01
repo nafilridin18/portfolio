@@ -2,7 +2,9 @@
 
 # 👋 Hi, I'm Nafil Ardul Ridin
 
-### 🎓 3rd Year CSE Student @ DIU (CGPA 3.73) | 💻 Full-Stack & ML/AI Engineer | 💼 HR & Content Manager @ StratifyX.Global
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1200&color=F5A97F&center=true&vCenter=true&width=620&height=46&lines=3rd+Year+CSE+Undergrad+%40+DIU+(CGPA+3.73);Full-Stack+Web+%26+Relational+Data+Architect;Machine+Learning+%26+Applied+AI+Explorer;Compiler+Design+(Flex+%26+Bison)+%26+Theory;Senior+Content+Writer+%26+HR+Manager" alt="Typing SVG" />
+</a>
 
 <p align="center">
   <a href="https://nafilridin18.github.io/portfolio/">
@@ -14,16 +16,20 @@
   <a href="https://www.linkedin.com/in/nafil-ardul-ridin-5853912a7/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="https://www.facebook.com/nafilardulridin/" target="_blank">
-    <img src="https://img.shields.io/badge/Facebook-Connect-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" />
-  </a>
   <a href="mailto:nafilridinssbu@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Primary_Email-nafilridinssbu-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="mailto:ardul242-15-705@diu.edu.bd">
+    <img src="https://img.shields.io/badge/Academic_Email-DIU-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="DIU Email" />
   </a>
 </p>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=nafilridin18&label=Profile%20Views&color=e07a5f&style=flat-square" alt="Profile Views" />
+  <img src="https://img.shields.io/badge/CGPA-3.73%20%2F%204.00-success?style=flat-square&color=22c55e" alt="CGPA" />
+  <img src="https://img.shields.io/badge/IELTS-6.5%20Band-blue?style=flat-square&color=3b82f6" alt="IELTS" />
+  <img src="https://img.shields.io/badge/SSC%20%26%20HSC-GPA%205.00-gold?style=flat-square&color=eab308" alt="GPA 5.00" />
+  <img src="https://img.shields.io/badge/Top%2080-Unlock%20The%20Algorithm-purple?style=flat-square&color=a855f7" alt="Top 80" />
 </p>
 
 </div>
@@ -32,58 +38,76 @@
 
 ## 🧑‍💻 About Me
 
-- 🎓 **3rd Year CSE Student** at **Daffodil International University** (Student ID: `242-15-705`) maintaining an average **CGPA of 3.73** (6th sem. avg: **3.735**).
-- 🏆 Completed SSC & HSC with **GPA 5.00** from **Birshrestha Noor Mohammed Public College (BNMPC)** (SSC 2021, HSC 2023).
-- 💼 **Senior Content Writer & HR Manager** at **StratifyX.Global**, supervising promotional content and leading talent recruitment & internal communications.
-- 🤖 Actively expanding into **Machine Learning and Applied AI architectures**, alongside full-stack web engineering, compiler design, and organizational leadership.
-- 🤝 **Executive Member** at **Competitive Programming Club (CPC), DIU**, coordinating contests and technical workshops for **1,000+ members**.
-- 🎖️ **Top 80 Finalist** in *Unlock The Algorithm* programming contest out of **2,000+ preliminary candidates**.
-- 🌐 Achieved an overall **IELTS Band Score of 6.5 / 9.0** (British Council, 2024).
-- 🚀 Portfolio features **12+ end-to-end engineering projects** across Web Development, Compiler Theory, Data Science, and Hardware Systems.
+I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil International University** (Student ID: `242-15-705`), maintaining an average **CGPA of 3.73** (6th semester average: **3.735**). Alongside full-stack software development and corporate team leadership, I am actively expanding into **Machine Learning and Applied AI architectures**.
+
+- 🎓 **Education:** BSc in CSE at **Daffodil International University** (2024 – Present).
+- 🏆 **Secondary & Higher Secondary:** Completed Science SSC (2021) & HSC (2023) at **Birshrestha Noor Mohammed Public College (BNMPC)** with **GPA 5.00** in both.
+- 💼 **Professional Experience:**
+  - **Senior Content Writer & HR Manager** at **StratifyX.Global** (Ongoing) — Leading digital content creation, talent recruitment, employee coordination, and organizational branding.
+  - **Private Tutor** (Ongoing) — Personalized academic mentoring in Science and Mathematics for Class 8 & Class 10 students.
+  - **Full-Stack Development Intern** at **CodeAlpha** (Virtual, Oct 2026) — Engineered end-to-end e-commerce and social networking applications.
+  - **Sales Assistant** at **Soniya's Boutique** (2020 – 2022) — Customer engagement, inventory display, and sales handling.
+- 🤝 **Leadership & Extracurriculars:**
+  - **Executive Member**, Competitive Programming Club (CPC), DIU — Coordinated programming contests and technical workshops for 1,000+ members.
+  - **Event Volunteer**, Job Utshob 2025 — Transportation and logistics management.
+  - **General Member**, Data Science Club, DIU (Member ID: `DS978`).
+  - **Executive Member**, Science Club, BNMPC (2018 – 2023).
+- 🎖️ **Honors & Awards:**
+  - **Top 80 Finalist** in *Unlock The Algorithm 2025* programming contest among 2,000+ candidates.
+  - **2nd Position**, *Science Olympiad 2024* (Saint Joseph).
+- 🌐 **Language Proficiency:** Bangla (Native), English (**IELTS 6.5 / 9.0**, British Council 2024), Hindi.
 
 ---
 
 ## 🛠️ Tech Stack & Skills
 
-### 💻 Programming & Scripting Languages
+### 💻 Programming Languages
 <p>
   <img src="https://skillicons.dev/icons?i=c,cpp,java,python,php,js,html,css&perline=8" alt="Languages" />
 </p>
 
 ### 🤖 Machine Learning & Applied AI
-- **Core Libraries:** NumPy, Pandas, Scikit-Learn, PyTorch Basics, Jupyter Notebook
-- **Techniques:** Data Linearization, Least Squares Regression, Residual Diagnostics, Predictive Modeling
-
-### 🌐 Web & Frameworks
 <p>
-  <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap,tailwind,mysql&perline=6" alt="Web Technologies" />
+  <img src="https://skillicons.dev/icons?i=py,pytorch&perline=6" alt="AI & ML" />
 </p>
 
-### 🗄️ Database & Systems
-- **Databases:** MySQL, Relational Database Normalization, ACID Transactions, Row-Level Locking (`FOR UPDATE`), Triggers & Stored Procedures
-- **Compiler & Theory:** Flex & Bison (Context-Free Grammars, Abstract Syntax Trees), Multi-byte Levenshtein Distance (`mb_levenshtein` Bangla Fuzzy Matching), Numerical Normal Equations
+- **Libraries & Tooling:** NumPy, Pandas, Scikit-Learn, PyTorch Basics, Jupyter Notebook, Streamlit, Plotly
+- **Core Concepts:** Least Squares Normal Equations, Non-linear Data Linearization (Log, Power, Exp), Residual Diagnostics ($R^2$, RMSE), Predictive Modeling
 
-### ⚡ Electronics & Hardware
-- **Hardware Skills:** Digital Logic Gates (AND, OR, NOT, Flip-Flops), Sequential Circuits, Breadboard Wiring, PCB Design, Sensor Integration, Microcontroller Basics
-
-### 🛠️ Developer Tools & Environment
+### 🌐 Web & Database Engineering
 <p>
-  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux,py&perline=5" alt="Tools" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,php,mysql,bootstrap,tailwind&perline=7" alt="Web & DB" />
+</p>
+
+- **Architecture:** Normalized Relational Databases (MySQL), ACID Transactions, Row-Level Locking (`FOR UPDATE`), Triggers & Stored Procedures, Administrative CMS Backends, AJAX Live Search, REST APIs
+
+### ⚙️ Systems, Compilers & Theory
+- **Compiler Construction:** Flex & Bison (Lexical Analysis, Context-Free Grammars, Abstract Syntax Trees)
+- **Algorithms:** Data Structures, Graph & Tree Traversals, Multi-byte Levenshtein Distance (`mb_levenshtein` Bangla Fuzzy Matching), Numerical Normal Equations
+- **Desktop Interfacing:** High-speed C calculation engine coupled with modern web GUI via Python `pywebview`
+
+### ⚡ Electronics, Hardware & IoT
+- **Circuit Design:** Digital Logic Gates (AND, OR, NOT, Flip-Flops), Sequential Circuits, Breadboard Wiring, PCB Design, Sensor Integration, Microcontroller Basics
+- **Physical Prototypes:** 4-Bit Binary Digital Lock, Battery Charger Voltage Regulation, Rain Detection Automation, Fluid Hydraulic Pump
+
+### 🛠️ Developer Tools & Environments
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux&perline=6" alt="Tools" />
 </p>
 
 ---
 
-## 🚀 Featured Projects (12 Engineering Projects)
+## 🚀 Featured Engineering Projects (12 Projects)
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 📰 [Newslens (Online News & Media Portal)](https://github.com/nafilridin18/Project-NewsLens)
+### 📰 [Newslens — Online News & Media Portal](https://github.com/nafilridin18/Project-NewsLens)
 **Tech:** `PHP` • `MySQL` • `CMS Architecture` • `Responsive UX`
-- Scalable news publishing platform with normalized MySQL schemas optimized for categorized feeds and fast reads.
-- Administrative CMS backend enabling multi-tiered category hierarchy, draft/publish workflows, and reporter permissions.
-- Intuitive, responsive reading interface with category filtration and query routing.
+- Scalable digital news publishing platform with normalized relational MySQL database schemas.
+- Administrative CMS backend enabling multi-tiered category management, breaking news drafts, reporter permissions, and media uploads.
+- Fast-loading article pages, category filtering, and optimized query routing.
 
 <a href="https://github.com/nafilridin18/Project-NewsLens">
   <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github" />
@@ -93,11 +117,11 @@
 
 <td width="50%" valign="top">
 
-### 🛒 [Shuvrota E-Commerce](https://github.com/nafilridin18/Shuvrota-e-commerce)
+### 🛒 [Shuvrota — E-Commerce Retail Platform](https://github.com/nafilridin18/Shuvrota-e-commerce)
 **Tech:** `PHP` • `MySQL` • `ACID Transactions` • `AJAX`
-- Full-featured retail engine with persistent cart and streamlined checkout.
-- Implemented ACID-compliant transactional inventory handling to prevent overselling under concurrent user purchases.
-- Built live AJAX search and layered multi-category filtering.
+- Full-featured retail platform with secure authentication, persistent cart, and streamlined checkout.
+- ACID-compliant transactional inventory handling preventing overselling during concurrent purchases.
+- AJAX-driven live search and multi-layered category filtering.
 
 <a href="https://github.com/nafilridin18/Shuvrota-e-commerce">
   <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github" />
@@ -109,11 +133,11 @@
 <tr>
 <td width="50%" valign="top">
 
-### 🛡️ [RelieFX (Disaster Relief Tracker)](https://github.com/nafilridin18/relife_system)
+### 🛡️ [RelieFX — Disaster Relief Distribution Tracker](https://github.com/nafilridin18/relife_system)
 **Tech:** `PHP` • `MySQL` • `Cryptography` • `Fuzzy Matching`
-- Privacy-focused disaster relief distribution system with SHA-256 NID hashing and RBAC.
-- Row-level locking (`FOR UPDATE`) to enforce 7-day multi-NGO duplicate prevention.
-- Custom multi-byte Levenshtein distance (`mb_levenshtein`) for Bangla fuzzy matching.
+- Privacy-focused disaster relief tracker featuring SHA-256 NID hashing and role-based access control.
+- Enforces a 7-day multi-NGO duplicate prevention rule via row-level locking (`FOR UPDATE`) and database triggers.
+- Custom multi-byte Levenshtein distance (`mb_levenshtein`) in PHP to detect near-duplicate registrations in non-Latin Bangla script.
 
 <a href="https://github.com/nafilridin18/relife_system">
   <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github" />
@@ -123,11 +147,11 @@
 
 <td width="50%" valign="top">
 
-### 🧮 [OmniCalc (Compiler Desktop Suite)](https://github.com/nafilridin18/OmniCalc)
+### 🧮 [OmniCalc — Multi-Domain Computational Suite](https://github.com/nafilridin18/OmniCalc)
 **Tech:** `C` • `Flex` • `Bison` • `Python pywebview`
-- Multi-domain computational suite with a custom compiler architecture.
-- Context-Free Grammars (CFG) and dynamic Abstract Syntax Trees (AST) built using Flex & Bison.
-- Interfaced a high-speed C execution engine with modern HTML/JS GUI using Python `pywebview`.
+- Multi-domain desktop calculator leveraging custom compiler design architecture.
+- Context-Free Grammars (CFG) and dynamic Abstract Syntax Trees (AST) built with Flex and Bison.
+- High-speed C engine seamlessly interfaced with an HTML/JS frontend using Python `pywebview`.
 
 <a href="https://github.com/nafilridin18/OmniCalc">
   <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github" />
@@ -139,11 +163,11 @@
 <tr>
 <td width="50%" valign="top">
 
-### 📈 [Curve Fitting & Predictive Modeling](https://github.com/nafilridin18/curve_fitting)
+### 📈 [Curve Fitting & Predictive Modeling Web App](https://github.com/nafilridin18/curve_fitting)
 **Tech:** `Python` • `Streamlit` • `Plotly` • `Numerical Methods`
-- Built numerical regression app calculating Least Squares Normal Equations from scratch without library fitting functions.
-- Supports non-linear data linearization (Power, Exponential, Logarithmic) and polynomial modeling.
-- Real-time Plotly residual diagnostics with automated $R^2$ and RMSE metrics.
+- Numerical analysis web app solving Least Squares Normal Equations from scratch without library fitting functions.
+- Non-linear data linearization algorithms (Exponential, Power, Logarithmic) and polynomial regression models.
+- Interactive Plotly visualizations, residual diagnostics, and automated model evaluations ($R^2$, RMSE).
 
 <a href="https://github.com/nafilridin18/curve_fitting">
   <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github" />
@@ -153,11 +177,11 @@
 
 <td width="50%" valign="top">
 
-### 📱 [Minibook (Social Media Platform)](https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook)
+### 📱 [Minibook — Social Media Platform](https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook)
 **Tech:** `JavaScript` • `MySQL` • `Full-Stack` • `Responsive UI`
-- Social networking application with user registration, profile customization, and multimedia posts.
-- Optimized relational schemas for user follower networks and chronological feed querying.
-- Dynamic frontend event handlers for asynchronous post likes and comments without full page reloads.
+- Social networking platform with user registration, profile customization, and dynamic media sharing.
+- Optimized relational schemas for user connection networks (friends/followers) and chronological feeds.
+- Dynamic frontend event handlers for asynchronous post interactions (likes, comments) without page reloads.
 
 <a href="https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook">
   <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github" />
@@ -169,10 +193,10 @@
 <tr>
 <td width="50%" valign="top">
 
-### 🛍️ [Asthetica (E-Commerce Store)](https://github.com/nafilridin18/CodeAlpha_Simple-E-Commerce-Store-Asthetica)
+### 🛍️ [Asthetica — Modern E-Commerce Store](https://github.com/nafilridin18/CodeAlpha_Simple-E-Commerce-Store-Asthetica)
 **Tech:** `HTML5` • `CSS3` • `JavaScript` • `MySQL`
-- Modern, responsive e-commerce storefront for product catalog browsing and dynamic filtering.
-- Server-side inventory and order management system with secure session handling.
+- Responsive storefront with dynamic product filtering and cart state management.
+- Server-side inventory and order processing architecture with secure session handling.
 
 <a href="https://github.com/nafilridin18/CodeAlpha_Simple-E-Commerce-Store-Asthetica">
   <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github" />
@@ -184,8 +208,8 @@
 
 ### 🚗 [Ride Share Mobile App](https://github.com/nafilridin18)
 **Tech:** `Java` • `JavaFX` • `UI/UX Design` • `Route Optimization`
-- Efficient commuter matching connecting drivers and passengers with route optimization.
-- Secure user authentication and intuitive JavaFX interface.
+- Commuter matching connecting drivers and passengers with route optimization.
+- Real-time location tracking concepts, secure user authentication, and JavaFX interface.
 
 <a href="https://github.com/nafilridin18">
   <img src="https://img.shields.io/badge/View_Profile-181717?style=for-the-badge&logo=github" />
@@ -195,69 +219,86 @@
 </tr>
 </table>
 
+### ⚡ Additional Hardware, Circuit & Physics Systems
+- 🔐 **4-Bit Binary Digital Lock (2026):** Digital security access control circuit built with logic gates (AND, OR, NOT) and sequential flip-flops on breadboard wiring.
+- 🔋 **Battery Charger Regulation System (2025):** Charging circuit with voltage and current regulation designed to protect cells and enhance battery lifecycle.
+- 🌧️ **Rain Detection Device (2024):** Automated sensor-integrated hardware triggering real-time safety alerts upon rainfall.
+- 💧 **Hydraulic Pump Model (2023):** Practical fluid mechanics demonstration prototype tested and exhibited at the *National Science Carnival (DRMC)*.
+
 ---
 
-## ⚡ Additional Hardware & Electronics Projects
+## 📜 Verified Certifications
 
-- 🔐 **4-Bit Binary Digital Lock (2026):** Access control security circuit engineered with digital logic gates & sequential flip-flops on breadboard wiring.
-- 🔋 **Battery Charger Regulation System (2025):** High-efficiency charging circuit with voltage/current stabilization to preserve battery health.
-- 🌧️ **Rain Detection Automation Device (2024):** Automatic sensor-based rain detection triggering instant safety alert mechanisms.
-- 💧 **Hydraulic Pump Model (2023):** Fluid mechanics demonstration prototype showcased at the *National Science Carnival (DRMC)*.
+| Certification / Honor | Issuer / Organization | Year |
+| :--- | :--- | :---: |
+| **Full Stack Development Intern (Virtual)** | CodeAlpha | 2025 |
+| **Workplace Communication Essentials** | UNICEF – Passport to Earning Bangladesh | 2025 |
+| **DIU-Cybercon Cybersecurity Workshop** | Daffodil International University | 2025 |
+| **Job Utshob Volunteering** | Daffodil International University | 2025 |
+| **Prompt Battle (AI Prompting Challenge)** | Daffodil International University | 2025 |
+| **Type Track (Typing Championship)** | Daffodil International University | 2025 |
+| **IELTS Examination (Band 6.5 / 9.0)** | British Council | 2024 |
+| **AI Literacy & Ethical AI Workshop** | EMK Center | 2024 |
+| **National Photography Fest** | Dhaka Residential Model College | 2023 |
+| **National Science Carnival** | Dhaka Residential Model College | 2023 |
+
+<p align="center">
+  <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank">
+    <img src="https://img.shields.io/badge/📁_View_All_Verified_Certificates_on_Google_Drive-34A853?style=for-the-badge&logo=googledrive&logoColor=white" alt="Certificates Drive" />
+  </a>
+</p>
 
 ---
 
 ## 📊 GitHub Analytics
 
 <div align="center">
+
   <img src="https://github-readme-stats.vercel.app/api?username=nafilridin18&show_icons=true&theme=radical&hide_border=true&bg_color=0d0b0a&title_color=f5a97f&text_color=c9bea9&icon_color=f5a97f" alt="GitHub Stats" />
   <br><br>
   <img src="https://streak-stats.demolab.com?user=nafilridin18&theme=radical&hide_border=true&background=0d0b0a&ring=f5a97f&fire=f5a97f&currStreakLabel=f5a97f" alt="GitHub Streak" />
   <br><br>
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=nafilridin18&theme=react-dark&hide_border=true&bg_color=0d0b0a&color=f5a97f" alt="Contribution Graph" />
+
 </div>
 
 ---
 
-## 🤝 Connect With Me
+## 🤝 Let's Connect
 
 <div align="center">
 
 <a href="https://nafilridin18.github.io/portfolio/" target="_blank">
-  <img src="https://img.shields.io/badge/Portfolio-Visit_Website-e07a5f?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
+  <img src="https://img.shields.io/badge/🌐_Portfolio-nafilridin18.github.io-e07a5f?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
 </a>
-
 <a href="https://www.linkedin.com/in/nafil-ardul-ridin-5853912a7/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <img src="https://img.shields.io/badge/LinkedIn-Nafil_Ardul_Ridin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
-
+<a href="https://github.com/nafilridin18">
+  <img src="https://img.shields.io/badge/GitHub-nafilridin18-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
 <a href="https://www.facebook.com/nafilardulridin/" target="_blank">
   <img src="https://img.shields.io/badge/Facebook-Connect-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" />
 </a>
 
+<br><br>
+
 <a href="mailto:nafilridinssbu@gmail.com">
-  <img src="https://img.shields.io/badge/Primary_Email-nafilridinssbu@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Primary Email" />
+  <img src="https://img.shields.io/badge/Personal_Email-nafilridinssbu%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Personal Email" />
 </a>
-
+<a href="mailto:nafilridin.personal.info@gmail.com">
+  <img src="https://img.shields.io/badge/Professional_Email-nafilridin.personal.info%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Professional Email" />
+</a>
 <a href="mailto:ardul242-15-705@diu.edu.bd">
-  <img src="https://img.shields.io/badge/Academic_Email-ardul242--15--705@diu.edu.bd-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Academic Email" />
+  <img src="https://img.shields.io/badge/DIU_Academic-ardul242--15--705%40diu.edu.bd-4285F4?style=flat-square&logo=google&logoColor=white" alt="Academic Email" />
 </a>
 
-<a href="https://github.com/nafilridin18">
-  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-</a>
+<br><br>
 
-<a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank">
-  <img src="https://img.shields.io/badge/Drive-Certificates_Folder-34A853?style=for-the-badge&logo=googledrive&logoColor=white" alt="Certificates Drive" />
-</a>
+📍 **Location:** Dhanmondi, Dhaka-1209, Bangladesh • 📞 **Phone:** `+880 1742541999`
 
-</div>
+<br>
 
----
-
-<div align="center">
-
-### ⭐ Thanks for visiting my profile!
-
-**Let's build something impactful and innovative together 🚀**
+**⭐ Thanks for visiting my profile! Let's collaborate and build something impactful together 🚀**
 
 </div>
