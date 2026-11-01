@@ -10,7 +10,7 @@
   <a href="https://nafilridin18.github.io/portfolio/">
     <img src="https://img.shields.io/badge/🌐_Live_Portfolio-Website-e07a5f?style=for-the-badge&logoColor=white" alt="Live Portfolio" />
   </a>
-  <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank">
+  <a href="https://drive.google.com/drive/folders/12HffdqHBWT79N7mWGYnCVafn86gad06m?usp=sharing" target="_blank">
     <img src="https://img.shields.io/badge/📜_Verified_Certificates-Google_Drive-8c5a41?style=for-the-badge&logoColor=white" alt="Certificates" />
   </a>
   <a href="https://www.linkedin.com/in/nafil-ardul-ridin-5853912a7/" target="_blank">
@@ -262,7 +262,7 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 | **National Science Carnival** | Dhaka Residential Model College | 2023 |
 
 <p align="center">
-  <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank">
+  <a href="https://drive.google.com/drive/folders/12HffdqHBWT79N7mWGYnCVafn86gad06m?usp=sharing" target="_blank">
     <img src="https://img.shields.io/badge/📁_View_All_Verified_Certificates_on_Google_Drive-34A853?style=for-the-badge&logo=googledrive&logoColor=white" alt="Certificates Drive" />
   </a>
 </p>
