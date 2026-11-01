@@ -104,6 +104,27 @@
       <path fill="#004482" d="M18 84v24c0 8.8 20.6 16 46 16s46-7.2 46-16V84H18z"/>
       <ellipse cx="64" cy="108" rx="46" ry="14" fill="#659AD2"/>
     </symbol>
+    <symbol id="logo-ml" viewBox="0 0 128 128">
+      <circle cx="32" cy="32" r="14" fill="#f5a97f"/>
+      <circle cx="96" cy="32" r="14" fill="#f5a97f"/>
+      <circle cx="64" cy="64" r="16" fill="#e07a5f"/>
+      <circle cx="32" cy="96" r="14" fill="#f5a97f"/>
+      <circle cx="96" cy="96" r="14" fill="#f5a97f"/>
+      <line x1="32" y1="32" x2="64" y2="64" stroke="#ffd5c2" stroke-width="6"/>
+      <line x1="96" y1="32" x2="64" y2="64" stroke="#ffd5c2" stroke-width="6"/>
+      <line x1="32" y1="96" x2="64" y2="64" stroke="#ffd5c2" stroke-width="6"/>
+      <line x1="96" y1="96" x2="64" y2="64" stroke="#ffd5c2" stroke-width="6"/>
+      <line x1="32" y1="32" x2="32" y2="96" stroke="#ffd5c2" stroke-width="4" stroke-dasharray="6,4"/>
+      <line x1="96" y1="32" x2="96" y2="96" stroke="#ffd5c2" stroke-width="4" stroke-dasharray="6,4"/>
+    </symbol>
+    <symbol id="logo-jupyter" viewBox="0 0 128 128">
+      <ellipse cx="64" cy="22" rx="36" ry="10" fill="#F37626"/>
+      <circle cx="64" cy="64" r="26" fill="#F37626"/>
+      <ellipse cx="64" cy="106" rx="36" ry="10" fill="#F37626"/>
+      <circle cx="24" cy="48" r="7" fill="#616161"/>
+      <circle cx="104" cy="48" r="9" fill="#9E9E9E"/>
+      <circle cx="28" cy="84" r="9" fill="#757575"/>
+    </symbol>
   </svg>
 
   <!-- Ambient Glow Blobs -->
@@ -165,55 +186,65 @@
         </button>
       </div>
     </div>
+    <!-- Scroll Progress Bar -->
+    <div class="nav-progress-bar" id="navProgressBar" aria-hidden="true"></div>
   </header>
 
   <main>
     <!-- Hero Section -->
     <section id="top" class="hero-section">
+      <!-- Subtle Ambient Architectural Grid Accent -->
+      <div class="hero-grid-pattern" aria-hidden="true"></div>
       <div class="hero-content">
-        <div class="hero-badge">
+        <div class="hero-badge pop-appear">
           <span class="badge-dot"></span>
           <span>Available for Roles &amp; Collaborations</span>
         </div>
 
-        <h1 class="hero-title">
+        <h1 class="hero-title slide-appear-up">
           Hi, I'm <span class="text-gradient">Nafil Ardul Ridin</span>
         </h1>
 
-        <div class="dynamic-roles">
+        <div class="dynamic-roles slide-appear-up stagger-1">
           <span class="role-lead">Specializing in</span>
           <span class="typewriter-text" id="typewriterText">Full Stack &amp; Software Engineering</span>
         </div>
 
-        <p class="hero-desc">
-          Third-year Computer Science &amp; Engineering student at <strong>Daffodil International University</strong> (ID: 242-15-705) maintaining an average <strong>3.735 CGPA</strong>. Senior Content Writer &amp; HR Manager at <strong><a href="https://stratifyxglobal.com/" target="_blank" rel="noopener" class="link-hover">StratifyX.Global</a></strong>, Executive Member at <strong>DIU CPC</strong>, and passionate builder of robust web apps, compiler suites, and electronics systems.
+        <div class="hero-code-pill pop-appear stagger-2">
+          <span class="code-pill-prompt">&gt;</span>
+          <span class="code-pill-text">Building robust software, ML/AI architectures &amp; hardware systems</span>
+          <span class="code-pill-status">Active</span>
+        </div>
+
+        <p class="hero-desc slide-appear-up stagger-3">
+          Third-year Computer Science &amp; Engineering student (ID: 242-15-705) at <strong>Daffodil International University</strong> with an average <strong>CGPA of 3.73</strong> (6th semester average: 3.735). Alongside full-stack web engineering and organizational leadership, actively expanding into <strong>Machine Learning and Applied AI architectures</strong>. Senior Content Writer &amp; HR Manager at <strong><a href="https://stratifyxglobal.com/" target="_blank" rel="noopener" class="link-hover">StratifyX.Global</a></strong>, Executive Member at <strong>DIU CPC</strong>, and builder of impactful software, compiler suites, and electronics systems.
         </p>
 
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">
-            Explore Projects
+        <div class="hero-buttons slide-appear-up stagger-4">
+          <a href="#projects" class="btn btn-primary pop-hover">
+            Explore Projects (12)
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary">
+          <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary pop-hover">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             Certificates Drive
           </a>
-          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+          <a href="#contact" class="btn btn-ghost pop-hover">Contact Me</a>
         </div>
 
-        <div class="hero-social-strip">
+        <div class="hero-social-strip slide-appear-up stagger-5">
           <span class="social-label">Find me on:</span>
           <div class="social-links">
-            <a href="https://github.com/nafilridin18" target="_blank" rel="noopener" aria-label="GitHub Profile" title="GitHub">
+            <a href="https://github.com/nafilridin18" target="_blank" rel="noopener" aria-label="GitHub Profile" title="GitHub" class="pop-hover">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.7.5.9 5.3.9 11.6c0 5 3.2 9.2 7.7 10.7.6.1.8-.2.8-.6v-2.2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.1.9-.2 1.8-.4 2.8-.4s1.9.1 2.8.4c2.1-1.4 3-1.1 3-1.1.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.7-5.7 7.7-10.7C23.1 5.3 18.3.5 12 .5z"/></svg>
             </a>
-            <a href="https://www.linkedin.com/in/nafil-ardul-ridin-5853912a7/" target="_blank" rel="noopener" aria-label="LinkedIn Profile" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/nafil-ardul-ridin-5853912a7/" target="_blank" rel="noopener" aria-label="LinkedIn Profile" title="LinkedIn" class="pop-hover">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM7 20.4H3.5V9H7v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
             </a>
-            <a href="https://www.facebook.com/nafilardulridin/" target="_blank" rel="noopener" aria-label="Facebook Profile" title="Facebook">
+            <a href="https://www.facebook.com/nafilardulridin/" target="_blank" rel="noopener" aria-label="Facebook Profile" title="Facebook" class="pop-hover">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <button class="social-copy-btn" data-copy="nafilridinssbu@gmail.com" aria-label="Copy Email" title="Copy Primary Email">
+            <button class="social-copy-btn pop-hover" data-copy="nafilridinssbu@gmail.com" aria-label="Copy Email" title="Copy Primary Email">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </button>
           </div>
@@ -221,7 +252,7 @@
       </div>
 
       <!-- Hero Visuals -->
-      <div class="hero-visual">
+      <div class="hero-visual slide-appear-right">
         <div class="avatar-card-wrapper" id="avatarCardWrapper">
           <div class="avatar-glow"></div>
           <!-- Spreading Outer Dim Light Aura & Beam (Radiates Outwards from Edge) -->
@@ -233,26 +264,26 @@
           </div>
 
           <!-- Floating Stat Cards -->
-          <div class="floating-badge badge-top-left">
+          <div class="floating-badge badge-top-left pop-appear stagger-1">
             <span class="badge-icon">🎓</span>
             <div>
-              <span class="badge-num">3.735</span>
-              <span class="badge-sub">DIU CGPA (Avg)</span>
+              <span class="badge-num">3.73</span>
+              <span class="badge-sub">DIU CGPA (Avg: 3.735)</span>
             </div>
           </div>
 
-          <div class="floating-badge badge-bottom-right">
+          <div class="floating-badge badge-bottom-right pop-appear stagger-2">
             <span class="badge-icon">🏆</span>
             <div>
-              <span class="badge-num">Golden 5.0</span>
+              <span class="badge-num">GPA 5.0</span>
               <span class="badge-sub">HSC &amp; SSC</span>
             </div>
           </div>
 
-          <div class="floating-badge badge-bottom-left">
+          <div class="floating-badge badge-bottom-left pop-appear stagger-3">
             <span class="badge-icon">💻</span>
             <div>
-              <span class="badge-num">11+</span>
+              <span class="badge-num">12+</span>
               <span class="badge-sub">Projects Built</span>
             </div>
           </div>
@@ -261,29 +292,29 @@
     </section>
 
     <!-- Highlights Counter Bar -->
-    <section class="highlights-bar">
-      <div class="bar-item">
-        <span class="bar-value">3.735</span>
+    <section class="highlights-bar slide-appear-up">
+      <div class="bar-item pop-appear stagger-1">
+        <span class="bar-value">3.73</span>
         <span class="bar-title">University CGPA</span>
-        <span class="bar-desc">Daffodil Int. University (6 Semesters)</span>
+        <span class="bar-desc">Daffodil Int. University (6th Sem. Avg: 3.735)</span>
       </div>
       <div class="bar-divider"></div>
-      <div class="bar-item">
+      <div class="bar-item pop-appear stagger-2">
         <span class="bar-value">6.5</span>
         <span class="bar-title">IELTS Band Score</span>
         <span class="bar-desc">British Council (2024)</span>
       </div>
       <div class="bar-divider"></div>
-      <div class="bar-item">
+      <div class="bar-item pop-appear stagger-3">
         <span class="bar-value">1,000+</span>
         <span class="bar-title">Club Community Impact</span>
         <span class="bar-desc">Competitive Programming Club (CPC)</span>
       </div>
       <div class="bar-divider"></div>
-      <div class="bar-item">
+      <div class="bar-item pop-appear stagger-4">
         <span class="bar-value">Top 80</span>
         <span class="bar-title">Unlock The Algorithm</span>
-        <span class="bar-desc">Out of 2,000+ Preliminary Candidates</span>
+        <span class="bar-desc">Finalist out of 2,000+ Candidates</span>
       </div>
     </section>
 
@@ -358,6 +389,14 @@
               <span>Digital Logic</span>
             </div>
             <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-ml"></use></svg>
+              <span>Machine Learning &amp; AI</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-jupyter"></use></svg>
+              <span>Jupyter Notebook</span>
+            </div>
+            <div class="tech-marquee-item">
               <svg class="tech-logo-svg"><use href="#logo-linux"></use></svg>
               <span>Linux</span>
             </div>
@@ -425,6 +464,14 @@
               <span>Digital Logic</span>
             </div>
             <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-ml"></use></svg>
+              <span>Machine Learning &amp; AI</span>
+            </div>
+            <div class="tech-marquee-item">
+              <svg class="tech-logo-svg"><use href="#logo-jupyter"></use></svg>
+              <span>Jupyter Notebook</span>
+            </div>
+            <div class="tech-marquee-item">
               <svg class="tech-logo-svg"><use href="#logo-linux"></use></svg>
               <span>Linux</span>
             </div>
@@ -435,37 +482,37 @@
 
     <!-- About Section -->
     <section id="about" class="section">
-      <div class="section-header">
+      <div class="section-header slide-appear-up">
         <span class="section-tag">About Me</span>
         <h2 class="section-heading">Dedicated to Code, Architecture &amp; Execution</h2>
       </div>
 
       <div class="about-layout">
-        <div class="about-bio-col">
+        <div class="about-bio-col slide-appear-left">
           <p class="lead-paragraph">
-            I am a third-year Computer Science and Engineering student at <strong>Daffodil International University</strong> with an average CGPA of <strong>3.735</strong>. My foundational education began at <strong>Birshrestha Noor Mohammed Public College</strong>, where I secured <strong>Golden GPA-5 in both SSC and HSC</strong>.
+            I am a third-year Computer Science and Engineering student (ID: 242-15-705) with an average CGPA of <strong>3.73</strong>, having completed 6 semesters at <strong>Daffodil International University</strong> (maintaining a <strong>3.735</strong> 6th semester average). Alongside full-stack web engineering and organizational leadership, I am actively expanding into <strong>Machine Learning and Applied AI architectures</strong>. I completed my SSC and HSC at <strong>Birshrestha Noor Mohammed Public College</strong>, securing a <strong>GPA of 5.00 in both</strong>. I am seeking opportunities to gain real-world industry experience and contribute impactful engineering solutions.
           </p>
           <p>
-            Beyond coursework, I bridge software and leadership: serving as <strong>Senior Content Writer &amp; HR Manager</strong> at <strong><a href="https://stratifyxglobal.com/" target="_blank" rel="noopener" class="link-hover">StratifyX.Global</a></strong>, where I lead communications and talent management; and as an active <strong>Executive Member</strong> of the Competitive Programming Club (CPC), orchestrating massive collegiate coding contests.
+            Beyond coursework, I bridge software and leadership: serving as <strong>Senior Content Writer &amp; HR Manager</strong> at <strong><a href="https://stratifyxglobal.com/" target="_blank" rel="noopener" class="link-hover">StratifyX.Global</a></strong>, where I lead communications, talent recruitment, and operations; and as an active <strong>Executive Member</strong> of the Competitive Programming Club (CPC), orchestrating massive collegiate coding contests.
           </p>
           <p>
-            From low-level parser theory with Flex &amp; Bison and Levenshtein algorithm integrations to full-stack e-commerce platforms and breadboard sequential logic circuits, I love tackling challenging technical domains end-to-end.
+            From low-level parser theory with Flex &amp; Bison and Bangla Levenshtein algorithm integrations to full-stack e-commerce platforms, machine learning models, and breadboard sequential logic circuits, I love tackling challenging technical domains end-to-end.
           </p>
 
           <div class="about-action-strip">
-            <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary">
+            <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary pop-hover">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               View Verified Certificates Drive
             </a>
-            <button class="btn btn-ghost" id="viewBioDetailsBtn">
+            <button class="btn btn-ghost pop-hover" id="viewBioDetailsBtn">
               Personal Bio Specs
             </button>
           </div>
         </div>
 
-        <div class="about-cards-col">
+        <div class="about-cards-col slide-appear-right">
           <!-- Quick Contact Information -->
-          <div class="profile-card">
+          <div class="profile-card pop-appear">
             <h3 class="card-mini-title">Key Information</h3>
             <ul class="meta-list">
               <li>
@@ -476,28 +523,28 @@
                 <span class="meta-key">Phone:</span>
                 <span class="meta-val">
                   <a href="tel:01742541999" class="link-hover">01742541999</a>
-                  <button class="inline-copy-btn" data-copy="01742541999" title="Copy Phone">Copy</button>
+                  <button class="inline-copy-btn pop-hover" data-copy="01742541999" title="Copy Phone">Copy</button>
                 </span>
               </li>
               <li>
                 <span class="meta-key">Primary Email:</span>
                 <span class="meta-val">
                   <a href="mailto:nafilridinssbu@gmail.com" class="link-hover">nafilridinssbu@gmail.com</a>
-                  <button class="inline-copy-btn" data-copy="nafilridinssbu@gmail.com" title="Copy Email">Copy</button>
+                  <button class="inline-copy-btn pop-hover" data-copy="nafilridinssbu@gmail.com" title="Copy Email">Copy</button>
                 </span>
               </li>
               <li>
                 <span class="meta-key">Academic Email:</span>
                 <span class="meta-val">
                   <a href="mailto:ardul242-15-705@diu.edu.bd" class="link-hover">ardul242-15-705@diu.edu.bd</a>
-                  <button class="inline-copy-btn" data-copy="ardul242-15-705@diu.edu.bd" title="Copy Academic Email">Copy</button>
+                  <button class="inline-copy-btn pop-hover" data-copy="ardul242-15-705@diu.edu.bd" title="Copy Academic Email">Copy</button>
                 </span>
               </li>
               <li>
                 <span class="meta-key">Professional:</span>
                 <span class="meta-val">
                   <a href="mailto:nafilridin.personal.info@gmail.com" class="link-hover">nafilridin.personal.info@gmail.com</a>
-                  <button class="inline-copy-btn" data-copy="nafilridin.personal.info@gmail.com" title="Copy Professional Email">Copy</button>
+                  <button class="inline-copy-btn pop-hover" data-copy="nafilridin.personal.info@gmail.com" title="Copy Professional Email">Copy</button>
                 </span>
               </li>
               <li>
@@ -508,7 +555,7 @@
           </div>
 
           <!-- Personal Background Collapsible/Display -->
-          <div class="profile-card personal-details-card" id="personalDetailsCard">
+          <div class="profile-card personal-details-card pop-appear stagger-1" id="personalDetailsCard">
             <h3 class="card-mini-title">Personal Details</h3>
             <div class="details-grid">
               <div class="detail-cell">
@@ -547,24 +594,24 @@
 
     <!-- Skills Section -->
     <section id="skills" class="section">
-      <div class="section-header">
+      <div class="section-header slide-appear-up">
         <span class="section-tag">Technical Arsenal</span>
         <h2 class="section-heading">Skills &amp; Competencies</h2>
         <p class="section-subtext">A blend of computer science foundations, modern web engineering, hardware design, and leadership.</p>
       </div>
 
       <!-- Interactive Skill Filter Tabs & Search Bar -->
-      <div class="skills-controls">
+      <div class="skills-controls slide-appear-up stagger-1">
         <div class="skill-filters" id="skillFilters" role="tablist">
-          <button class="skill-filter-btn active" data-skill-filter="all" role="tab" aria-selected="true">All Domains (37)</button>
+          <button class="skill-filter-btn active" data-skill-filter="all" role="tab" aria-selected="true">All Domains (40+)</button>
           <button class="skill-filter-btn" data-skill-filter="programming" role="tab" aria-selected="false">Programming &amp; Web</button>
-          <button class="skill-filter-btn" data-skill-filter="cs" role="tab" aria-selected="false">CS Foundations</button>
+          <button class="skill-filter-btn" data-skill-filter="cs" role="tab" aria-selected="false">CS &amp; Machine Learning</button>
           <button class="skill-filter-btn" data-skill-filter="hardware" role="tab" aria-selected="false">Electronics &amp; Hardware</button>
           <button class="skill-filter-btn" data-skill-filter="tools" role="tab" aria-selected="false">Tools &amp; Leadership</button>
         </div>
         <div class="skills-search-wrapper">
           <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="skillSearchInput" class="skill-search-input" placeholder="Search skills, e.g. Python, MySQL, Flex..." aria-label="Search skills">
+          <input type="text" id="skillSearchInput" class="skill-search-input" placeholder="Search skills, e.g. Machine Learning, Python, MySQL..." aria-label="Search skills">
         </div>
       </div>
 
@@ -578,9 +625,9 @@
             <span class="dot-icon">💻</span>
             <span class="dot-label">Dev</span>
           </button>
-          <button class="slider-dot" data-index="1" aria-label="Category 2: CS Foundations">
+          <button class="slider-dot" data-index="1" aria-label="Category 2: CS & Machine Learning">
             <span class="dot-icon">🧠</span>
-            <span class="dot-label">CS</span>
+            <span class="dot-label">CS &amp; AI</span>
           </button>
           <button class="slider-dot" data-index="2" aria-label="Category 3: Electronics & Hardware">
             <span class="dot-icon">⚡</span>
@@ -603,7 +650,7 @@
 
       <div class="skills-wrapper" id="skillsWrapper">
         <!-- Programming & Web -->
-        <div class="skill-category-card blur-reveal" data-skill-category="programming">
+        <div class="skill-category-card pop-appear stagger-1" data-skill-category="programming">
           <div class="category-header">
             <div class="category-icon">💻</div>
             <div>
@@ -627,15 +674,16 @@
         </div>
 
         <!-- Technical Knowledge -->
-        <div class="skill-category-card blur-reveal" data-skill-category="cs">
+        <div class="skill-category-card pop-appear stagger-2" data-skill-category="cs">
           <div class="category-header">
             <div class="category-icon">🧠</div>
             <div>
-              <h3>Computer Science Foundations</h3>
-              <p>Algorithms, data structures &amp; systems</p>
+              <h3>Computer Science &amp; AI Architectures</h3>
+              <p>Algorithms, data structures &amp; machine learning</p>
             </div>
           </div>
           <div class="pill-group">
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-ml"></use></svg> Machine Learning (NumPy, Pandas, Scikit-Learn/PyTorch)</span>
             <span class="skill-pill">📊 Data Structures</span>
             <span class="skill-pill">⚡ Algorithms</span>
             <span class="skill-pill">🧱 Object-Oriented Programming (OOP)</span>
@@ -643,12 +691,12 @@
             <span class="skill-pill"><svg class="pill-logo"><use href="#logo-mysql"></use></svg> MySQL &amp; ACID Transactions</span>
             <span class="skill-pill"><svg class="pill-logo"><use href="#logo-compiler"></use></svg> Compiler Theory (Flex &amp; Bison)</span>
             <span class="skill-pill">🔍 Fuzzy String Matching (Levenshtein)</span>
-            <span class="skill-pill">📈 Least Squares Regression</span>
+            <span class="skill-pill">📈 Least Squares Numerical Regression</span>
           </div>
         </div>
 
         <!-- Electronics & Hardware -->
-        <div class="skill-category-card blur-reveal" data-skill-category="hardware">
+        <div class="skill-category-card pop-appear stagger-3" data-skill-category="hardware">
           <div class="category-header">
             <div class="category-icon">⚡</div>
             <div>
@@ -662,14 +710,14 @@
             <span class="skill-pill"><svg class="pill-logo"><use href="#logo-circuit"></use></svg> Sequential Circuits</span>
             <span class="skill-pill">📐 PCB Design</span>
             <span class="skill-pill">📡 Sensor Integration</span>
-            <span class="skill-pill">🔌 Breadboard Prototyping</span>
-            <span class="skill-pill">💡 Electronic Components (Diode, Zener, Transistor, Capacitor, LED)</span>
-            <span class="skill-pill">🕹️ Microcontroller Fundamentals</span>
+            <span class="skill-pill">🔌 Breadboard Wiring &amp; Prototyping</span>
+            <span class="skill-pill">💡 Electronic Components (Diode, Zener, Transistor, Capacitor, Resistor, LED)</span>
+            <span class="skill-pill">🕹️ Basic Microcontroller Programming</span>
           </div>
         </div>
 
         <!-- Tools & Soft Skills -->
-        <div class="skill-category-card blur-reveal" data-skill-category="tools">
+        <div class="skill-category-card pop-appear stagger-4" data-skill-category="tools">
           <div class="category-header">
             <div class="category-icon">🛠️</div>
             <div>
@@ -681,14 +729,15 @@
             <span class="skill-pill"><svg class="pill-logo"><use href="#logo-vscode"></use></svg> VS Code</span>
             <span class="skill-pill"><svg class="pill-logo"><use href="#logo-git"></use></svg> Git</span>
             <span class="skill-pill"><svg class="pill-logo"><use href="#logo-github"></use></svg> GitHub</span>
+            <span class="skill-pill"><svg class="pill-logo"><use href="#logo-jupyter"></use></svg> Jupyter Notebook</span>
             <span class="skill-pill"><svg class="pill-logo"><use href="#logo-linux"></use></svg> Linux Shell</span>
             <span class="skill-pill">📈 Plotly &amp; pywebview</span>
             <span class="skill-pill">👔 Human Resources (HR) Basics</span>
-            <span class="skill-pill">👥 Team Leadership</span>
-            <span class="skill-pill">🎙️ Public Communication</span>
-            <span class="skill-pill">🧩 Problem Solving</span>
-            <span class="skill-pill">📄 MS Office Suite</span>
-            <span class="skill-pill">✨ Adobe Tools</span>
+            <span class="skill-pill">👥 Team Leadership &amp; Negotiation</span>
+            <span class="skill-pill">🎙️ Public Communication &amp; Mentoring</span>
+            <span class="skill-pill">🧩 Problem Solving &amp; Critical Thinking</span>
+            <span class="skill-pill">🤝 Teamwork, Adaptability &amp; Responsibility</span>
+            <span class="skill-pill">📄 MS Office (Word, Excel) &amp; Adobe</span>
           </div>
         </div>
       </div>
@@ -696,15 +745,15 @@
 
     <!-- Projects Section -->
     <section id="projects" class="section">
-      <div class="section-header">
+      <div class="section-header slide-appear-up">
         <span class="section-tag">Featured Work</span>
         <h2 class="section-heading">Projects &amp; Prototypes</h2>
         <p class="section-subtext">Explore software systems, web applications, algorithms, and hardware implementations.</p>
       </div>
 
       <!-- Category Filter Tabs -->
-      <div class="project-filters" id="projectFilters" role="tablist">
-        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects (11)</button>
+      <div class="project-filters slide-appear-up stagger-1" id="projectFilters" role="tablist">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects (12)</button>
         <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Full-Stack &amp; Web</button>
         <button class="filter-btn" data-filter="systems" role="tab" aria-selected="false">Systems &amp; Algorithms</button>
         <button class="filter-btn" data-filter="hardware" role="tab" aria-selected="false">Hardware &amp; IoT</button>
@@ -713,8 +762,32 @@
       <!-- Projects Grid -->
       <div class="projects-grid" id="projectsGrid">
 
-        <!-- Project 1: Minibook -->
-        <article class="project-card" data-category="web">
+        <!-- Project 1: Newslens -->
+        <article class="project-card pop-appear pop-hover" data-category="web">
+          <div class="project-badge">News &amp; Media • 2026</div>
+          <div class="project-main">
+            <div class="project-org">Daffodil International University / Independent</div>
+            <h3 class="project-title">Newslens (Online News &amp; Media Portal)</h3>
+            <p class="project-description">
+              Scalable online news platform engineered with normalized relational database schemas (MySQL) optimized for categorized news feeds, dynamic tag queries, and fast read operations. Built an administrative CMS backend enabling editors to manage multi-tiered categories, publish/draft breaking news, upload media, and manage reporter permissions alongside a responsive, high-engagement reading UX.
+            </p>
+            <div class="project-tags">
+              <span>MySQL Architecture</span>
+              <span>CMS Backend</span>
+              <span>Dynamic Routing</span>
+              <span>Responsive UX</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/nafilridin18/Project-NewsLens" target="_blank" rel="noopener" class="project-action-link">
+              <span>View Repository</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Minibook -->
+        <article class="project-card pop-appear pop-hover" data-category="web">
           <div class="project-badge">Full-Stack • 2026</div>
           <div class="project-main">
             <div class="project-org">CodeAlpha Virtual Internship</div>
@@ -730,15 +803,15 @@
             </div>
           </div>
           <div class="project-footer">
-            <a href="https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook-" target="_blank" rel="noopener" class="project-action-link">
+            <a href="https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook" target="_blank" rel="noopener" class="project-action-link">
               <span>View Repository</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
         </article>
 
-        <!-- Project 2: Asthetica -->
-        <article class="project-card" data-category="web">
+        <!-- Project 3: Asthetica -->
+        <article class="project-card pop-appear pop-hover" data-category="web">
           <div class="project-badge">E-Commerce • 2026</div>
           <div class="project-main">
             <div class="project-org">CodeAlpha Virtual Internship</div>
@@ -761,8 +834,8 @@
           </div>
         </article>
 
-        <!-- Project 3: Shuvrota -->
-        <article class="project-card" data-category="web">
+        <!-- Project 4: Shuvrota -->
+        <article class="project-card pop-appear pop-hover" data-category="web">
           <div class="project-badge">Retail Platform • 2026</div>
           <div class="project-main">
             <div class="project-org"><a href="https://stratifyxglobal.com/" target="_blank" rel="noopener" class="link-hover">StratifyX.Global ↗</a></div>
@@ -785,8 +858,8 @@
           </div>
         </article>
 
-        <!-- Project 4: RelieFX -->
-        <article class="project-card" data-category="systems">
+        <!-- Project 5: RelieFX -->
+        <article class="project-card pop-appear pop-hover" data-category="systems">
           <div class="project-badge">Disaster Relief &amp; Security • 2026</div>
           <div class="project-main">
             <div class="project-org">Daffodil International University</div>
@@ -809,8 +882,8 @@
           </div>
         </article>
 
-        <!-- Project 5: OmniCalc -->
-        <article class="project-card" data-category="systems">
+        <!-- Project 6: OmniCalc -->
+        <article class="project-card pop-appear pop-hover" data-category="systems">
           <div class="project-badge">Compiler Design • 2026</div>
           <div class="project-main">
             <div class="project-org">Daffodil International University</div>
@@ -833,8 +906,8 @@
           </div>
         </article>
 
-        <!-- Project 6: Curve Fitting & Predictive Modeling -->
-        <article class="project-card" data-category="systems">
+        <!-- Project 7: Curve Fitting & Predictive Modeling -->
+        <article class="project-card pop-appear pop-hover" data-category="systems">
           <div class="project-badge">Numerical Methods • 2026</div>
           <div class="project-main">
             <div class="project-org">Daffodil International University</div>
@@ -857,8 +930,8 @@
           </div>
         </article>
 
-        <!-- Project 7: Ride Share App -->
-        <article class="project-card" data-category="systems">
+        <!-- Project 8: Ride Share App -->
+        <article class="project-card pop-appear pop-hover" data-category="systems">
           <div class="project-badge">Application • 2025</div>
           <div class="project-main">
             <div class="project-org">Daffodil International University</div>
@@ -878,8 +951,8 @@
           </div>
         </article>
 
-        <!-- Project 8: 4-Bit Binary Lock -->
-        <article class="project-card" data-category="hardware">
+        <!-- Project 9: 4-Bit Binary Lock -->
+        <article class="project-card pop-appear pop-hover" data-category="hardware">
           <div class="project-badge">Digital Logic • 2026</div>
           <div class="project-main">
             <div class="project-org">Daffodil International University</div>
@@ -899,8 +972,8 @@
           </div>
         </article>
 
-        <!-- Project 9: Battery Charger -->
-        <article class="project-card" data-category="hardware">
+        <!-- Project 10: Battery Charger -->
+        <article class="project-card pop-appear pop-hover" data-category="hardware">
           <div class="project-badge">Power Electronics • 2025</div>
           <div class="project-main">
             <div class="project-org">Daffodil International University</div>
@@ -919,8 +992,8 @@
           </div>
         </article>
 
-        <!-- Project 10: Rain Detection Device -->
-        <article class="project-card" data-category="hardware">
+        <!-- Project 11: Rain Detection Device -->
+        <article class="project-card pop-appear pop-hover" data-category="hardware">
           <div class="project-badge">Automation &amp; Sensors • 2024</div>
           <div class="project-main">
             <div class="project-org">Daffodil International University</div>
@@ -939,8 +1012,8 @@
           </div>
         </article>
 
-        <!-- Project 11: Hydraulic Pump -->
-        <article class="project-card" data-category="hardware">
+        <!-- Project 12: Hydraulic Pump -->
+        <article class="project-card pop-appear pop-hover" data-category="hardware">
           <div class="project-badge">Physics &amp; Mechanics • 2023</div>
           <div class="project-main">
             <div class="project-org">National Science Carnival – DRMC</div>
@@ -964,16 +1037,16 @@
 
     <!-- Experience Section -->
     <section id="experience" class="section">
-      <div class="section-header">
+      <div class="section-header slide-appear-up">
         <span class="section-tag">Career History</span>
         <h2 class="section-heading">Work Experience &amp; Internships</h2>
       </div>
 
       <div class="timeline">
-        <!-- Experience 1 -->
-        <div class="timeline-card">
+        <!-- Experience 1: StratifyX.Global -->
+        <div class="timeline-card slide-appear-left stagger-1">
           <div class="timeline-indicator"></div>
-          <div class="timeline-content">
+          <div class="timeline-content pop-hover">
             <div class="timeline-top">
               <div>
                 <h3 class="timeline-role">Senior Content Writer &amp; HR Manager</h3>
@@ -982,56 +1055,59 @@
               <span class="timeline-date-badge">Ongoing</span>
             </div>
             <ul class="timeline-bullet-list">
-              <li>Lead and supervise all content writing initiatives and promotional campaigns across digital platforms.</li>
-              <li>Manage talent acquisition, candidate screening, interviews, employee coordination, and HR administration.</li>
-              <li>Support organizational development, branding, and disciplined internal communication workflows.</li>
-              <li>Ensure strict organizational confidentiality, team alignment, and operational efficiency.</li>
+              <li>Lead and supervise content writing activities across digital and promotional platforms.</li>
+              <li>Create high-quality written content for brand visibility, marketing, and organizational outreach.</li>
+              <li>Manage recruitment, employee coordination, and day-to-day HR operations.</li>
+              <li>Assist in employee management, onboarding, and disciplined internal communication.</li>
+              <li>Support branding, marketing, and strategic organizational development initiatives.</li>
+              <li>Maintain high standards of professionalism, confidentiality, and organizational discipline.</li>
             </ul>
           </div>
         </div>
 
-        <!-- Experience 2 -->
-        <div class="timeline-card">
+        <!-- Experience 2: Private Academic Tutor -->
+        <div class="timeline-card slide-appear-right stagger-2">
           <div class="timeline-indicator"></div>
-          <div class="timeline-content">
+          <div class="timeline-content pop-hover">
             <div class="timeline-top">
               <div>
-                <h3 class="timeline-role">Full Stack Development Intern</h3>
-                <div class="timeline-company">CodeAlpha • Virtual Internship</div>
-              </div>
-              <span class="timeline-date-badge">Oct 2026</span>
-            </div>
-            <ul class="timeline-bullet-list">
-              <li>Engineered <strong>"Asthetica"</strong>, an interactive e-commerce website with product catalogs, responsive UI, and secure database interactions.</li>
-              <li>Built <strong>"Mini Book"</strong>, an engaging social media web application supporting user authentication, post feeds, and database storage.</li>
-              <li>Applied hands-on full-stack development skills across frontend logic, backend routing, and relational databases.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Experience 3 -->
-        <div class="timeline-card">
-          <div class="timeline-indicator"></div>
-          <div class="timeline-content">
-            <div class="timeline-top">
-              <div>
-                <h3 class="timeline-role">Private Academic Tutor</h3>
-                <div class="timeline-company">Mentoring Class 8 &amp; Class 10 Students</div>
+                <h3 class="timeline-role">Private Tutor</h3>
+                <div class="timeline-company">Class 8 &amp; Class 10 Students</div>
               </div>
               <span class="timeline-date-badge">Ongoing</span>
             </div>
             <ul class="timeline-bullet-list">
-              <li>Conduct personalized tutoring sessions focusing on science and mathematics concepts, problem solving, and exam readiness.</li>
-              <li>Formulate customized study materials, practice sets, and systematic revision schedules.</li>
-              <li>Cultivated communication skills, academic empathy, and pedagogical clarity.</li>
+              <li>Conduct personalized tutoring sessions focused on improving subject understanding and exam performance.</li>
+              <li>Prepare structured study notes, practice sets, and revision plans tailored to each student's needs.</li>
+              <li>Track student progress and guide them through challenging mathematical and scientific topics with patience and clarity.</li>
+              <li>Strengthen pedagogical skills in teaching, academic communication, and youth mentoring.</li>
             </ul>
           </div>
         </div>
 
-        <!-- Experience 4 -->
-        <div class="timeline-card">
+        <!-- Experience 3: CodeAlpha Full Stack Intern -->
+        <div class="timeline-card slide-appear-left stagger-3">
           <div class="timeline-indicator"></div>
-          <div class="timeline-content">
+          <div class="timeline-content pop-hover">
+            <div class="timeline-top">
+              <div>
+                <h3 class="timeline-role">Full Stack Development Intern</h3>
+                <div class="timeline-company">CodeAlpha | Virtual</div>
+              </div>
+              <span class="timeline-date-badge">1 Oct 2026 – 31 Oct 2026</span>
+            </div>
+            <ul class="timeline-bullet-list">
+              <li>Designed and developed <strong>"Asthetica"</strong>, an e-commerce website featuring a responsive user interface for product browsing and secure backend architecture for managing user transactions.</li>
+              <li>Built <strong>"Mini Book"</strong>, a social media platform incorporating user engagement features, interactive feeds, and underlying database management.</li>
+              <li>Applied end-to-end technical skills to execute practical, hands-on full-stack development assignments during the online internship program.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 4: Soniya's Boutique -->
+        <div class="timeline-card slide-appear-right stagger-4">
+          <div class="timeline-indicator"></div>
+          <div class="timeline-content pop-hover">
             <div class="timeline-top">
               <div>
                 <h3 class="timeline-role">Sales Assistant (Part-Time)</h3>
@@ -1040,9 +1116,10 @@
               <span class="timeline-date-badge">2020 – 2022</span>
             </div>
             <ul class="timeline-bullet-list">
-              <li>Assisted customers with garment selection and delivered attentive, high-quality personalized service.</li>
-              <li>Managed daily billing, pricing records, stock replenishment, and aesthetic display organization.</li>
-              <li>Honed early real-world negotiation, interpersonal communication, and team coordination skills.</li>
+              <li>Assisted customers with outfit selection and provided attentive, personalized service.</li>
+              <li>Helped manage billing, pricing, stock arrangement, and visual display setup.</li>
+              <li>Supported daily boutique operations such as packaging, organizing new arrivals, and maintaining the shop environment.</li>
+              <li>Developed strong real-world communication, customer service, and sales-handling skills.</li>
             </ul>
           </div>
         </div>
@@ -1051,61 +1128,60 @@
 
     <!-- Education Section -->
     <section id="education" class="section">
-      <div class="section-header">
+      <div class="section-header slide-appear-up">
         <span class="section-tag">Academic Background</span>
         <h2 class="section-heading">Education</h2>
       </div>
 
       <div class="edu-grid">
         <!-- BSc -->
-        <div class="edu-card highlighted-edu">
+        <div class="edu-card highlighted-edu pop-appear pop-hover stagger-1">
           <div class="edu-top-row">
             <span class="edu-badge">Undergraduate</span>
-            <span class="edu-duration">2024 — Present</span>
+            <span class="edu-duration">2024 – Present</span>
           </div>
-          <h3 class="edu-degree">Bachelor of Science in Computer Science &amp; Engineering</h3>
-          <p class="edu-institution">Daffodil International University (DIU)</p>
+          <h3 class="edu-degree">Bachelor of Science (BSc) in Computer Science &amp; Engineering</h3>
+          <p class="edu-institution">Daffodil International University</p>
           <div class="edu-grade-pill">
             <span class="grade-label">Running CGPA:</span>
-            <span class="grade-number">3.735</span>
-            <span class="grade-context">(6th Semester Average)</span>
+            <span class="grade-number">3.73</span>
+            <span class="grade-context">(6th Semester Avg: 3.735)</span>
           </div>
-          <p class="edu-sub">Student ID: 242-15-705 • Focus on Algorithms, Systems Engineering, Databases &amp; Software Design.</p>
+          <p class="edu-sub">Student ID: 242-15-705 • Currently studying CSE • Focus on Systems, Full-Stack &amp; AI Architectures.</p>
         </div>
 
         <!-- HSC -->
-        <div class="edu-card">
+        <div class="edu-card pop-appear pop-hover stagger-2">
           <div class="edu-top-row">
             <span class="edu-badge">Higher Secondary</span>
-            <span class="edu-duration">2021 — 2023</span>
+            <span class="edu-duration">2023</span>
           </div>
           <h3 class="edu-degree">Higher Secondary Certificate (HSC)</h3>
-          <p class="edu-institution">Birshrestha Noor Mohammed Public College (BNMPC)</p>
+          <p class="edu-institution">Birshrestha Noor Mohammed Public College</p>
           <div class="edu-grade-pill">
             <span class="grade-label">Result:</span>
-            <span class="grade-number">Golden GPA 5.00 / 5.00</span>
+            <span class="grade-number">GPA 5.00 / 5.00</span>
           </div>
-          <p class="edu-sub">Science Background • Physics, Chemistry, Higher Mathematics &amp; ICT.</p>
+          <p class="edu-sub">Completed with a background in Science with exceptional academic excellence.</p>
         </div>
 
         <!-- SSC -->
-        <div class="edu-card">
+        <div class="edu-card pop-appear pop-hover stagger-3">
           <div class="edu-top-row">
             <span class="edu-badge">Secondary School</span>
-            <span class="edu-duration">2019 — 2021</span>
+            <span class="edu-duration">2021</span>
           </div>
           <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
-          <p class="edu-institution">Birshrestha Noor Mohammed Public College (BNMPC)</p>
+          <p class="edu-institution">Birshrestha Noor Mohammed Public College</p>
           <div class="edu-grade-pill">
             <span class="grade-label">Result:</span>
-            <span class="grade-number">Golden GPA 5.00 / 5.00</span>
+            <span class="grade-number">GPA 5.00 / 5.00</span>
           </div>
-          <p class="edu-sub">Science Background with exceptional academic performance throughout.</p>
+          <p class="edu-sub">Completed with a background in Science securing highest distinction.</p>
         </div>
       </div>
     </section>
 
-    <!-- Co-Curricular & Awards Section -->
     <!-- Co-Curricular & Awards Section -->
     <section id="co-curricular" class="section">
       <div class="section-header">
@@ -1277,15 +1353,26 @@
 
     <!-- Certifications Section -->
     <section id="certifications" class="section">
-      <div class="section-header">
+      <div class="section-header slide-appear-up">
         <span class="section-tag">Verified Credentials</span>
         <h2 class="section-heading">Certifications &amp; Courses</h2>
         <p class="section-subtext">Click below to view the official Google Drive archive with all original certificates.</p>
       </div>
 
       <div class="certifications-grid">
-        <!-- 1 -->
-        <div class="cert-card">
+        <!-- 1: CodeAlpha Internship -->
+        <div class="cert-card pop-appear pop-hover stagger-1">
+          <div class="cert-icon">💻</div>
+          <div class="cert-meta">
+            <span class="cert-year">2025</span>
+            <h3 class="cert-title">Full Stack Development Intern (Virtual)</h3>
+            <p class="cert-issuer">CodeAlpha</p>
+            <p class="cert-desc">Awarded Certificate of Completion and Letter of Recommendation for designing and deploying full-stack web applications, including an e-commerce platform and a social media network.</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="cert-card pop-appear pop-hover stagger-2">
           <div class="cert-icon">📜</div>
           <div class="cert-meta">
             <span class="cert-year">2025</span>
@@ -1295,8 +1382,8 @@
           </div>
         </div>
 
-        <!-- 2 -->
-        <div class="cert-card">
+        <!-- 3 -->
+        <div class="cert-card pop-appear pop-hover stagger-3">
           <div class="cert-icon">🛡️</div>
           <div class="cert-meta">
             <span class="cert-year">2025</span>
@@ -1306,8 +1393,8 @@
           </div>
         </div>
 
-        <!-- 3 -->
-        <div class="cert-card">
+        <!-- 4 -->
+        <div class="cert-card pop-appear pop-hover stagger-4">
           <div class="cert-icon">🌐</div>
           <div class="cert-meta">
             <span class="cert-year">2024</span>
@@ -1317,8 +1404,8 @@
           </div>
         </div>
 
-        <!-- 4 -->
-        <div class="cert-card">
+        <!-- 5 -->
+        <div class="cert-card pop-appear pop-hover stagger-5">
           <div class="cert-icon">🤖</div>
           <div class="cert-meta">
             <span class="cert-year">2024</span>
@@ -1328,8 +1415,8 @@
           </div>
         </div>
 
-        <!-- 5 -->
-        <div class="cert-card">
+        <!-- 6 -->
+        <div class="cert-card pop-appear pop-hover stagger-6">
           <div class="cert-icon">⚡</div>
           <div class="cert-meta">
             <span class="cert-year">2025</span>
@@ -1339,8 +1426,8 @@
           </div>
         </div>
 
-        <!-- 6 -->
-        <div class="cert-card">
+        <!-- 7 -->
+        <div class="cert-card pop-appear pop-hover stagger-7">
           <div class="cert-icon">⌨️</div>
           <div class="cert-meta">
             <span class="cert-year">2025</span>
@@ -1350,8 +1437,8 @@
           </div>
         </div>
 
-        <!-- 7 -->
-        <div class="cert-card">
+        <!-- 8 -->
+        <div class="cert-card pop-appear pop-hover stagger-8">
           <div class="cert-icon">🤝</div>
           <div class="cert-meta">
             <span class="cert-year">2025</span>
@@ -1361,8 +1448,8 @@
           </div>
         </div>
 
-        <!-- 8 -->
-        <div class="cert-card">
+        <!-- 9 -->
+        <div class="cert-card pop-appear pop-hover stagger-9">
           <div class="cert-icon">📸</div>
           <div class="cert-meta">
             <span class="cert-year">2023</span>
@@ -1372,8 +1459,8 @@
           </div>
         </div>
 
-        <!-- 9 -->
-        <div class="cert-card">
+        <!-- 10 -->
+        <div class="cert-card pop-appear pop-hover stagger-10">
           <div class="cert-icon">🔬</div>
           <div class="cert-meta">
             <span class="cert-year">2023</span>
@@ -1384,8 +1471,8 @@
         </div>
       </div>
 
-      <div class="cert-bottom-action">
-        <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary drive-button">
+      <div class="cert-bottom-action slide-appear-up">
+        <a href="https://drive.google.com/drive/folders/1D_Qk6MNR-UPgzf0SCq3Oa6IwGc7MtbDS?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary drive-button pop-hover">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
           Open Complete Certificate Google Drive Folder
         </a>
@@ -1394,7 +1481,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-      <div class="section-header">
+      <div class="section-header slide-appear-up">
         <span class="section-tag">Let's Talk</span>
         <h2 class="section-heading">Get in Touch</h2>
         <p class="section-subtext">Open to software engineering roles, internships, tech collaborations, or casual conversations.</p>
@@ -1402,8 +1489,8 @@
 
       <div class="contact-container">
         <!-- Direct Contact Cards -->
-        <div class="contact-info-col">
-          <div class="contact-card">
+        <div class="contact-info-col slide-appear-left">
+          <div class="contact-card pop-appear">
             <h3 class="contact-card-title">Direct Channels</h3>
             
             <div class="channel-item">
@@ -1411,7 +1498,7 @@
               <div class="channel-body">
                 <span class="channel-title">Primary Email</span>
                 <a href="mailto:nafilridinssbu@gmail.com" class="channel-val">nafilridinssbu@gmail.com</a>
-                <button class="inline-copy-btn" data-copy="nafilridinssbu@gmail.com">Copy</button>
+                <button class="inline-copy-btn pop-hover" data-copy="nafilridinssbu@gmail.com">Copy</button>
               </div>
             </div>
 
@@ -1420,7 +1507,7 @@
               <div class="channel-body">
                 <span class="channel-title">Educational Email</span>
                 <a href="mailto:ardul242-15-705@diu.edu.bd" class="channel-val">ardul242-15-705@diu.edu.bd</a>
-                <button class="inline-copy-btn" data-copy="ardul242-15-705@diu.edu.bd">Copy</button>
+                <button class="inline-copy-btn pop-hover" data-copy="ardul242-15-705@diu.edu.bd">Copy</button>
               </div>
             </div>
 
@@ -1429,7 +1516,7 @@
               <div class="channel-body">
                 <span class="channel-title">Professional Email</span>
                 <a href="mailto:nafilridin.personal.info@gmail.com" class="channel-val">nafilridin.personal.info@gmail.com</a>
-                <button class="inline-copy-btn" data-copy="nafilridin.personal.info@gmail.com">Copy</button>
+                <button class="inline-copy-btn pop-hover" data-copy="nafilridin.personal.info@gmail.com">Copy</button>
               </div>
             </div>
 
@@ -1438,7 +1525,7 @@
               <div class="channel-body">
                 <span class="channel-title">Phone / WhatsApp</span>
                 <a href="tel:01742541999" class="channel-val">01742541999</a>
-                <button class="inline-copy-btn" data-copy="01742541999">Copy</button>
+                <button class="inline-copy-btn pop-hover" data-copy="01742541999">Copy</button>
               </div>
             </div>
 
@@ -1451,18 +1538,18 @@
             </div>
           </div>
 
-          <div class="social-panel">
+          <div class="social-panel pop-appear stagger-2">
             <h4>Connect via Social Media</h4>
             <div class="social-buttons-row">
-              <a href="https://github.com/nafilridin18" target="_blank" rel="noopener" class="social-badge-btn" title="GitHub Profile">
+              <a href="https://github.com/nafilridin18" target="_blank" rel="noopener" class="social-badge-btn pop-hover" title="GitHub Profile">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5C5.7.5.9 5.3.9 11.6c0 5 3.2 9.2 7.7 10.7.6.1.8-.2.8-.6v-2.2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.1.9-.2 1.8-.4 2.8-.4s1.9.1 2.8.4c2.1-1.4 3-1.1 3-1.1.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.7-5.7 7.7-10.7C23.1 5.3 18.3.5 12 .5z"/></svg>
                 <span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/nafil-ardul-ridin-5853912a7/" target="_blank" rel="noopener" class="social-badge-btn" title="LinkedIn Profile">
+              <a href="https://www.linkedin.com/in/nafil-ardul-ridin-5853912a7/" target="_blank" rel="noopener" class="social-badge-btn pop-hover" title="LinkedIn Profile">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM7 20.4H3.5V9H7v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
                 <span>LinkedIn</span>
               </a>
-              <a href="https://www.facebook.com/nafilardulridin/" target="_blank" rel="noopener" class="social-badge-btn" title="Facebook Profile">
+              <a href="https://www.facebook.com/nafilardulridin/" target="_blank" rel="noopener" class="social-badge-btn pop-hover" title="Facebook Profile">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 <span>Facebook</span>
               </a>
@@ -1471,8 +1558,8 @@
         </div>
 
         <!-- Message Form -->
-        <div class="contact-form-col">
-          <form class="contact-form" id="contactForm" action="https://formsubmit.co/nafilridinssbu@gmail.com" method="POST">
+        <div class="contact-form-col slide-appear-right">
+          <form class="contact-form pop-appear" id="contactForm" action="https://formsubmit.co/nafilridinssbu@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
             <input type="text" name="_honey" style="display:none">
@@ -1510,6 +1597,20 @@
       </div>
     </section>
   </main>
+
+  <!-- Floating Back to Top Button with Scroll Progress Ring -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll back to top">
+    <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+      <circle class="progress-ring-bg" cx="23" cy="23" r="19" fill="none" stroke-width="2.5"></circle>
+      <circle class="progress-ring-circle" id="progressRingCircle" cx="23" cy="23" r="19" fill="none" stroke-width="2.5"></circle>
+    </svg>
+    <span class="back-to-top-icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </span>
+  </button>
 
   <!-- Footer -->
   <footer class="footer">

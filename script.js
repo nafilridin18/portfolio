@@ -28,11 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const typewriterElement = document.getElementById('typewriterText');
   if (typewriterElement) {
     const roles = [
+      'Machine Learning & Applied AI',
       'Full Stack & Web Engineering',
       'Algorithms & Compiler Design',
       'Disaster Relief & Security Systems',
       'Numerical Modeling & Data Analytics',
-      'Digital Logic & Hardware Circuits',
+      'Digital Logic & Hardware Systems',
       'Content Strategy & HR Leadership'
     ];
     let roleIndex = 0;
@@ -87,14 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const category = card.getAttribute('data-category');
         if (filterValue === 'all' || category === filterValue) {
           card.classList.remove('hidden');
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(15px)';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 30);
+          card.classList.remove('animate-pop-in');
+          // Trigger pop animation reflow
+          void card.offsetWidth;
+          card.classList.add('animate-pop-in');
+          card.classList.add('revealed');
         } else {
           card.classList.add('hidden');
+          card.classList.remove('animate-pop-in');
         }
       });
     });
@@ -348,20 +349,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---------- 10. Scroll Blur-to-Appear Reveal Observer ----------
+  // ---------- 10. Scroll Slide & Pop Appear Reveal Observer ----------
   const revealTargets = document.querySelectorAll(
-    '.blur-reveal, .section-header, .about-layout, .skill-category-card, .project-card, .timeline-card, .edu-card, .cert-card, .dual-column-card, .profile-card, .contact-card, .social-panel, .contact-form'
+    '.slide-appear-up, .slide-appear-down, .slide-appear-left, .slide-appear-right, .pop-appear, .blur-reveal, .section-header, .about-layout, .skill-category-card, .project-card, .timeline-card, .edu-card, .cert-card, .dual-column-card, .profile-card, .contact-card, .social-panel, .contact-form'
   );
 
   revealTargets.forEach(el => {
-    el.classList.add('blur-reveal');
+    // If element doesn't have an explicit animation class, give it slide-appear-up
+    if (!el.classList.contains('slide-appear-up') &&
+        !el.classList.contains('slide-appear-down') &&
+        !el.classList.contains('slide-appear-left') &&
+        !el.classList.contains('slide-appear-right') &&
+        !el.classList.contains('pop-appear') &&
+        !el.classList.contains('blur-reveal')) {
+      el.classList.add('slide-appear-up');
+    }
   });
 
   // Apply sequential stagger to grid children
   const gridGroups = document.querySelectorAll('.skills-wrapper, .projects-grid, .timeline, .edu-grid, .certifications-grid');
   gridGroups.forEach(grid => {
     Array.from(grid.children).forEach((child, idx) => {
-      child.classList.add(`stagger-${(idx % 5) + 1}`);
+      if (!child.className.includes('stagger-')) {
+        child.classList.add(`stagger-${(idx % 12) + 1}`);
+      }
     });
   });
 
@@ -370,8 +381,8 @@ document.addEventListener('DOMContentLoaded', () => {
     revealTargets.forEach(el => {
       if (!el.classList.contains('revealed')) {
         const rect = el.getBoundingClientRect();
-        // If element is in view or within 80px of entering viewport
-        if (rect.top <= windowH * 0.92) {
+        // If element is in view or near viewport
+        if (rect.top <= windowH * 0.95 && rect.bottom >= 0) {
           el.classList.add('revealed');
         }
       }
@@ -379,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if ('IntersectionObserver' in window) {
-    const blurObserver = new IntersectionObserver((entries, observer) => {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
@@ -388,12 +399,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, {
       root: null,
-      rootMargin: '160px 0px 160px 0px',
-      threshold: 0
+      rootMargin: '80px 0px 80px 0px',
+      threshold: 0.05
     });
 
     revealTargets.forEach(el => {
-      blurObserver.observe(el);
+      revealObserver.observe(el);
     });
   } else {
     // Fallback only for legacy browsers without IntersectionObserver
@@ -729,5 +740,92 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ---------- 13. Scroll Progress Indicator, Elevated Navbar & Back-To-Top Button ----------
+  const navbar = document.getElementById('navbar');
+  const navProgressBar = document.getElementById('navProgressBar');
+  const backToTopBtn = document.getElementById('backToTop');
+  const progressRingCircle = document.getElementById('progressRingCircle');
+  const ringCircumference = 2 * Math.PI * 19; // ~119.38
+
+  if (progressRingCircle) {
+    progressRingCircle.style.strokeDasharray = `${ringCircumference}`;
+    progressRingCircle.style.strokeDashoffset = `${ringCircumference}`;
+  }
+
+  let isScrollRunning = false;
+
+  function updateScrollEffects() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = scrollHeight > 0 ? Math.min(1, Math.max(0, scrollTop / scrollHeight)) : 0;
+
+    // Update Top Reading Progress Bar
+    if (navProgressBar) {
+      navProgressBar.style.width = `${(progress * 100).toFixed(1)}%`;
+    }
+
+    // Update Circular Progress on Back-To-Top Button
+    if (progressRingCircle) {
+      const offset = ringCircumference - progress * ringCircumference;
+      progressRingCircle.style.strokeDashoffset = `${offset.toFixed(2)}`;
+    }
+
+    // Navbar elevated state (smooth transition once scrolled past hero header)
+    if (navbar) {
+      if (scrollTop > 45) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+
+    // Back to top visibility
+    if (backToTopBtn) {
+      if (scrollTop > 420) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+
+    isScrollRunning = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!isScrollRunning) {
+      requestAnimationFrame(updateScrollEffects);
+      isScrollRunning = true;
+    }
+  }, { passive: true });
+
+  // Initial calculation
+  updateScrollEffects();
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ---------- 15. Tactile Interactive Mouse Spotlight for Cards ----------
+  const spotlightCards = document.querySelectorAll(
+    '.project-card, .skill-category-card, .profile-card, .timeline-content, .cert-card, .award-box, .activity-item, .contact-card'
+  );
+
+  spotlightCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--card-mouse-x', `${x.toFixed(1)}px`);
+      card.style.setProperty('--card-mouse-y', `${y.toFixed(1)}px`);
+    }, { passive: true });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--card-mouse-x', `-500px`);
+      card.style.setProperty('--card-mouse-y', `-500px`);
+    });
+  });
 
 });

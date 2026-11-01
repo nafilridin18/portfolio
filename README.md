@@ -2,7 +2,7 @@
 
 # 👋 Hi, I'm Nafil Ardul Ridin
 
-### 🎓 3rd Year CSE Student @ DIU (CGPA 3.735) | 💻 Full-Stack & Software Developer | 💼 HR & Content Manager @ StratifyX.Global
+### 🎓 3rd Year CSE Student @ DIU (CGPA 3.73) | 💻 Full-Stack & ML/AI Engineer | 💼 HR & Content Manager @ StratifyX.Global
 
 <p align="center">
   <a href="https://nafilridin18.github.io/portfolio/">
@@ -32,13 +32,14 @@
 
 ## 🧑‍💻 About Me
 
-- 🎓 **3rd Year CSE Student** at **Daffodil International University** (Student ID: `242-15-705`) maintaining an average **CGPA of 3.735** across 6 semesters.
-- 🏆 Completed SSC & HSC with **Golden GPA-5.00** from **Birshrestha Noor Mohammed Public College (BNMPC)**.
+- 🎓 **3rd Year CSE Student** at **Daffodil International University** (Student ID: `242-15-705`) maintaining an average **CGPA of 3.73** (6th sem. avg: **3.735**).
+- 🏆 Completed SSC & HSC with **GPA 5.00** from **Birshrestha Noor Mohammed Public College (BNMPC)** (SSC 2021, HSC 2023).
 - 💼 **Senior Content Writer & HR Manager** at **StratifyX.Global**, supervising promotional content and leading talent recruitment & internal communications.
+- 🤖 Actively expanding into **Machine Learning and Applied AI architectures**, alongside full-stack web engineering, compiler design, and organizational leadership.
 - 🤝 **Executive Member** at **Competitive Programming Club (CPC), DIU**, coordinating contests and technical workshops for **1,000+ members**.
 - 🎖️ **Top 80 Finalist** in *Unlock The Algorithm* programming contest out of **2,000+ preliminary candidates**.
 - 🌐 Achieved an overall **IELTS Band Score of 6.5 / 9.0** (British Council, 2024).
-- 🚀 Passionate about **Full-Stack Web Engineering, Relational Database Modeling, Compiler Design (Flex & Bison), Numerical Algorithms, and Digital Circuit Prototyping**.
+- 🚀 Portfolio features **12+ end-to-end engineering projects** across Web Development, Compiler Theory, Data Science, and Hardware Systems.
 
 ---
 
@@ -49,14 +50,18 @@
   <img src="https://skillicons.dev/icons?i=c,cpp,java,python,php,js,html,css&perline=8" alt="Languages" />
 </p>
 
+### 🤖 Machine Learning & Applied AI
+- **Core Libraries:** NumPy, Pandas, Scikit-Learn, PyTorch Basics, Jupyter Notebook
+- **Techniques:** Data Linearization, Least Squares Regression, Residual Diagnostics, Predictive Modeling
+
 ### 🌐 Web & Frameworks
 <p>
   <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap,tailwind,mysql&perline=6" alt="Web Technologies" />
 </p>
 
 ### 🗄️ Database & Systems
-- **Databases:** MySQL, Relational Database Normalization, ACID Transactions, Row-Level Locking, Database Triggers & Stored Procedures
-- **Compiler & Theory:** Flex & Bison (Context-Free Grammars, Abstract Syntax Trees), Levenshtein Distance (Bangla Fuzzy Matching), Numerical Least Squares
+- **Databases:** MySQL, Relational Database Normalization, ACID Transactions, Row-Level Locking (`FOR UPDATE`), Triggers & Stored Procedures
+- **Compiler & Theory:** Flex & Bison (Context-Free Grammars, Abstract Syntax Trees), Multi-byte Levenshtein Distance (`mb_levenshtein` Bangla Fuzzy Matching), Numerical Normal Equations
 
 ### ⚡ Electronics & Hardware
 - **Hardware Skills:** Digital Logic Gates (AND, OR, NOT, Flip-Flops), Sequential Circuits, Breadboard Wiring, PCB Design, Sensor Integration, Microcontroller Basics
@@ -68,16 +73,30 @@
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 Featured Projects (12 Engineering Projects)
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
+### 📰 [Newslens (Online News & Media Portal)](https://github.com/nafilridin18/Project-NewsLens)
+**Tech:** `PHP` • `MySQL` • `CMS Architecture` • `Responsive UX`
+- Scalable news publishing platform with normalized MySQL schemas optimized for categorized feeds and fast reads.
+- Administrative CMS backend enabling multi-tiered category hierarchy, draft/publish workflows, and reporter permissions.
+- Intuitive, responsive reading interface with category filtration and query routing.
+
+<a href="https://github.com/nafilridin18/Project-NewsLens">
+  <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github" />
+</a>
+
+</td>
+
+<td width="50%" valign="top">
+
 ### 🛒 [Shuvrota E-Commerce](https://github.com/nafilridin18/Shuvrota-e-commerce)
 **Tech:** `PHP` • `MySQL` • `ACID Transactions` • `AJAX`
 - Full-featured retail engine with persistent cart and streamlined checkout.
-- Implemented ACID-compliant transactional inventory handling to prevent overselling under high concurrency.
+- Implemented ACID-compliant transactional inventory handling to prevent overselling under concurrent user purchases.
 - Built live AJAX search and layered multi-category filtering.
 
 <a href="https://github.com/nafilridin18/Shuvrota-e-commerce">
@@ -85,7 +104,9 @@
 </a>
 
 </td>
+</tr>
 
+<tr>
 <td width="50%" valign="top">
 
 ### 🛡️ [RelieFX (Disaster Relief Tracker)](https://github.com/nafilridin18/relife_system)
@@ -99,9 +120,7 @@
 </a>
 
 </td>
-</tr>
 
-<tr>
 <td width="50%" valign="top">
 
 ### 🧮 [OmniCalc (Compiler Desktop Suite)](https://github.com/nafilridin18/OmniCalc)
@@ -115,13 +134,15 @@
 </a>
 
 </td>
+</tr>
 
+<tr>
 <td width="50%" valign="top">
 
-### 📈 [Curve Fitting & Predictive App](https://github.com/nafilridin18/curve_fitting)
+### 📈 [Curve Fitting & Predictive Modeling](https://github.com/nafilridin18/curve_fitting)
 **Tech:** `Python` • `Streamlit` • `Plotly` • `Numerical Methods`
 - Built numerical regression app calculating Least Squares Normal Equations from scratch without library fitting functions.
-- Supports non-linear data linearization (Power, Exponential, Log) and polynomial modeling.
+- Supports non-linear data linearization (Power, Exponential, Logarithmic) and polynomial modeling.
 - Real-time Plotly residual diagnostics with automated $R^2$ and RMSE metrics.
 
 <a href="https://github.com/nafilridin18/curve_fitting">
@@ -129,23 +150,23 @@
 </a>
 
 </td>
-</tr>
 
-<tr>
 <td width="50%" valign="top">
 
-### 📱 [Minibook (Social Media Platform)](https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook-)
+### 📱 [Minibook (Social Media Platform)](https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook)
 **Tech:** `JavaScript` • `MySQL` • `Full-Stack` • `Responsive UI`
 - Social networking application with user registration, profile customization, and multimedia posts.
 - Optimized relational schemas for user follower networks and chronological feed querying.
-- Dynamic frontend event handlers for asynchronous post likes and comments without reloads.
+- Dynamic frontend event handlers for asynchronous post likes and comments without full page reloads.
 
-<a href="https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook-">
+<a href="https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook">
   <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github" />
 </a>
 
 </td>
+</tr>
 
+<tr>
 <td width="50%" valign="top">
 
 ### 🛍️ [Asthetica (E-Commerce Store)](https://github.com/nafilridin18/CodeAlpha_Simple-E-Commerce-Store-Asthetica)
@@ -158,6 +179,19 @@
 </a>
 
 </td>
+
+<td width="50%" valign="top">
+
+### 🚗 [Ride Share Mobile App](https://github.com/nafilridin18)
+**Tech:** `Java` • `JavaFX` • `UI/UX Design` • `Route Optimization`
+- Efficient commuter matching connecting drivers and passengers with route optimization.
+- Secure user authentication and intuitive JavaFX interface.
+
+<a href="https://github.com/nafilridin18">
+  <img src="https://img.shields.io/badge/View_Profile-181717?style=for-the-badge&logo=github" />
+</a>
+
+</td>
 </tr>
 </table>
 
@@ -165,10 +199,10 @@
 
 ## ⚡ Additional Hardware & Electronics Projects
 
-- 🔐 **4-Bit Binary Digital Lock:** Access control security circuit engineered with digital logic gates & sequential flip-flops on breadboard wiring.
-- 🔋 **Battery Charger Regulation System:** High-efficiency charging circuit with voltage/current stabilization to preserve battery health.
-- 🌧️ **Rain Detection Automation Device:** Automatic sensor-based rain detection triggering instant safety alert mechanisms.
-- 💧 **Hydraulic Pump Model:** Fluid mechanics demonstration prototype showcased at the *National Science Carnival (DRMC)*.
+- 🔐 **4-Bit Binary Digital Lock (2026):** Access control security circuit engineered with digital logic gates & sequential flip-flops on breadboard wiring.
+- 🔋 **Battery Charger Regulation System (2025):** High-efficiency charging circuit with voltage/current stabilization to preserve battery health.
+- 🌧️ **Rain Detection Automation Device (2024):** Automatic sensor-based rain detection triggering instant safety alert mechanisms.
+- 💧 **Hydraulic Pump Model (2023):** Fluid mechanics demonstration prototype showcased at the *National Science Carnival (DRMC)*.
 
 ---
 
