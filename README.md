@@ -29,6 +29,7 @@
   <img src="https://img.shields.io/badge/CGPA-3.73%20%2F%204.00-success?style=flat-square&color=22c55e" alt="CGPA" />
   <img src="https://img.shields.io/badge/IELTS-6.5%20Band-blue?style=flat-square&color=3b82f6" alt="IELTS" />
   <img src="https://img.shields.io/badge/SSC%20%26%20HSC-GPA%205.00-gold?style=flat-square&color=eab308" alt="GPA 5.00" />
+  <img src="https://img.shields.io/badge/80th%20Rank-Vibe%20Coding%20Contest-orange?style=flat-square&color=f97316" alt="Vibe Coding 80th Rank" />
   <img src="https://img.shields.io/badge/Top%2080-Unlock%20The%20Algorithm-purple?style=flat-square&color=a855f7" alt="Top 80" />
 </p>
 
@@ -53,6 +54,7 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
   - **General Member**, Data Science Club, DIU (Member ID: `DS978`).
   - **Executive Member**, Science Club, BNMPC (2018 – 2023).
 - 🎖️ **Honors & Awards:**
+  - **80th Rank & Certificate of Appreciation**, *Vibe Coding Competition – AI Dev Fest 2026* (DIU CPC, Daffodil International University).
   - **Top 80 Finalist** in *Unlock The Algorithm 2025* programming contest among 2,000+ candidates.
   - **2nd Position**, *Science Olympiad 2024* (Saint Joseph).
 - 🌐 **Language Proficiency:** Bangla (Native), English (**IELTS 6.5 / 9.0**, British Council 2024), Hindi.
@@ -97,10 +99,24 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 
 ---
 
-## 🚀 Featured Engineering Projects (12 Projects)
+## 🚀 Featured Engineering Projects (13 Projects)
 
 <table>
 <tr>
+<td width="50%" valign="top">
+
+### 📑 [Tender Document Package Builder (Vibe Coding Contest)](https://lnkd.in/gi-FRFm5)
+**Tech:** `JavaScript` • `Frontend Engineering` • `PDF Generation` • `UI/UX Prototyping`
+- Built within the strict time limits of the **Vibe Coding Competition** at **AI Dev Fest 2026** (organized by DIU CPC, Daffodil International University).
+- Implemented client-side PDF generation logic required to compile and export structured tender document packages according to competition specifications.
+- Analyzed complex problem specifications under high time pressure, delivering a functional, responsive interface.
+
+<a href="https://lnkd.in/gi-FRFm5">
+  <img src="https://img.shields.io/badge/View_Project-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+</td>
+
 <td width="50%" valign="top">
 
 ### 📰 [Newslens — Online News & Media Portal](https://github.com/nafilridin18/Project-NewsLens)
@@ -114,7 +130,9 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 </a>
 
 </td>
+</tr>
 
+<tr>
 <td width="50%" valign="top">
 
 ### 🛒 [Shuvrota — E-Commerce Retail Platform](https://github.com/nafilridin18/Shuvrota-e-commerce)
@@ -128,9 +146,7 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 </a>
 
 </td>
-</tr>
 
-<tr>
 <td width="50%" valign="top">
 
 ### 🛡️ [RelieFX — Disaster Relief Distribution Tracker](https://github.com/nafilridin18/relife_system)
@@ -144,7 +160,9 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 </a>
 
 </td>
+</tr>
 
+<tr>
 <td width="50%" valign="top">
 
 ### 🧮 [OmniCalc — Multi-Domain Computational Suite](https://github.com/nafilridin18/OmniCalc)
@@ -158,9 +176,7 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 </a>
 
 </td>
-</tr>
 
-<tr>
 <td width="50%" valign="top">
 
 ### 📈 [Curve Fitting & Predictive Modeling Web App](https://github.com/nafilridin18/curve_fitting)
@@ -174,7 +190,9 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 </a>
 
 </td>
+</tr>
 
+<tr>
 <td width="50%" valign="top">
 
 ### 📱 [Minibook — Social Media Platform](https://github.com/nafilridin18/CodeAlpha_Social-Media-Platform-minibook)
@@ -188,9 +206,7 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 </a>
 
 </td>
-</tr>
 
-<tr>
 <td width="50%" valign="top">
 
 ### 🛍️ [Asthetica — Modern E-Commerce Store](https://github.com/nafilridin18/CodeAlpha_Simple-E-Commerce-Store-Asthetica)
@@ -203,13 +219,15 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 </a>
 
 </td>
+</tr>
 
-<td width="50%" valign="top">
+<tr>
+<td colspan="2" valign="top">
 
 ### 🚗 [Ride Share Mobile App](https://github.com/nafilridin18)
 **Tech:** `Java` • `JavaFX` • `UI/UX Design` • `Route Optimization`
-- Commuter matching connecting drivers and passengers with route optimization.
-- Real-time location tracking concepts, secure user authentication, and JavaFX interface.
+- Commuter matching connecting drivers and passengers with route optimization heuristics.
+- Real-time location tracking concepts, secure user authentication, and desktop/mobile interface built with JavaFX.
 
 <a href="https://github.com/nafilridin18">
   <img src="https://img.shields.io/badge/View_Profile-181717?style=for-the-badge&logo=github" />
@@ -231,6 +249,7 @@ I am a 3rd-year **Computer Science & Engineering** undergraduate at **Daffodil I
 
 | Certification / Honor | Issuer / Organization | Year |
 | :--- | :--- | :---: |
+| **Vibe Coding Competition – AI Dev Fest 2026 (80th Rank)** | DIU Computer Programming Club (DIU CPC) | 2026 |
 | **Full Stack Development Intern (Virtual)** | CodeAlpha | 2025 |
 | **Workplace Communication Essentials** | UNICEF – Passport to Earning Bangladesh | 2025 |
 | **DIU-Cybercon Cybersecurity Workshop** | Daffodil International University | 2025 |
